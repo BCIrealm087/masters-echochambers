@@ -1,0 +1,11 @@
+# Local research inputs and working outputs
+/data/local/
+/runs/local/
+
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Notebook checkpoints
+.ipynb_checkpoints/
