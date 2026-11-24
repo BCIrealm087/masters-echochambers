@@ -33,6 +33,8 @@ Compare definitions of an echo chamber and methods that turn them into observabl
 
 **Deliverable.** A comparison of candidate definitions and detection procedures, with the data each needs, the evidence that would support or weaken an echo-chamber interpretation, and the proposed outputs for groups, membership and circulation.
 
+**Result.** The [Step 3 report](m1-echo-chamber-detection.md) proposes a directed account repost graph, validation on a separate time interval with a degree-preserving reference model, and explicit checks for missing endpoints. It identifies prior network studies of Brazil’s 2022 election and states what additional evidence would be needed to support political selectivity or trust claims. Supporting sources and search decisions are in the [Q1 evidence notes](m1-q1-evidence.md).
+
 ## Step 4 — Compare graph construction and label-spreading methods
 
 Review alternatives for the earlier hashtag graph and for account-level interaction graphs. For each, specify nodes, edge meaning and direction, weights, time windows and expected scale. Use the prior study’s Gaussian Fields and Harmonic Functions (GFHF) method as the stance-propagation baseline. Shortlist alternatives to compare against it and against a simple baseline. Draft a comparison that can vary graph construction and label-spreading algorithm independently, account for possible bias toward frequent seed hashtags, and evaluate performance on held-out evidence. Compare the cost and interpretability of graph choices alongside their effect on results.
