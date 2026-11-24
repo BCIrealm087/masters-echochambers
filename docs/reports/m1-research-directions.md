@@ -7,7 +7,9 @@ What can the Interfaces Twitter Elections Dataset (ITED-Br) tell us about echo c
 
 ## Scope and working record
 
-The roadmap covers planning and synthesis. Empirical testing, pipeline development and formal expert evaluation belong to a later milestone. Keep the current task and its status in [STATUS.md](../../STATUS.md). Add each step’s findings to this report or link a supporting note from it. Record the alternatives considered, the evidence that changed a decision, and the unresolved questions that could affect the shortlist. Treat the five initial avenues as research hypotheses.
+The assistant carries out the brainstorming, literature search and review, feasibility assessment from existing documentation, and synthesis. Use available sources to resolve routine questions and document uncertainties that would affect a later pilot. If a critical fact cannot be verified with available tools, identify the specific input needed and continue the independent parts of the review.
+
+M1 ends with a research synthesis and a proposed pilot. Empirical testing, pipeline development and formal expert evaluation belong to a later milestone. Keep the current task and its status in [STATUS.md](../../STATUS.md). Add each step’s findings to this report or link a supporting note from it. Record the alternatives considered, the evidence that changed a decision, and the unresolved questions that could affect the shortlist. Treat the five initial avenues as research hypotheses.
 
 ## Step 1 — Frame the questions and plan the literature review
 
@@ -17,7 +19,7 @@ Turn the proposed avenues into questions the review can answer. Define the outco
 
 ## Step 2 — Establish what the data and prior study can support
 
-Use existing dataset and study documentation to make an inventory of fields, coverage and access. Check what is known about account and post identifiers, timestamps, reposts, replies, quotes, referenced posts, text and links. Record how the election collection queries and time windows could affect comparisons, and flag missing targets or unresolved field availability. Locate the earlier graph specification, seed labels and code if available. Record the open question about how seed hashtags were selected.
+Use existing dataset and study documentation to make an inventory of fields, coverage and access. Check what is known about account and post identifiers, timestamps, reposts, replies, quotes, referenced posts, text and links. Record how the election collection queries and time windows could affect comparisons, and flag missing targets or unresolved field availability. Locate the earlier graph specification, seed labels and code if available. Record the open question about how seed hashtags were selected. Where documentation leaves a field or assumption unverified, record the uncertainty and which proposed analyses depend on it.
 
 **Deliverable.** A feasibility table that maps each proposed analysis to its minimum data requirements, records which inputs are documented or still uncertain, and identifies what could be checked in a later pilot.
 
@@ -47,7 +49,7 @@ Review ways to explain why a group was identified and what characterizes it usin
 
 ## Step 7 — Design validation with political science experts
 
-Draft a small review that the research group’s political scientists could carry out in a later milestone. Define what they would see and judge, including whether selected groups meet the proposed echo-chamber criteria, whether the taxonomy captures meaningful distinctions, and whether explanations are accurate and informative. Include clear cases and near misses. Propose independent judgments before discussion, criteria for interpreting disagreement, and a practical estimate of reviewer effort. Where feasible, hide which method produced an output until after the initial assessment.
+Draft a small review for a later milestone. Identify which claims would require independent judgment from the research group’s political scientists and what automated checks could establish beforehand. Define what they would see and judge, including whether selected groups meet the proposed echo-chamber criteria, whether the taxonomy captures meaningful distinctions, and whether explanations are accurate and informative. Include clear cases and near misses. Propose independent judgments before discussion, criteria for interpreting disagreement, and a practical estimate of reviewer effort. Where feasible, hide which method produced an output until after the initial assessment.
 
 **Deliverable.** A draft protocol with sample selection, review materials, criteria and a plan to document agreement, disagreement and resulting changes to the methods.
 
@@ -55,7 +57,7 @@ Draft a small review that the research group’s political scientists could carr
 
 Compare the proposed directions on thesis contribution, data feasibility, strength of validation and effort. Cite the literature and feasibility findings behind the ranking. Explain which ideas depend on others, which merit prioritizing, and which can be deferred or revisited when evidence or data availability changes. Outline a bounded pilot for the leading direction with a baseline, expected outputs and criteria for deciding what to do next.
 
-**Deliverable.** An advisor-ready synthesis with a ranked shortlist, a proposed first pilot and any decisions where the advisor’s feedback would help.
+**Deliverable.** An advisor-ready synthesis with a ranked shortlist and a proposed first pilot. Flag any decision that genuinely needs the researcher’s or advisor’s input and explain what depends on it.
 
 ## Milestone completion
 

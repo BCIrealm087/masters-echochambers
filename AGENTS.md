@@ -15,6 +15,12 @@ These instructions apply throughout `BCIrealm087/masters-echochambers`, the work
 - Archive substantive work on GitHub as it progresses. Commit the relevant documents, code or shareable results together with the tracker update. Use relative links to the evidence so a later reader can follow the history from a checkout.
 - Make routine organizational decisions within the agreed scope. Record consequential choices and their rationale near the affected work. Respect the stage boundary set by the researcher. For setup, report completion before beginning another milestone.
 
+## Roadmap execution
+
+Unless the researcher explicitly specifies a different workflow, prioritize steps the assistant can carry out autonomously. Use available tools to do the research, analysis and verification, and use scripts when they help make repeatable work reproducible. Carry routine decisions and checks through to completion.
+
+Include a human task only when a critical input is beyond the automated workflow’s capabilities or when credible validation requires independent human judgment. State what is needed and why, ask for the minimum input required, and continue any work that can proceed independently.
+
 ## Research reports for the advisor
 
 Keep a dated Markdown report in `docs/reports/` for each substantive research milestone. Update it when an analysis changes a conclusion, a methodological decision affects the study, or an unresolved question needs discussion. Link the report from [STATUS.md](STATUS.md) and keep routine task updates in the tracker.

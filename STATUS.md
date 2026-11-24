@@ -32,3 +32,4 @@ Last updated 2026-11-24.
 | 2026-11-21 | M0 · Repository setup | Completed the setup outcomes above. The research question, dataset slice, graph design and validation criteria remain open for a later milestone. |
 | 2026-11-24 | M0 · Repository setup | Added [advisor reporting guidance](AGENTS.md#research-reports-for-the-advisor) for documenting substantive progress, conclusions and their supporting evidence. |
 | 2026-11-24 | M1 · Research directions and literature review | Opened M1 and registered the [roadmap](docs/reports/m1-research-directions.md) with deliverables for each step. |
+| 2026-11-24 | M1 · Research directions and literature review | Updated the [roadmap](docs/reports/m1-research-directions.md#scope-and-working-record) for autonomous brainstorming, literature review and analysis. The pilot and formal expert validation are planned for later milestones. |
