@@ -25,6 +25,8 @@ Use existing dataset and study documentation to make an inventory of fields, cov
 
 **Deliverable.** A feasibility table that maps each proposed analysis to its minimum data requirements, records which inputs are documented or still uncertain, and identifies what could be checked in a later pilot.
 
+**Result.** The [ITED-Br feasibility report](m1-ited-br-feasibility.md) verifies public linkage fields and October partitions, identifies which questions require hydrated data, and locates the earlier graph and stance code. A repost-to-target-author join is the first structural check proposed for a later pilot. The seed workbooks and original selection procedure remain unresolved.
+
 ## Step 3 — Review automatic detection, membership and information flow
 
 Compare definitions of an echo chamber and methods that turn them into observable criteria. Brainstorm how to find candidate account groups, estimate core or uncertain membership, recover the posts and sources that members produce or share, and trace circulation within and across groups. Compare measures of selective interaction or circulation against plausible reference patterns, such as a null model that preserves account degree. Consider what conclusions are possible when only some repost or quote chains can be reconstructed. Favor validation evidence distinct from the signals that formed the groups, such as a held-out interval or a different observed interaction layer.
