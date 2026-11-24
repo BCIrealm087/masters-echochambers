@@ -1,6 +1,6 @@
 # Research progress
 
-Last updated 2026-11-21.
+Last updated 2026-11-24.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
@@ -22,3 +22,4 @@ Last updated 2026-11-21.
 | --- | --- | --- |
 | 2026-11-21 | M0 · Repository setup | Opened the tracker in the empty repository. |
 | 2026-11-21 | M0 · Repository setup | Completed the setup outcomes above. The research question, dataset slice, graph design and validation criteria remain open for a later milestone. |
+| 2026-11-24 | M0 · Repository setup | Added [advisor reporting guidance](AGENTS.md#research-reports-for-the-advisor) for documenting substantive progress, conclusions and their supporting evidence. |
