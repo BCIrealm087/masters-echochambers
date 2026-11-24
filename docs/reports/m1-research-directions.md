@@ -1,0 +1,62 @@
+# Research directions for echo chambers in Brazil’s 2022 election
+
+**Milestone M1 · Research directions and literature review**  
+**Roadmap recorded on 2026-11-24**
+
+What can the Interfaces Twitter Elections Dataset (ITED-Br) tell us about echo chambers among accounts, and which methods would let us characterize those groups credibly? The earlier study gives us a baseline for hashtag co-occurrence and candidate-relative stance. This milestone uses brainstorming and a focused literature review to decide which extensions are worth testing, what data they require, and how the thesis could evaluate them. [Prior-study note](../prior-study.md)
+
+## Scope and working record
+
+The roadmap covers planning and synthesis. Empirical testing, pipeline development and formal expert evaluation belong to a later milestone. Keep the current task and its status in [STATUS.md](../../STATUS.md). Add each step’s findings to this report or link a supporting note from it. Record the alternatives considered, the evidence that changed a decision, and the unresolved questions that could affect the shortlist. Treat the five initial avenues as research hypotheses.
+
+## Step 1 — Frame the questions and plan the literature review
+
+Turn the proposed avenues into questions the review can answer. Define the outcomes of interest, from candidate-relative stance and selective circulation to interpretation of group-level language. Specify what would make an avenue add something to the prior study. Plan to search in English and Portuguese for work on political echo chambers, graph methods, campaign discourse, explainability and validation, including studies of Brazil and the 2022 election. Keep a search log with sources, dates, queries, inclusion criteria and key references followed.
+
+**Deliverable.** A short set of research questions and a review protocol. For each retained study, capture the population and sampling, what it measures, how it validates the measure and what would transfer to ITED-Br.
+
+## Step 2 — Establish what the data and prior study can support
+
+Use existing dataset and study documentation to make an inventory of fields, coverage and access. Check what is known about account and post identifiers, timestamps, reposts, replies, quotes, referenced posts, text and links. Record how the election collection queries and time windows could affect comparisons, and flag missing targets or unresolved field availability. Locate the earlier graph specification, seed labels and code if available. Record the open question about how seed hashtags were selected.
+
+**Deliverable.** A feasibility table that maps each proposed analysis to its minimum data requirements, records which inputs are documented or still uncertain, and identifies what could be checked in a later pilot.
+
+## Step 3 — Review automatic detection, membership and information flow
+
+Compare definitions of an echo chamber and methods that turn them into observable criteria. Brainstorm how to find candidate account groups, estimate core or uncertain membership, recover the posts and sources that members produce or share, and trace circulation within and across groups. Compare measures of selective interaction or circulation against plausible reference patterns, such as a null model that preserves account degree. Consider what conclusions are possible when only some repost or quote chains can be reconstructed. Favor validation evidence distinct from the signals that formed the groups, such as a held-out interval or a different observed interaction layer.
+
+**Deliverable.** A comparison of candidate definitions and detection procedures, with the data each needs, the evidence that would support or weaken an echo-chamber interpretation, and the proposed outputs for groups, membership and circulation.
+
+## Step 4 — Compare graph construction and label-spreading methods
+
+Review alternatives for the earlier hashtag graph and for account-level interaction graphs. For each, specify nodes, edge meaning and direction, weights, time windows and expected scale. Use the prior study’s Gaussian Fields and Harmonic Functions (GFHF) method as the stance-propagation baseline. Shortlist alternatives to compare against it and against a simple baseline. Draft a comparison that can vary graph construction and label-spreading algorithm independently, account for possible bias toward frequent seed hashtags, and evaluate performance on held-out evidence. Compare the cost and interpretability of graph choices alongside their effect on results.
+
+**Deliverable.** A small set of baseline and alternative configurations with the rationale, proposed evaluation and computational assumptions for each.
+
+## Step 5 — Draft a taxonomy for political language and tactics
+
+Review work on Brazilian Portuguese campaign language, stance and misinformation. Sketch categories for who is targeted, whether the message supports or attacks them, and how that stance is expressed. Give rhetorical tactics, factual verification and evidence of coordinated or deceptive behavior their own criteria. Decide whether the first coding unit should be a post, claim or interaction, and how those annotations could be summarized at group level. Include ambiguity, sarcasm, quotations and relevant election context in the annotation guidance.
+
+**Deliverable.** A draft taxonomy with definitions, inclusion and exclusion criteria, provisions for ambiguous cases, and a proposal for comparing category frequencies across groups while accounting for their size and activity.
+
+## Step 6 — Assess LLM-assisted explanations of groups
+
+Review ways to explain why a group was identified and what characterizes it using graph measures, circulation summaries and permitted linguistic evidence. Define which claims an LLM could make from a supplied evidence set and what format would let a reader verify each claim. Compare against a structured evidence summary without an LLM. Plan to evaluate factual grounding, attribution of claims to evidence, unsupported inferences, and handling of Brazilian Portuguese and political context.
+
+**Deliverable.** A candidate explanation format and evaluation rubric, illustrated with a hypothetical group. State what evidence an explanation would need for each type of claim.
+
+## Step 7 — Design validation with political science experts
+
+Draft a small review that the research group’s political scientists could carry out in a later milestone. Define what they would see and judge, including whether selected groups meet the proposed echo-chamber criteria, whether the taxonomy captures meaningful distinctions, and whether explanations are accurate and informative. Include clear cases and near misses. Propose independent judgments before discussion, criteria for interpreting disagreement, and a practical estimate of reviewer effort. Where feasible, hide which method produced an output until after the initial assessment.
+
+**Deliverable.** A draft protocol with sample selection, review materials, criteria and a plan to document agreement, disagreement and resulting changes to the methods.
+
+## Step 8 — Select the most promising directions for a pilot
+
+Compare the proposed directions on thesis contribution, data feasibility, strength of validation and effort. Cite the literature and feasibility findings behind the ranking. Explain which ideas depend on others, which merit prioritizing, and which can be deferred or revisited when evidence or data availability changes. Outline a bounded pilot for the leading direction with a baseline, expected outputs and criteria for deciding what to do next.
+
+**Deliverable.** An advisor-ready synthesis with a ranked shortlist, a proposed first pilot and any decisions where the advisor’s feedback would help.
+
+## Milestone completion
+
+M1 is complete when the report gives an evidence-backed disposition for all five initial avenues, explains the choices and major uncertainties, and proposes a feasible first pilot with a credible route to validation.

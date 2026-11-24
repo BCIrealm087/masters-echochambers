@@ -4,7 +4,15 @@ Last updated 2026-11-24.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M0 · Repository setup | None active | Setup complete. Awaiting the researcher’s direction for the next milestone. |
+| M1 · Research directions and literature review | [Step 1 — Frame the questions and plan the literature review](docs/reports/m1-research-directions.md#step-1--frame-the-questions-and-plan-the-literature-review) | Roadmap recorded. Step 1 is ready to begin. |
+
+## M1 · Research directions and literature review
+
+**Objective.** Use brainstorming and a focused literature review to identify promising directions for extending the prior hashtag-network study and propose a first pilot.
+
+**Completion condition.** The advisor report assesses all five initial avenues against the literature, data feasibility and validation needs, and records a ranked shortlist with a proposed first pilot.
+
+[Eight-step roadmap and working advisor report](docs/reports/m1-research-directions.md)
 
 ## M0 · Repository setup
 
@@ -23,3 +31,4 @@ Last updated 2026-11-24.
 | 2026-11-21 | M0 · Repository setup | Opened the tracker in the empty repository. |
 | 2026-11-21 | M0 · Repository setup | Completed the setup outcomes above. The research question, dataset slice, graph design and validation criteria remain open for a later milestone. |
 | 2026-11-24 | M0 · Repository setup | Added [advisor reporting guidance](AGENTS.md#research-reports-for-the-advisor) for documenting substantive progress, conclusions and their supporting evidence. |
+| 2026-11-24 | M1 · Research directions and literature review | Opened M1 and registered the [roadmap](docs/reports/m1-research-directions.md) with deliverables for each step. |
