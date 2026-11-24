@@ -17,6 +17,8 @@ Turn the proposed avenues into questions the review can answer. Define the outco
 
 **Deliverable.** A short set of research questions and a review protocol. For each retained study, capture the population and sampling, what it measures, how it validates the measure and what would transfer to ITED-Br.
 
+**Result.** The [review protocol](m1-review-protocol.md) records five questions, the screening criteria, the evidence to extract for each study, and the trial search log. The main question asks what account-level observations would support an echo-chamber interpretation. Trial searches favored running each strand separately, with dedicated searches for Brazilian evidence and transferable methods.
+
 ## Step 2 — Establish what the data and prior study can support
 
 Use existing dataset and study documentation to make an inventory of fields, coverage and access. Check what is known about account and post identifiers, timestamps, reposts, replies, quotes, referenced posts, text and links. Record how the election collection queries and time windows could affect comparisons, and flag missing targets or unresolved field availability. Locate the earlier graph specification, seed labels and code if available. Record the open question about how seed hashtags were selected. Where documentation leaves a field or assumption unverified, record the uncertainty and which proposed analyses depend on it.
