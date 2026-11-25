@@ -49,6 +49,8 @@ Review work on Brazilian Portuguese campaign language, stance and misinformation
 
 **Deliverable.** A draft taxonomy with definitions, inclusion and exclusion criteria, provisions for ambiguous cases, and a proposal for comparing category frequencies across groups while accounting for their size and activity.
 
+**Result.** The [draft political-language taxonomy](m1-political-language-taxonomy.md) defines the post–target stance unit, codes with inclusion and exclusion rules, and how to document claim verification and evidence of coordination. It includes Brazilian Portuguese examples and estimands for authored and amplified content that account for group size, activity and missing context. The [Q3 evidence notes](m1-q3-evidence.md) record the sources and search.
+
 ## Step 6 — Assess LLM-assisted explanations of groups
 
 Review ways to explain why a group was identified and what characterizes it using graph measures, circulation summaries and permitted linguistic evidence. Define which claims an LLM could make from a supplied evidence set and what format would let a reader verify each claim. Compare against a structured evidence summary without an LLM. Plan to evaluate factual grounding, attribution of claims to evidence, unsupported inferences, and handling of Brazilian Portuguese and political context.
