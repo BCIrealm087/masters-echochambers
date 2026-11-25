@@ -41,6 +41,8 @@ Review alternatives for the earlier hashtag graph and for account-level interact
 
 **Deliverable.** A small set of baseline and alternative configurations with the rationale, proposed evaluation and computational assumptions for each.
 
+**Result.** The [graph methods report](m1-graph-methods.md) proposes crossing raw and fractional hashtag co-occurrence with GFHF and LGC, using fixed inputs and splits and testing sensitivity to frequent seeds. For account communities, it compares directed modularity and Infomap on matched repost graphs. Both tracks specify coverage, validation and cost measures. The [Q2 evidence notes](m1-q2-evidence.md) record the literature and implementation checks.
+
 ## Step 5 — Draft a taxonomy for political language and tactics
 
 Review work on Brazilian Portuguese campaign language, stance and misinformation. Sketch categories for who is targeted, whether the message supports or attacks them, and how that stance is expressed. Give rhetorical tactics, factual verification and evidence of coordinated or deceptive behavior their own criteria. Decide whether the first coding unit should be a post, claim or interaction, and how those annotations could be summarized at group level. Include ambiguity, sarcasm, quotations and relevant election context in the annotation guidance.

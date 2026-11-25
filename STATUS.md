@@ -4,7 +4,7 @@ Last updated 2026-11-24.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M1 · Research directions and literature review | [Step 4 — Compare graph construction and label-spreading methods](docs/reports/m1-research-directions.md#step-4--compare-graph-construction-and-label-spreading-methods) | Ready to begin. Step 3 is complete. |
+| M1 · Research directions and literature review | [Step 5 — Draft a taxonomy for political language and tactics](docs/reports/m1-research-directions.md#step-5--draft-a-taxonomy-for-political-language-and-tactics) | Ready to begin. Step 4 is complete. |
 
 ## M1 · Research directions and literature review
 
@@ -36,3 +36,4 @@ Last updated 2026-11-24.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 1. Recorded the [research questions and literature review protocol](docs/reports/m1-review-protocol.md), including a bilingual trial search log and the evidence to extract from each study. |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 2. Published the [ITED-Br feasibility and prior-code inventory](docs/reports/m1-ited-br-feasibility.md), including coverage limits, the public linkage fields and the missing inputs for reproducing the stance baseline. |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 3. Published the [echo-chamber detection and circulation review](docs/reports/m1-echo-chamber-detection.md) with a held-out validation design, missing-data checks, and a [search and evidence log](docs/reports/m1-q1-evidence.md). |
+| 2026-11-24 | M1 · Research directions and literature review | Completed Step 4. Published the [graph and label propagation comparison](docs/reports/m1-graph-methods.md) and [Q2 evidence notes](docs/reports/m1-q2-evidence.md), including matched configurations, seed-selection checks and measures of coverage, performance and cost. |
