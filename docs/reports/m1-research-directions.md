@@ -73,6 +73,8 @@ Compare the proposed directions on thesis contribution, data feasibility, streng
 
 **Deliverable.** An advisor-ready synthesis with a ranked shortlist and a proposed first pilot. Flag any decision that genuinely needs the researcher’s or advisor’s input and explain what depends on it.
 
+**Result.** The [advisor synthesis and first pilot](m1-advisor-synthesis.md) ranks the five directions and recommends a bounded public-data study of observed reposts, with target-author coverage as the first checkpoint. It records the baseline, expected outputs and criteria for expanding, narrowing or stopping the pilot.
+
 ## Milestone completion
 
-M1 is complete when the report gives an evidence-backed disposition for all five initial avenues, explains the choices and major uncertainties, and proposes a feasible first pilot with a credible route to validation.
+M1 was completed on 2026-11-25. The [advisor synthesis](m1-advisor-synthesis.md) records the evidence and disposition of all five avenues, the major data uncertainties, and a proposed pilot with a route to validation.

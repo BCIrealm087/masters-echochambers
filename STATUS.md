@@ -1,10 +1,10 @@
 # Research progress
 
-Last updated 2026-11-24.
+Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M1 · Research directions and literature review | [Step 8 — Select the most promising directions for a pilot](docs/reports/m1-research-directions.md#step-8--select-the-most-promising-directions-for-a-pilot) | Ready to begin. Step 7 is complete. |
+| M1 · Research directions and literature review | None active. [First pilot proposed](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). | Complete. All eight steps are recorded. |
 
 ## M1 · Research directions and literature review
 
@@ -12,7 +12,7 @@ Last updated 2026-11-24.
 
 **Completion condition.** The advisor report assesses all five initial avenues against the literature, data feasibility and validation needs, and records a ranked shortlist with a proposed first pilot.
 
-[Eight-step roadmap and working advisor report](docs/reports/m1-research-directions.md)
+[Advisor synthesis and first pilot](docs/reports/m1-advisor-synthesis.md) · [Eight-step roadmap and supporting reports](docs/reports/m1-research-directions.md)
 
 ## M0 · Repository setup
 
@@ -40,3 +40,4 @@ Last updated 2026-11-24.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 5. Published the [draft political-language taxonomy](docs/reports/m1-political-language-taxonomy.md) with Portuguese coding examples, verification rules and a group-comparison plan, alongside the [Q3 search and evidence notes](docs/reports/m1-q3-evidence.md). |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 6. Published the [LLM explanation format and evaluation rubric](docs/reports/m1-llm-group-explanations.md) with a fictional Portuguese example, a matched structured baseline and the [Q4 evidence notes](docs/reports/m1-q4-evidence.md). |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 7. Published the [expert validation protocol](docs/reports/m1-expert-validation.md) and [Q5 evidence notes](docs/reports/m1-q5-evidence.md), including a Portuguese review form, matched case selection, time estimates and a disagreement procedure. |
+| 2026-11-25 | M1 · Research directions and literature review | Completed Step 8 and closed M1. Published the [advisor synthesis](docs/reports/m1-advisor-synthesis.md) ranking all five directions and proposing a public-data repost pilot with scope and decision criteria. |
