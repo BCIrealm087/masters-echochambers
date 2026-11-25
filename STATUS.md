@@ -4,7 +4,7 @@ Last updated 2026-11-24.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M1 · Research directions and literature review | [Step 7 — Design validation with political science experts](docs/reports/m1-research-directions.md#step-7--design-validation-with-political-science-experts) | Ready to begin. Step 6 is complete. |
+| M1 · Research directions and literature review | [Step 8 — Select the most promising directions for a pilot](docs/reports/m1-research-directions.md#step-8--select-the-most-promising-directions-for-a-pilot) | Ready to begin. Step 7 is complete. |
 
 ## M1 · Research directions and literature review
 
@@ -39,3 +39,4 @@ Last updated 2026-11-24.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 4. Published the [graph and label propagation comparison](docs/reports/m1-graph-methods.md) and [Q2 evidence notes](docs/reports/m1-q2-evidence.md), including matched configurations, seed-selection checks and measures of coverage, performance and cost. |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 5. Published the [draft political-language taxonomy](docs/reports/m1-political-language-taxonomy.md) with Portuguese coding examples, verification rules and a group-comparison plan, alongside the [Q3 search and evidence notes](docs/reports/m1-q3-evidence.md). |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 6. Published the [LLM explanation format and evaluation rubric](docs/reports/m1-llm-group-explanations.md) with a fictional Portuguese example, a matched structured baseline and the [Q4 evidence notes](docs/reports/m1-q4-evidence.md). |
+| 2026-11-24 | M1 · Research directions and literature review | Completed Step 7. Published the [expert validation protocol](docs/reports/m1-expert-validation.md) and [Q5 evidence notes](docs/reports/m1-q5-evidence.md), including a Portuguese review form, matched case selection, time estimates and a disagreement procedure. |

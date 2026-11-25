@@ -65,6 +65,8 @@ Draft a small review for a later milestone. Identify which claims would require 
 
 **Deliverable.** A draft protocol with sample selection, review materials, criteria and a plan to document agreement, disagreement and resulting changes to the methods.
 
+**Result.** The [expert validation protocol](m1-expert-validation.md) defines the cases, evidence packets, Portuguese review form and effort for assessing group interpretations, language categories and explanations. It specifies automated checks, independent review, and how disagreement changes the analysis. The [Q5 evidence notes](m1-q5-evidence.md) record the methodological precedents.
+
 ## Step 8 — Select the most promising directions for a pilot
 
 Compare the proposed directions on thesis contribution, data feasibility, strength of validation and effort. Cite the literature and feasibility findings behind the ranking. Explain which ideas depend on others, which merit prioritizing, and which can be deferred or revisited when evidence or data availability changes. Outline a bounded pilot for the leading direction with a baseline, expected outputs and criteria for deciding what to do next.
