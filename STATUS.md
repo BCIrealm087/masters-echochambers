@@ -4,13 +4,15 @@ Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 1 · Interpretation and expert evaluation](docs/reports/reflexive-report-1.md) | Unit complete. Awaiting selection of the next unit. |
+| Incremental reflexive review | [Report 2 · Brazilian Portuguese political discourse](docs/reports/reflexive-report-2.md) | Unit complete. Awaiting selection of the next unit. |
 
 ## Incremental reflexive review
 
 **Objective.** Revisit the completed M1 design one research review at a time, recording decisions, evidence limits and implications for the relevant protocols.
 
 **Report 1 completion condition.** Consolidate the conversation and Deep Research output into a single advisor report and reconcile the explanation, expert-review and synthesis documents. The [revised design](docs/reports/reflexive-report-1.md) is ready for later testing. Real packets depend on the [proposed public-data pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot).
+
+**Report 2 completion condition.** Consolidate the conversation and Deep Research PDF into one [advisor report](docs/reports/reflexive-report-2.md) and align the Q3 question, [codebook](docs/reports/m1-political-language-taxonomy.md), [evidence notes](docs/reports/m1-q3-evidence.md), expert protocol and ranked synthesis. The design is registered. Language estimates depend on recoverable text and independent validation.
 
 ## M1 · Research directions and literature review
 
@@ -48,3 +50,4 @@ Last updated 2026-11-25.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 7. Published the [expert validation protocol](docs/reports/m1-expert-validation.md) and [Q5 evidence notes](docs/reports/m1-q5-evidence.md), including a Portuguese review form, matched case selection, time estimates and a disagreement procedure. |
 | 2026-11-25 | M1 · Research directions and literature review | Completed Step 8 and closed M1. Published the [advisor synthesis](docs/reports/m1-advisor-synthesis.md) ranking all five directions and proposing a public-data repost pilot with scope and decision criteria. |
 | 2026-11-25 | Reflexive review · Report 1 | Integrated both source reviews into the [three-format comparison and expert evaluation](docs/reports/reflexive-report-1.md). Documented feasibility limits, disagreement handling and criteria for a larger thesis role. |
+| 2026-11-25 | Reflexive review · Report 2 | Integrated both reviews into the [Q3 measurement design](docs/reports/reflexive-report-2.md). Recorded the text-coverage decision, independent Portuguese annotation and model benchmark, four authorship/circulation estimands, and outcomes that would narrow a group claim. The public-data structural pilot retains priority. |
