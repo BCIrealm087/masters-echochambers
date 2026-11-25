@@ -4,7 +4,13 @@ Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M1 · Research directions and literature review | None active. [First pilot proposed](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). | Complete. All eight steps are recorded. |
+| Incremental reflexive review | [Report 1 · Interpretation and expert evaluation](docs/reports/reflexive-report-1.md) | Unit complete. Awaiting selection of the next unit. |
+
+## Incremental reflexive review
+
+**Objective.** Revisit the completed M1 design one research review at a time, recording decisions, evidence limits and implications for the relevant protocols.
+
+**Report 1 completion condition.** Consolidate the conversation and Deep Research output into a single advisor report and reconcile the explanation, expert-review and synthesis documents. The [revised design](docs/reports/reflexive-report-1.md) is ready for later testing. Real packets depend on the [proposed public-data pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot).
 
 ## M1 · Research directions and literature review
 
@@ -41,3 +47,4 @@ Last updated 2026-11-25.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 6. Published the [LLM explanation format and evaluation rubric](docs/reports/m1-llm-group-explanations.md) with a fictional Portuguese example, a matched structured baseline and the [Q4 evidence notes](docs/reports/m1-q4-evidence.md). |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 7. Published the [expert validation protocol](docs/reports/m1-expert-validation.md) and [Q5 evidence notes](docs/reports/m1-q5-evidence.md), including a Portuguese review form, matched case selection, time estimates and a disagreement procedure. |
 | 2026-11-25 | M1 · Research directions and literature review | Completed Step 8 and closed M1. Published the [advisor synthesis](docs/reports/m1-advisor-synthesis.md) ranking all five directions and proposing a public-data repost pilot with scope and decision criteria. |
+| 2026-11-25 | Reflexive review · Report 1 | Integrated both source reviews into the [three-format comparison and expert evaluation](docs/reports/reflexive-report-1.md). Documented feasibility limits, disagreement handling and criteria for a larger thesis role. |
