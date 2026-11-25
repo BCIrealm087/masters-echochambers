@@ -1,0 +1,86 @@
+# Evidence-grounded explanations of account communities
+
+**M1 · Step 6 · 2026-11-24**
+
+Can a large language model (LLM) help an advisor understand why an account group was identified and what the available evidence says about it? The proposed test compares a **Brazilian Portuguese explanation with claim-level evidence references** against a fixed-format summary of the same records. The LLM would explain measured results and their limits. Group membership, statistics and claim verdicts would come from the graph analysis and taxonomy. [Step 3 group validation](m1-echo-chamber-detection.md) · [Step 5 taxonomy](m1-political-language-taxonomy.md) · [Search and evidence notes](m1-q4-evidence.md)
+
+## What an explanation can establish
+
+| Question | Appropriate explanation | Evidence needed |
+| --- | --- | --- |
+| **How did the algorithm find this group?** | State the graph relation, discovery window, partition method and objective, member count, and membership stability where measured. Example reasoning can show that members stayed together across repeated runs. | A versioned partition, graph specification, discovery dates, settings, and the results of the stated stability or sensitivity checks. Claims that a particular tie or account materially changes the assignment require an actual perturbation analysis and its uncertainty. |
+| **What did the group do in the held-out data?** | Describe within-group and cross-group reposts, the expected within-group share under the reference model, and scope or coverage limits. Use the actor and original author directions as documented. | Frozen membership, a separate set of observed interactions, counts of within-group, across-group and unresolved endpoints, and a reference-model result with the comparison denominator. Report sensitivity checks when available. |
+| **What language characterized the observed sample?** | Describe scoped frequencies, target and speaker attribution, and how an example illustrates a documented category. Compare groups only through comparable measures or an explicitly adjusted estimate. | A versioned annotation rule, group, eligible and codable denominators, dates, sampling method, and permitted examples or reviewed aggregates. A single excerpt can illustrate its category but gives insufficient evidence for prevalence. |
+| **What does the group’s circulation reveal about a claim or source?** | Describe sharing of an identified post or source, or report the supported verdict of a specific fact-check with its context. Distinguish a member’s assertions, quotations and rebuttals. | Observed event and attribution summaries. A factual verdict requires a vetted match to the exact proposition and its context. A claim about a cross-group share needs both groups and the documented direction. |
+
+An algorithm objective explains the grouping rule. A held-out effect supports a behavioral interpretation. The two are different evidence. A model of potential flow is also distinct from a recorded repost. Without suitable external evidence, use a brief limit statement for causal influence, actual exposure, private beliefs, hidden coordination or intent. Partisan labels require independent stance evidence and its coverage. [Step 3 detection review](m1-echo-chamber-detection.md) · [Step 5 verification rules](m1-political-language-taxonomy.md#claim-verification-and-behavior)
+
+## Approaches considered
+
+- **Fixed-format summary.** Fill a small table from verified graph and coding records. This gives a baseline for accuracy, coverage and readers’ ability to recover a result. The summary also receives vetted examples and displays their context.
+- **Measured structural explanation.** Identify stable membership and show how a partition changes when a day or an unusually active source is omitted. This explains which grouping features matter under a documented perturbation. The procedure can feed either output format. Work on explainable community finding uses repeated runs and structural features on benchmark graphs. Its feature importance results need their own validation on ITED-Br. [Sadler et al., 2022](https://doi.org/10.1007/s41109-022-00515-6) · [Lancichinetti and Fortunato, 2012](https://doi.org/10.1038/srep00336)
+- **LLM synthesis.** Give the model the same fixed evidence and ask it to write short prose that connects the grouping, measured circulation, and any verified characterization. It should explain the implications of coverage and corroboration in plain Portuguese. Research on citation quality and table-to-text generation motivates testing attribution even when the underlying data are available. Some recent graph explainers use model internals to explain node-level predictions. Their fidelity tests address a different task from describing an account partition and its held-out behavior. [Gao et al., 2023](https://aclanthology.org/2023.emnlp-main.398/) · [Parikh et al., 2020](https://aclanthology.org/2020.emnlp-main.89/) · [Baghershahi et al., 2026](https://aclanthology.org/2026.acl-long.1944/)
+
+The first comparison uses a frozen set of records rather than adding an open-ended retrieval step to generation. That keeps evidence selection constant across formats. Citation-style output can still contain unsupported or contradicted statements. Assess each resulting claim against its cited records and measure whether the explanation omits essential facts. [Rashkin et al., 2023](https://aclanthology.org/2023.cl-4.2/) · [Min et al., 2023](https://aclanthology.org/2023.emnlp-main.741/) · [Niu et al., 2024](https://aclanthology.org/2024.acl-long.585/)
+
+## Proposed evidence and output format
+
+**Evidence supplied to both formats.** Record the release and analysis revision, group identifier, event chronology and timezone, graph direction, and the codebook version where applicable. Give each item a stable identifier referencing a named output or source. Quantitative items include the measure, unit, denominator, comparison, uncertainty or coverage, and provenance. Where a claim involves text, retain the language, whose contribution it is, parent or quote context, and whether it is representative or illustrative. If data are missing, mark the missing item explicitly. Use approved aggregates and permitted excerpts, with identifying records retained in protected storage. Put any source excerpt in a field for quoted evidence. Its contents are research data.
+
+**Reader-facing explanation.** Use a heading for the group and two short sections covering identification and observed behavior. Add a short characterization section when there is linguistic evidence. Include a limitation adjacent to the claim it qualifies. Give each factual sentence or clause a nearby evidence identifier. For a later machine-checkable version, use one record per checkable assertion with fields for claim text, evidence IDs and whether the assertion is an observation, a measured comparison or a statement about missing evidence. Render that record set as prose or a table. Record what cannot be assessed from the evidence. Results and examples stay within the scope of the supplied group and time window.
+
+**Safeguards for interpretation.** If numeric or directional records conflict, surface the conflict and defer the affected conclusion. Use only prepared arithmetic results or explicit calculations that can be checked from supplied values. Keep any claim about accuracy separate from claims about who shared or rejected an allegation. An explicit absence in the records means the question cannot be answered from those records. It gives no evidence of an absence in the population. When the graph method was compared under a perturbation, report the measured change and avoid attributing behavior to individual intent.
+
+## Worked example with a fictional group
+
+All counts and wording below are invented to illustrate the format. They are independent of the actual ITED-Br analysis.
+
+| ID | Evidence available to both formats |
+| --- | --- |
+| **E1** | Directed Louvain placed 40 accounts in a group during 10–16 October 2022 in the observed repost graph, with arcs from sharing account to original author. In five prespecified reruns on the discovery data with different random seeds, 33 of the 40 appeared in the aligned group at least four times. |
+| **E2** | During 17–23 October, 29 of the assigned accounts made 120 observed reposts. For 72, the referenced author was in the same group. For 28, the author was assigned elsewhere. For 20, the target could not be assigned. The corresponding fraction within the group is 72 of 100 resolved events. |
+| **E3** | The directed reference model for those 100 resolved events preserved reposts made and received per account. The expected within-group share was 48% under this reference. The observed excess among resolved events was 24 percentage points. If the 20 unresolved observed events were all external or all internal, the share across all 120 observed events would be 60.0% or 76.7%, respectively. The reference model was not recomputed for those endpoint scenarios. |
+| **E4** | A stratified sample of 24 distinct authored posts from the holdout yielded 20 codable posts. Six of those 20 were coded as substantive criticism of candidate A. Four lacked enough context. The count is descriptive and unweighted for this example. |
+| **E5** | Synthetic quote example with known parent. Added author text reads *“Discordo da proposta de A porque ela reduz o atendimento no bairro.”* The codebook classifies the authored text as opposition to A and substantive criticism. No factual verdict on the service claim, population-level stance estimate, or exposure measurement is available. |
+
+### Possible explanation in Brazilian Portuguese
+
+> Na janela de descoberta, o método Louvain dirigido agrupou 40 contas com base em quem republicou posts de quais autores. Em cinco novas execuções com sementes diferentes, 33 dessas contas reapareceram no grupo correspondente em pelo menos quatro delas. (E1)
+>
+> Entre 17 e 23 de outubro, em 72 das 100 republicações cujo autor original tinha grupo atribuído, esse autor pertencia ao mesmo grupo da conta que republicou. Isso representa 24 pontos percentuais acima dos 48% esperados pelo modelo de referência para essas interações. Outras 20 republicações ficaram sem grupo do autor original atribuído. Considerando os extremos possíveis para essas 20, a proporção interna entre as 120 republicações observadas varia de 60,0% a 76,7%. O modelo de referência foi calculado apenas para as republicações com grupo do autor original atribuído. (E2, E3)
+>
+> Das 20 publicações autorais que puderam ser codificadas na amostra de 24, seis continham críticas substantivas a A. Um exemplo é a crítica ao possível efeito da proposta sobre o atendimento no bairro. O exemplo ilustra a crítica. A afirmação sobre o atendimento ficou sem verificação. (E4, E5)
+
+### Structured comparison using the same evidence
+
+| Campo | Resumo em português | Evidência |
+| --- | --- | --- |
+| Formação | Louvain dirigido, 10–16 de outubro. Aresta da conta que republicou para o autor. Grupo com 40 contas. Em pelo menos quatro de cinco novas execuções com sementes diferentes, 33 contas reapareceram no grupo correspondente. | E1 |
+| Republicações | 17–23 de outubro. 120 observadas, com 72 internas, 28 externas e 20 sem destino atribuído. Entre as 100 resolvidas, 72% internas. | E2 |
+| Referência e cobertura | 48% esperadas pelo modelo para as interações resolvidas. Diferença de 24 pontos percentuais nesse conjunto. Com os 20 destinos pendentes, os extremos para a proporção observada total são 60,0% e 76,7%. A referência foi calculada para os destinos identificados. | E3 |
+| Discurso autoral | Seis críticas substantivas a A em 20 posts codificáveis de 24 amostrados. Exemplo sobre atendimento no bairro. A afirmação sobre o atendimento ficou sem verificação. | E4, E5 |
+
+A rubric check on this example should accept the 24-point difference with its resolved-only qualifier. It should flag an assertion that 72% of all 120 reposts were internal, a claim that the result survived the missing-endpoint sensitivity analysis of the reference model, or an attribution of the service claim to the quoted speaker. The end-to-end comparison would score both formats against the same requirements.
+
+## Evaluation rubric for a later pilot
+
+Use atomic claims as the scoring unit. A causal verb, who said something, a denominator and a time qualifier can change whether a claim is supported. Label each distinct claim as **supported**, **partially supported**, **contradicted**, or **unverifiable from the supplied evidence**. Fully supported means the evidence entails the complete assertion including its relevant scope. A missing qualifier that changes the meaning cannot receive full credit. Check that claims about observed events retain their scope when the explanation draws a group-level conclusion. [Gao et al., 2023](https://aclanthology.org/2023.emnlp-main.398/) · [Min et al., 2023](https://aclanthology.org/2023.emnlp-main.741/) · [Rashkin et al., 2023](https://aclanthology.org/2023.cl-4.2/)
+
+| Dimension | How to score it |
+| --- | --- |
+| **Grounding and critical errors** | Report fully supported claims divided by all distinct checkable claims. Count unsupported and contradicted claims separately. Flag errors that reverse a conclusion, switch speaker or group, change a denominator materially, or assign a false verdict, intent or exposure without evidence. |
+| **Attribution** | Report the share of checkable claims whose cited records exist and jointly support them. Also count irrelevant claim–record links as a share of all links, so a long list of identifiers does not earn extra credit. |
+| **Coverage and uncertainty** | Define required observations and qualifications per group before generation. Score the proportion present and correct. Include a required absence statement where evidence is genuinely missing. High precision in a short explanation cannot compensate for systematically missing coverage or conclusions. |
+| **Portuguese and election context** | Score 0 for a meaning-changing error in speaker, negation, irony, target or relevant local term, 1 for material ambiguity or phrasing needing correction, and 2 for clear Brazilian Portuguese consistent with the context. Use cases with replies, quoted claims and omitted parents. Brazilian Portuguese evaluation is needed even when a model performed well on a different Portuguese task. |
+| **Reader usefulness** | Ask the same short questions for each output. Identify the observed denominator, distinguish discovery from validation, locate evidence for one statement, or name one warranted limit. Measure answer accuracy and time, and collect a clarity preference as a secondary result. |
+
+### Comparison design
+
+- Prepare a small, varied set of frozen cases. Include a stable, a borderline or low-coverage, and a mixed-evidence case. Include graph-only cases, cases with approved Portuguese excerpts, a conflict between structural and linguistic evidence, and examples where a missing source or parent should force a limit statement. Define required facts and severe errors before seeing any outputs. Hold cases out from prompt and template development.
+- Use identical inputs, required topics and comparable reading time for the table and prose. Fix the model and prompt version for a first comparison. Run repeated generations if outputs vary under the chosen settings. Randomize display order and conceal method labels where feasible. Record any recognizability of the formats. Compare paired results by case and report the effect of missing evidence, so easy examples do not mask failures on difficult cases.
+- Use automated checks first for schema, evidence identifiers, duplicate claims and exact numeric relations, such as event counts, date windows and percentage-point differences. Use independent reviewers for semantic attribution, irony or Portuguese political context when it is needed for credible validation. A judge model may help triage cases and requires calibration against reviewed examples before controlling conclusions. Position and verbosity can influence judge-model preferences. [Zheng et al., 2023](https://proceedings.neurips.cc/paper_files/paper/2023/file/91f18a1287b398d378ef22505bf41832-Paper-Datasets_and_Benchmarks.pdf)
+- Keep the structured summary as the reference output. Advance LLM prose if it yields a practical improvement in comprehension or time while meeting predeclared grounding, coverage and context requirements. A serious error type should trigger inspection of the affected cases and correction before advisor use. Record exceptions and use the table for cases where text cannot be grounded.
+
+## Handoff to Step 7
+
+The next step is to specify which political science judgments require independent review and how reviewers will record disagreements. The rubric supplies the claim-level and reader-level tasks for the comparison. The worked example illustrates format and arithmetic, with actual usefulness, error rates and reviewer agreement left for the pilot. [M1 roadmap](m1-research-directions.md)

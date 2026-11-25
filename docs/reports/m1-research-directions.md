@@ -57,6 +57,8 @@ Review ways to explain why a group was identified and what characterizes it usin
 
 **Deliverable.** A candidate explanation format and evaluation rubric, illustrated with a hypothetical group. State what evidence an explanation would need for each type of claim.
 
+**Result.** The [LLM explanation design](m1-llm-group-explanations.md) defines which claims a group description can make, a claim-level evidence format, and a comparison against a fixed summary using the same data. The worked example and rubric cover grounding, missing evidence, Brazilian Portuguese context and reader usefulness. The [Q4 evidence notes](m1-q4-evidence.md) record the research and search process.
+
 ## Step 7 — Design validation with political science experts
 
 Draft a small review for a later milestone. Identify which claims would require independent judgment from the research group’s political scientists and what automated checks could establish beforehand. Define what they would see and judge, including whether selected groups meet the proposed echo-chamber criteria, whether the taxonomy captures meaningful distinctions, and whether explanations are accurate and informative. Include clear cases and near misses. Propose independent judgments before discussion, criteria for interpreting disagreement, and a practical estimate of reviewer effort. Where feasible, hide which method produced an output until after the initial assessment.

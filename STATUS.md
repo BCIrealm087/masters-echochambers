@@ -4,7 +4,7 @@ Last updated 2026-11-24.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M1 · Research directions and literature review | [Step 6 — Assess LLM-assisted explanations of groups](docs/reports/m1-research-directions.md#step-6--assess-llm-assisted-explanations-of-groups) | Ready to begin. Step 5 is complete. |
+| M1 · Research directions and literature review | [Step 7 — Design validation with political science experts](docs/reports/m1-research-directions.md#step-7--design-validation-with-political-science-experts) | Ready to begin. Step 6 is complete. |
 
 ## M1 · Research directions and literature review
 
@@ -38,3 +38,4 @@ Last updated 2026-11-24.
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 3. Published the [echo-chamber detection and circulation review](docs/reports/m1-echo-chamber-detection.md) with a held-out validation design, missing-data checks, and a [search and evidence log](docs/reports/m1-q1-evidence.md). |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 4. Published the [graph and label propagation comparison](docs/reports/m1-graph-methods.md) and [Q2 evidence notes](docs/reports/m1-q2-evidence.md), including matched configurations, seed-selection checks and measures of coverage, performance and cost. |
 | 2026-11-24 | M1 · Research directions and literature review | Completed Step 5. Published the [draft political-language taxonomy](docs/reports/m1-political-language-taxonomy.md) with Portuguese coding examples, verification rules and a group-comparison plan, alongside the [Q3 search and evidence notes](docs/reports/m1-q3-evidence.md). |
+| 2026-11-24 | M1 · Research directions and literature review | Completed Step 6. Published the [LLM explanation format and evaluation rubric](docs/reports/m1-llm-group-explanations.md) with a fictional Portuguese example, a matched structured baseline and the [Q4 evidence notes](docs/reports/m1-q4-evidence.md). |
