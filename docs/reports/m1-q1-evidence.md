@@ -59,3 +59,15 @@ The analytical design also draws on three methodological references. The papers 
 
 - Degree-constrained graph models depend on the chosen graph representation and whether the graph allows parallel events or self-links. The ITED-Br comparison should preserve event-level activity before any simple-graph sensitivity check. [Fosdick et al.](https://doi.org/10.1137/16M1087175) · [Hobson et al.](https://doi.org/10.1111/brv.12775)
 - Repeated partitions can quantify co-assignment. A dense consensus matrix can grow much larger than a sparse graph, so a pilot can start with aligned group membership across repeated runs. [Lancichinetti and Fortunato](https://doi.org/10.1038/srep00336)
+
+## Reflexive report 3 evidence addendum
+
+The supplied review *Measuring Information Circulation Across Political Communities in Brazil’s 2022 Election* extends Q1 from internal author flow to item selection and audience overlap. These references trace the review's main methodological choices. The earlier search record above retains its original scope. The [advisor report](reflexive-report-3.md) gives the resulting protocol and data requirements.
+
+| Evidence and setting | Use and transfer limit |
+| --- | --- |
+| [ITED-Br collection paper](https://doi.org/10.1371/journal.pone.0316626) and [Brazilian 2022 repost networks](https://doi.org/10.1088/2632-072X/acf6a4) | Query changes and election peaks motivate date and context checks. Concentrated amplification and a media-oriented group in a separate election sample motivate viral-source exclusions and open group labels. Neither study establishes target-match rates in our slice. |
+| [Entropy-based detection of Twitter echo chambers](https://pmc.ncbi.nlm.nih.gov/articles/PMC11086943/) and [validated audience overlap in Italian political elections](https://doi.org/10.1057/s41599-019-0300-3) | Test co-sharing against activity and source popularity. Compare audience-defined producer clusters to independently fitted social groups. The Italian partitions supply a method precedent only. |
+| [Bipartite stochastic block models](https://doi.org/10.1103/PhysRevE.90.012805) and [mixing patterns](https://doi.org/10.1103/PhysRevE.67.026126) | Model the account and item sides directly where projection obscures viral-item effects. A mixing matrix retains group-specific asymmetry hidden by one assortativity coefficient. |
+| [Network roles](https://pmc.ncbi.nlm.nih.gov/articles/PMC2175124/) and [multislice community structure](https://pubmed.ncbi.nlm.nih.gov/20466926/) | Participation across groups motivates separate incoming and outgoing role profiles. Multislice models can explore membership changes after the frozen-group test. Role or partition changes do not establish exposure paths or changes of belief. |
+| [Political discourse on social media](https://doi.org/10.1145/3178876.3186139) and [structural virality](https://doi.org/10.1287/mnsc.2015.2158) | Distinguish sharing from potential consumption and from observed transmission. Connecting every sharer to the original author mechanically produces a star, leaving the actual cascade shape unknown. |

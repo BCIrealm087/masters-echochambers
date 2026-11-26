@@ -1,0 +1,61 @@
+# Do repost communities amplify their own authors and circulate distinct material?
+
+**Incremental reflexive review · Report 3 · 2026-11-25**
+
+Two groups may each repost their own authors unusually often yet share many of the same original posts. Conversely, two groups may amplify the same authors but choose different posts by them. The thesis should measure both **who amplifies whom** and **which originals circulate across groups**. Keep the held-out account test as the first pilot and make account-by-original-post analysis the first structural extension. This choice makes a narrow source repertoire, a shared viral story and broad internal amplification distinguishable outcomes.
+
+This design unit draws on the original research question and the supplied 16-page Deep Research report *Measuring Information Circulation Across Political Communities in Brazil’s 2022 Election*. Pages 1–7 define the observables, pages 7–11 compare methods and threats, and pages 11–15 rank experiments and state their limits. The [Q1 evidence addendum](m1-q1-evidence.md#reflexive-report-3-evidence-addendum) records selected sources and their use. All proposed ITED-Br measures below await a run on the documented slice.
+
+## 1. Which repost events can enter each analysis?
+
+Use one typed repost action per action ID. Keep the sharer, referenced original post ID, joined original author where available, action-date evidence, and every collection-context membership. Resolve conflicts explicitly. A source lookup can include older originals without adding discovery or evaluation actions. Verify that partition dates support assignment to the São Paulo calendar. Report candidate rows, unique typed actions, missing references, conflicting or unresolved authors, out-of-window targets and accounts outside the frozen partition. Break coverage down by interval, day and query, and examine concentration of missing joins by sharer, referenced post and, where known, source age, popularity and sharer group. An external source class systematically missing from the lookup could inflate measured internal sharing even with a high overall join rate. [Feasibility audit](m1-ited-br-feasibility.md)
+
+| Known for a typed action | Eligible use |
+| --- | --- |
+| Assigned sharer and referenced post ID | Include the item in that group's post repertoire even if its author cannot be joined. Report coverage of both fields. |
+| Assigned sharer and assigned original author | Estimate internal or external author flow on resolved assignments. |
+| Assigned sharer, unknown target assignment | Keep an unknown origin in the descriptive table and include the action in the missing-endpoint bounds. Distinguish a missing author from a known author outside the partition. |
+| Sharer outside the discovery partition | Count separately in coverage and the descriptive matrix. Leave group-specific rates for assigned sharers. |
+
+Deduplicate before pooling and retain all memberships for query-stratified checks. The archive reflects candidate and event queries. A query label cannot supply a political stance. Even a complete join would describe only the collected actions.
+
+## 2. Does internal amplification persist on unseen actions?
+
+Use 16–18 October 2022 for discovery and 19–21 October for evaluation, conditional on action-date verification. On the resolved training graph, a directed edge goes from sharer to original author and its weight counts actions. Freeze directed Louvain and directed Infomap partitions fitted to the same count graph. Retain the existing unique-pair Louvain sensitivity, report stability across seeds and day omissions, and document aligned groups, splits, merges and unassigned accounts. Infomap models random-walk flow on this graph. Its fitted flow has no observed transmission path attached to it. [Graph comparison](m1-graph-methods.md#account-communities)
+
+For each assigned sharing group, count held-out events by original-author group. Display **rows as original-author groups and columns as sharing groups**, with unknowns on each axis. Keep raw totals visible. For the resolved comparison, normalize within each sharing group over assigned authors. Randomize events while preserving counts made and received and, where feasible, day and disjoint query strata. Compare observed and expected shares for the same eligible events and report their difference in percentage points, the simulated range and sample sizes. Diagonal excess measures internal amplification. An off-diagonal excess identifies a particular external group whose originals received unusually frequent amplification from those sharers. A global assortativity statistic can conceal such asymmetry.
+
+For a known sharing group let I, E and U count internally assigned, externally assigned and unknown target assignments. Show the resolved share I/(I+E) and the observed-event bounds I/(I+E+U) to (I+U)/(I+E+U). Mark empty denominators undefined. The bounds concern recorded events only. A null fitted to resolved events has a different denominator from these bounds. Refit on matched events in each lookup sensitivity. The 70% join screen and the 100-event, 20-sharer, five-percentage-point and central 95% reference criteria are provisional resource and reporting decisions. Freeze them before examining group outcomes. [Pilot decision criteria](m1-advisor-synthesis.md#decision-criteria)
+
+## 3. Is the result broad or driven by a few viral sources?
+
+| Unit | Question and measure |
+| --- | --- |
+| Repost action | How much observed amplification went to each origin? Count every deduplicated event. |
+| Distinct sharer–author pair | How much depends on repeated sharing between the same accounts? Count each pair once within the stated interval. |
+| Sharer | How widespread was the behavior? Report participant counts and average individual internal shares with equal weight for each eligible sharer. |
+| Distinct original post | How broad was the repertoire? Count each referenced post once per sharing group and report shared originals across groups. |
+| Original author | How concentrated was sourcing? Report distinct authors, top-source shares, HHI (sum of squared shares) and the effective number of sources (exponential of Shannon entropy). |
+
+Rank original posts and authors separately by received reposts. Repeat the main comparison after excluding the top one, top five and top 1% in each ranking separately. Specify the ranking population, ties and rounding before evaluation. Recalculate eligible counts and the null on each reduced sample. Report pooled and comparable query strata, and account- or day-level sensitivity. If the excess vanishes after one original is removed, the evidence supports concentrated amplification around that item. A claim of widespread internal selection would require support across items and sharers.
+
+## 4. Do the groups draw on separate information sources?
+
+Build a bipartite graph with accounts on one side and original post IDs on the other. One binary edge records that an account reposted that original during the interval. For each pair of frozen account groups report distinct repertoire sizes, overlap counts and Jaccard overlap. Compare observed overlap with a bipartite randomization preserving each account's number of distinct originals and each original's number of distinct sharers. This gives a popular post shared across many groups an appropriate reference. The post ID identifies the same item even when its text is unavailable. Statements about shared topics or viewpoints require content evidence.
+
+Once author joins permit, cluster original authors by overlap in their reposting audiences without using the social group labels. Use a statistically validated overlap projection or fit a bipartite stochastic block model directly. Assess stability or held-out source-sharing performance before comparing source clusters with the account partition. Tabulate where each group's amplification goes across source clusters. Compare normalized post and author repertoires separately, for example with Jensen–Shannon divergence. Distinctly fitted structures can still share the same underlying actions, so agreement alone cannot validate an ideological interpretation.
+
+Several outcomes would change the thesis account. Strong internal author flow alongside ordinary post overlap supports social concentration with shared material. Divergent post repertoires drawn from similar authors support item-level selection. A producer cluster amplified across social boundaries could motivate a media interpretation once independently characterized. Allow multiple, mixed and shared-source groups in the Brazilian setting.
+
+## 5. Which extensions have the evidence they require?
+
+| Priority after the coverage and held-out tests | Design and limits |
+| --- | --- |
+| Source repertoires | Run viral-source sensitivity and the post-level bipartite comparison first. Add audience-defined author clusters when author coverage supports them. |
+| Temporal persistence and election events | With reliable dates, freeze a partition before the event, then compare excess internal and cross-group sharing, concentration and post overlap with matched days and placebo dates. Prefer the 30 October runoff for the first event study. The 4 October Bolsonaro-query change complicates the first-round comparison. For the 16 October debate, train before the debate. The six-day pilot uses the debate in discovery. Event-associated changes in this sample do not establish causation. |
+| Producer, sharer and bridge roles | Compare originals authored, distinct originals shared, reposts made and received, concentration of audiences and participation across groups. Measure incoming and outgoing participation separately. A widely shared producer and an account reposting many groups occupy different roles. Test role stability across windows and weightings. A bridge documents cross-group action. Evidence of exposure mediation or coordination would require additional observations. |
+| Political alignment | Compare frozen structural groups with independent candidate-relative stance labels, reporting coverage, group-by-stance distributions and adjusted mutual information or conditional entropy. Cross-tabulate crossings of social and stance boundaries. Recover the historical labels or use an independently annotated benchmark. Graph edges and collection queries cannot provide an independent reference. [Report 2](reflexive-report-2.md) |
+| Interaction layers and domains | On comparable accounts and dates, measure separate repost, quote and reply matrices only where action type and direct targets are reliable. Frequent replies can coexist with internal reposting, and interpretation of criticism requires speaker context. With verified URLs, normalize domains, audit classifications and unresolved links, and compare domain repertoires. Source variety alone gives no measure of viewpoint variety. |
+| Diffusion | Repost references identify the original item. They leave the intervening path unknown. Cascade depth and structural virality require evidence about transmission parents. A future reconstruction would need assumptions and uncertainty estimates. Any spreading simulation represents a specified counterfactual process. |
+
+**Decision for the thesis.** First establish whether the sampled actions support a reproducible held-out flow estimate. If query coverage, missing endpoints or a dominant source changes the interpretation, report the narrower or inconclusive result. Keep source repertoire as a separate structural question and preserve valid post-ID analyses when author coverage is inadequate and sharer groups can be assigned independently of the missing joins under study. A political echo-chamber interpretation requires stable groups, robust held-out selective sharing and independent political or content evidence. Feed exposure, endorsement, persuasion, trust and belief change each require further evidence. The immediate empirical dependency is the [typed-event and join audit](m1-advisor-synthesis.md#proposed-first-pilot).
