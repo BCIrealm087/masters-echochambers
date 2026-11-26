@@ -71,3 +71,14 @@ The supplied review *Measuring Information Circulation Across Political Communit
 | [Bipartite stochastic block models](https://doi.org/10.1103/PhysRevE.90.012805) and [mixing patterns](https://doi.org/10.1103/PhysRevE.67.026126) | Model the account and item sides directly where projection obscures viral-item effects. A mixing matrix retains group-specific asymmetry hidden by one assortativity coefficient. |
 | [Network roles](https://pmc.ncbi.nlm.nih.gov/articles/PMC2175124/) and [multislice community structure](https://pubmed.ncbi.nlm.nih.gov/20466926/) | Participation across groups motivates separate incoming and outgoing role profiles. Multislice models can explore membership changes after the frozen-group test. Role or partition changes do not establish exposure paths or changes of belief. |
 | [Political discourse on social media](https://doi.org/10.1145/3178876.3186139) and [structural virality](https://doi.org/10.1287/mnsc.2015.2158) | Distinguish sharing from potential consumption and from observed transmission. Connecting every sharer to the original author mechanically produces a star, leaving the actual cascade shape unknown. |
+
+## Reflexive report 5 evidence addendum
+
+The [statistical review](reflexive-report-5.md) combines the supplied conversation and Deep Research report. Their proposed thresholds, simulation budgets and validation outcomes have different standing from results reported in the source literature. This addendum uses named works and stable identifiers because several PDF endnotes resolve to unrelated papers (for example, its entry 30 for temporal reference models).
+
+| Source | Use in Q1 |
+| --- | --- |
+| [Iasulaitis et al., The Interfaces Twitter Elections Dataset](https://doi.org/10.1371/journal.pone.0316626) | Candidate searches excluded retweets, October collection included later retrieval of reposts and the post-debate peak falls in discovery. Check provenance and event timing on the actual slice. |
+| [Fosdick et al., Configuring Random Graph Models with Fixed Degree Sequences](https://doi.org/10.1137/16M1087175) · [Gauvin et al., Randomized Reference Models for Temporal Networks](https://doi.org/10.1137/19M1242252) | Define feasible assignments and which temporal features the reference preserves. Verify the sampler against tractable cases. |
+| [Butts, A Relational Event Framework for Social Action](https://doi.org/10.1111/j.1467-9531.2008.00203.x) | Motivate history-dependent prediction as a separate test of the information in frozen membership. |
+| [Phipson and Smyth, Permutation P-values Should Never Be Zero](https://doi.org/10.2202/1544-6115.1585) · [Holm, A Simple Sequentially Rejective Multiple Test Procedure](https://www.jstor.org/stable/4615733) | Correct finite random draws and control familywise error across the prespecified group comparisons. Neither correction evaluates power or endpoint bias. |
