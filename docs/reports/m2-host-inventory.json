@@ -1,0 +1,909 @@
+{
+  "coverage": {
+    "query_bolsonaro/2022_10_16": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 0,
+      "rows": 302757,
+      "timestamp agrees with ID at UTC second": 302754,
+      "timestamp parsed": 302757,
+      "timestamp with explicit offset": 0,
+      "type quoted": 33850,
+      "type quoted, replied_to": 3025,
+      "type replied_to": 195674,
+      "type tweeted": 70208,
+      "usable post ID": 302757,
+      "usable row author": 302757
+    },
+    "query_bolsonaro/2022_10_17": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 426458,
+      "rows": 505559,
+      "timestamp agrees with ID at UTC second": 505555,
+      "timestamp parsed": 505559,
+      "timestamp with explicit offset": 0,
+      "type quoted": 42664,
+      "type quoted, replied_to": 5542,
+      "type replied_to": 281342,
+      "type tweeted": 176011,
+      "usable post ID": 505559,
+      "usable row author": 505559
+    },
+    "query_bolsonaro/2022_10_18": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 584651,
+      "rows": 588870,
+      "timestamp agrees with ID at UTC second": 588862,
+      "timestamp parsed": 588870,
+      "timestamp with explicit offset": 0,
+      "type quoted": 47024,
+      "type quoted, replied_to": 3175,
+      "type replied_to": 323246,
+      "type tweeted": 215425,
+      "usable post ID": 588870,
+      "usable row author": 588870
+    },
+    "query_bolsonaro/2022_10_19": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 337140,
+      "rows": 339941,
+      "timestamp agrees with ID at UTC second": 339936,
+      "timestamp parsed": 339941,
+      "timestamp with explicit offset": 0,
+      "type quoted": 32027,
+      "type quoted, replied_to": 2932,
+      "type replied_to": 214821,
+      "type tweeted": 90161,
+      "usable post ID": 339941,
+      "usable row author": 339941
+    },
+    "query_bolsonaro/2022_10_20": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 345867,
+      "rows": 347924,
+      "timestamp agrees with ID at UTC second": 347922,
+      "timestamp parsed": 347924,
+      "timestamp with explicit offset": 0,
+      "type quoted": 33467,
+      "type quoted, replied_to": 3425,
+      "type replied_to": 226219,
+      "type tweeted": 84813,
+      "usable post ID": 347924,
+      "usable row author": 347924
+    },
+    "query_bolsonaro/2022_10_21": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 418839,
+      "rows": 420832,
+      "timestamp agrees with ID at UTC second": 420829,
+      "timestamp parsed": 420832,
+      "timestamp with explicit offset": 0,
+      "type quoted": 45191,
+      "type quoted, replied_to": 3834,
+      "type replied_to": 265495,
+      "type tweeted": 106312,
+      "usable post ID": 420832,
+      "usable row author": 420832
+    },
+    "query_lula/2022_10_16": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 0,
+      "rows": 227391,
+      "timestamp agrees with ID at UTC second": 227390,
+      "timestamp parsed": 227391,
+      "timestamp with explicit offset": 0,
+      "type quoted": 21812,
+      "type quoted, replied_to": 2529,
+      "type replied_to": 150917,
+      "type tweeted": 52133,
+      "usable post ID": 227391,
+      "usable row author": 227391
+    },
+    "query_lula/2022_10_17": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 317759,
+      "rows": 364791,
+      "timestamp agrees with ID at UTC second": 364789,
+      "timestamp parsed": 364791,
+      "timestamp with explicit offset": 0,
+      "type quoted": 25022,
+      "type quoted, replied_to": 3076,
+      "type replied_to": 185785,
+      "type tweeted": 150908,
+      "usable post ID": 364791,
+      "usable row author": 364791
+    },
+    "query_lula/2022_10_18": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 602224,
+      "rows": 606056,
+      "timestamp agrees with ID at UTC second": 606052,
+      "timestamp parsed": 606056,
+      "timestamp with explicit offset": 0,
+      "type quoted": 49347,
+      "type quoted, replied_to": 3593,
+      "type replied_to": 345262,
+      "type tweeted": 207854,
+      "usable post ID": 606056,
+      "usable row author": 606056
+    },
+    "query_lula/2022_10_19": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 334049,
+      "rows": 336487,
+      "timestamp agrees with ID at UTC second": 336486,
+      "timestamp parsed": 336487,
+      "timestamp with explicit offset": 0,
+      "type quoted": 29073,
+      "type quoted, replied_to": 2164,
+      "type replied_to": 193399,
+      "type tweeted": 111851,
+      "usable post ID": 336487,
+      "usable row author": 336487
+    },
+    "query_lula/2022_10_20": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 405212,
+      "rows": 407313,
+      "timestamp agrees with ID at UTC second": 407312,
+      "timestamp parsed": 407313,
+      "timestamp with explicit offset": 0,
+      "type quoted": 45394,
+      "type quoted, replied_to": 3239,
+      "type replied_to": 256559,
+      "type tweeted": 102121,
+      "usable post ID": 407313,
+      "usable row author": 407313
+    },
+    "query_lula/2022_10_21": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 361321,
+      "rows": 363007,
+      "timestamp agrees with ID at UTC second": 363004,
+      "timestamp parsed": 363007,
+      "timestamp with explicit offset": 0,
+      "type quoted": 36309,
+      "type quoted, replied_to": 2889,
+      "type replied_to": 234689,
+      "type tweeted": 89120,
+      "usable post ID": 363007,
+      "usable row author": 363007
+    },
+    "retweets_query_bolsonaro/2022_10_16": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 0,
+      "reposts with single numeric reference": 913538,
+      "rows": 913538,
+      "timestamp agrees with ID at UTC second": 913538,
+      "timestamp parsed": 913538,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 913538,
+      "usable post ID": 913538,
+      "usable row author": 913538
+    },
+    "retweets_query_bolsonaro/2022_10_17": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 1333074,
+      "reposts with single numeric reference": 1518308,
+      "rows": 1518308,
+      "timestamp agrees with ID at UTC second": 1518308,
+      "timestamp parsed": 1518308,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 1518308,
+      "usable post ID": 1518308,
+      "usable row author": 1518308
+    },
+    "retweets_query_bolsonaro/2022_10_18": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 2167387,
+      "reposts with single numeric reference": 2167387,
+      "rows": 2167387,
+      "timestamp agrees with ID at UTC second": 2167387,
+      "timestamp parsed": 2167387,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 2167387,
+      "usable post ID": 2167387,
+      "usable row author": 2167387
+    },
+    "retweets_query_bolsonaro/2022_10_19": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 990474,
+      "reposts with single numeric reference": 990474,
+      "rows": 990474,
+      "timestamp agrees with ID at UTC second": 990474,
+      "timestamp parsed": 990474,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 990474,
+      "usable post ID": 990474,
+      "usable row author": 990474
+    },
+    "retweets_query_bolsonaro/2022_10_20": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 962873,
+      "reposts with single numeric reference": 962873,
+      "rows": 962873,
+      "timestamp agrees with ID at UTC second": 962873,
+      "timestamp parsed": 962873,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 962873,
+      "usable post ID": 962873,
+      "usable row author": 962873
+    },
+    "retweets_query_bolsonaro/2022_10_21": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 1095922,
+      "reposts with single numeric reference": 1095922,
+      "rows": 1095922,
+      "timestamp agrees with ID at UTC second": 1095922,
+      "timestamp parsed": 1095922,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 1095922,
+      "usable post ID": 1095922,
+      "usable row author": 1095922
+    },
+    "retweets_query_lula/2022_10_16": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 0,
+      "reposts with single numeric reference": 452324,
+      "rows": 452324,
+      "timestamp agrees with ID at UTC second": 452324,
+      "timestamp parsed": 452324,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 452324,
+      "usable post ID": 452324,
+      "usable row author": 452324
+    },
+    "retweets_query_lula/2022_10_17": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 682590,
+      "reposts with single numeric reference": 752412,
+      "rows": 752412,
+      "timestamp agrees with ID at UTC second": 752412,
+      "timestamp parsed": 752412,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 752412,
+      "usable post ID": 752412,
+      "usable row author": 752412
+    },
+    "retweets_query_lula/2022_10_18": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 1704137,
+      "reposts with single numeric reference": 1704137,
+      "rows": 1704137,
+      "timestamp agrees with ID at UTC second": 1704137,
+      "timestamp parsed": 1704137,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 1704137,
+      "usable post ID": 1704137,
+      "usable row author": 1704137
+    },
+    "retweets_query_lula/2022_10_19": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 703193,
+      "reposts with single numeric reference": 703193,
+      "rows": 703193,
+      "timestamp agrees with ID at UTC second": 703193,
+      "timestamp parsed": 703193,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 703193,
+      "usable post ID": 703193,
+      "usable row author": 703193
+    },
+    "retweets_query_lula/2022_10_20": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 1103159,
+      "reposts with single numeric reference": 1103159,
+      "rows": 1103159,
+      "timestamp agrees with ID at UTC second": 1103159,
+      "timestamp parsed": 1103159,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 1103159,
+      "usable post ID": 1103159,
+      "usable row author": 1103159
+    },
+    "retweets_query_lula/2022_10_21": {
+      "S\u00e3o Paulo day agrees with partition": 0,
+      "S\u00e3o Paulo day in audit window": 831792,
+      "reposts with single numeric reference": 831792,
+      "rows": 831792,
+      "timestamp agrees with ID at UTC second": 831792,
+      "timestamp parsed": 831792,
+      "timestamp with explicit offset": 0,
+      "type retweeted": 831792,
+      "usable post ID": 831792,
+      "usable row author": 831792
+    }
+  },
+  "footer_inventory_sha256": "b3a1f9cb48fcd5b590089da0a95897cf717367a4a935066494fcc3f287df745c",
+  "inventory": {
+    "media/atos_golpistas": {
+      "bytes": 25848734,
+      "empty_files": 0,
+      "files": 44,
+      "rows": 750861
+    },
+    "media/numero_bolsonaro": {
+      "bytes": 21125312,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 617409
+    },
+    "media/numero_lula": {
+      "bytes": 17893706,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 516530
+    },
+    "media/perfil_bolsonaro": {
+      "bytes": 11022958,
+      "empty_files": 187,
+      "files": 585,
+      "rows": 259253
+    },
+    "media/perfil_ciro": {
+      "bytes": 4161129,
+      "empty_files": 294,
+      "files": 585,
+      "rows": 58950
+    },
+    "media/perfil_lula": {
+      "bytes": 27504487,
+      "empty_files": 26,
+      "files": 585,
+      "rows": 750392
+    },
+    "media/perfil_simone": {
+      "bytes": 4423797,
+      "empty_files": 308,
+      "files": 585,
+      "rows": 68614
+    },
+    "media/pos_eleicao": {
+      "bytes": 35574062,
+      "empty_files": 0,
+      "files": 117,
+      "rows": 1031841
+    },
+    "media/query_bolsonaro": {
+      "bytes": 198667612,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 6887414
+    },
+    "media/query_ciro": {
+      "bytes": 24724617,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 812307
+    },
+    "media/query_lula": {
+      "bytes": 187835483,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 6207976
+    },
+    "media/query_simone": {
+      "bytes": 5933629,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 167048
+    },
+    "media/retweets_numero_bolsonaro": {
+      "bytes": 3079015,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 249344
+    },
+    "media/retweets_numero_lula": {
+      "bytes": 2303747,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 168687
+    },
+    "media/retweets_pos_eleicao": {
+      "bytes": 4806682,
+      "empty_files": 0,
+      "files": 78,
+      "rows": 413128
+    },
+    "media/retweets_query_bolsonaro": {
+      "bytes": 63100386,
+      "empty_files": 0,
+      "files": 182,
+      "rows": 6030490
+    },
+    "media/retweets_query_ciro": {
+      "bytes": 3709558,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 265864
+    },
+    "media/retweets_query_lula": {
+      "bytes": 57085438,
+      "empty_files": 0,
+      "files": 181,
+      "rows": 5374440
+    },
+    "media/retweets_query_simone": {
+      "bytes": 939849,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 43348
+    },
+    "quotes/perfil_bolsonaro": {
+      "bytes": 12753453,
+      "empty_files": 53,
+      "files": 195,
+      "rows": 982
+    },
+    "quotes/perfil_ciro": {
+      "bytes": 5983816,
+      "empty_files": 89,
+      "files": 195,
+      "rows": 1528
+    },
+    "quotes/perfil_lula": {
+      "bytes": 26739595,
+      "empty_files": 3,
+      "files": 195,
+      "rows": 3210
+    },
+    "quotes/perfil_simone": {
+      "bytes": 3174683,
+      "empty_files": 63,
+      "files": 195,
+      "rows": 736
+    },
+    "replies/perfil_bolsonaro": {
+      "bytes": 48328630,
+      "empty_files": 54,
+      "files": 195,
+      "rows": 445
+    },
+    "replies/perfil_ciro": {
+      "bytes": 16993849,
+      "empty_files": 89,
+      "files": 195,
+      "rows": 1160
+    },
+    "replies/perfil_lula": {
+      "bytes": 158512359,
+      "empty_files": 3,
+      "files": 195,
+      "rows": 2785
+    },
+    "replies/perfil_simone": {
+      "bytes": 21490922,
+      "empty_files": 61,
+      "files": 195,
+      "rows": 495
+    },
+    "tweets/atos_golpistas": {
+      "bytes": 773045775,
+      "empty_files": 0,
+      "files": 44,
+      "rows": 4466959
+    },
+    "tweets/numero_bolsonaro": {
+      "bytes": 406619534,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 2684908
+    },
+    "tweets/numero_lula": {
+      "bytes": 417002950,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 2823953
+    },
+    "tweets/perfil_bolsonaro": {
+      "bytes": 271604554,
+      "empty_files": 159,
+      "files": 585,
+      "rows": 2238217
+    },
+    "tweets/perfil_ciro": {
+      "bytes": 97454147,
+      "empty_files": 267,
+      "files": 585,
+      "rows": 737163
+    },
+    "tweets/perfil_lula": {
+      "bytes": 764561530,
+      "empty_files": 9,
+      "files": 585,
+      "rows": 6955987
+    },
+    "tweets/perfil_simone": {
+      "bytes": 103515730,
+      "empty_files": 183,
+      "files": 585,
+      "rows": 835412
+    },
+    "tweets/pos_eleicao": {
+      "bytes": 1081805024,
+      "empty_files": 0,
+      "files": 117,
+      "rows": 6277433
+    },
+    "tweets/query_bolsonaro": {
+      "bytes": 6084185592,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 37158316
+    },
+    "tweets/query_ciro": {
+      "bytes": 830221754,
+      "empty_files": 1,
+      "files": 195,
+      "rows": 5452873
+    },
+    "tweets/query_lula": {
+      "bytes": 5543020450,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 35179413
+    },
+    "tweets/query_simone": {
+      "bytes": 170722462,
+      "empty_files": 1,
+      "files": 195,
+      "rows": 1070541
+    },
+    "tweets/retweets_numero_bolsonaro": {
+      "bytes": 187059127,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 3178076
+    },
+    "tweets/retweets_numero_lula": {
+      "bytes": 160215796,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 2663657
+    },
+    "tweets/retweets_pos_eleicao": {
+      "bytes": 629065709,
+      "empty_files": 0,
+      "files": 78,
+      "rows": 10055682
+    },
+    "tweets/retweets_query_bolsonaro": {
+      "bytes": 7322760761,
+      "empty_files": 0,
+      "files": 182,
+      "rows": 84093716
+    },
+    "tweets/retweets_query_ciro": {
+      "bytes": 403235739,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 6405281
+    },
+    "tweets/retweets_query_lula": {
+      "bytes": 5609401342,
+      "empty_files": 0,
+      "files": 181,
+      "rows": 67665980
+    },
+    "tweets/retweets_query_simone": {
+      "bytes": 122454812,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 2192005
+    },
+    "users/atos_golpistas": {
+      "bytes": 184036018,
+      "empty_files": 0,
+      "files": 44,
+      "rows": 4110101
+    },
+    "users/numero_bolsonaro": {
+      "bytes": 104131715,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 2291835
+    },
+    "users/numero_lula": {
+      "bytes": 122063218,
+      "empty_files": 0,
+      "files": 38,
+      "rows": 2514580
+    },
+    "users/perfil_bolsonaro": {
+      "bytes": 104393768,
+      "empty_files": 158,
+      "files": 585,
+      "rows": 2035831
+    },
+    "users/perfil_ciro": {
+      "bytes": 36667521,
+      "empty_files": 267,
+      "files": 585,
+      "rows": 689786
+    },
+    "users/perfil_lula": {
+      "bytes": 287765744,
+      "empty_files": 8,
+      "files": 585,
+      "rows": 6274887
+    },
+    "users/perfil_simone": {
+      "bytes": 42679177,
+      "empty_files": 179,
+      "files": 585,
+      "rows": 763614
+    },
+    "users/pos_eleicao": {
+      "bytes": 247229351,
+      "empty_files": 0,
+      "files": 117,
+      "rows": 5615958
+    },
+    "users/query_bolsonaro": {
+      "bytes": 2063901119,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 48031372
+    },
+    "users/query_ciro": {
+      "bytes": 258868510,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 6438780
+    },
+    "users/query_lula": {
+      "bytes": 1799027410,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 41055006
+    },
+    "users/query_simone": {
+      "bytes": 83734326,
+      "empty_files": 0,
+      "files": 195,
+      "rows": 1773987
+    },
+    "users/retweets_numero_bolsonaro": {
+      "bytes": 115130840,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 2862756
+    },
+    "users/retweets_numero_lula": {
+      "bytes": 112402698,
+      "empty_files": 0,
+      "files": 26,
+      "rows": 2466757
+    },
+    "users/retweets_pos_eleicao": {
+      "bytes": 379472191,
+      "empty_files": 0,
+      "files": 78,
+      "rows": 9309653
+    },
+    "users/retweets_query_bolsonaro": {
+      "bytes": 3066624212,
+      "empty_files": 0,
+      "files": 182,
+      "rows": 76001038
+    },
+    "users/retweets_query_ciro": {
+      "bytes": 187491107,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 4823953
+    },
+    "users/retweets_query_lula": {
+      "bytes": 2526400856,
+      "empty_files": 0,
+      "files": 181,
+      "rows": 61343713
+    },
+    "users/retweets_query_simone": {
+      "bytes": 92419477,
+      "empty_files": 0,
+      "files": 100,
+      "rows": 2001374
+    }
+  },
+  "pyarrow": "25.0.1",
+  "sao_paulo_day_minus_partition_day": {
+    "query_bolsonaro/2022_10_16": {
+      "-1": 247439,
+      "-2": 50681,
+      "other": 4637
+    },
+    "query_bolsonaro/2022_10_17": {
+      "-1": 426458,
+      "-2": 73862,
+      "other": 5239
+    },
+    "query_bolsonaro/2022_10_18": {
+      "-1": 296580,
+      "-2": 288071,
+      "other": 4219
+    },
+    "query_bolsonaro/2022_10_19": {
+      "-1": 276518,
+      "-2": 57599,
+      "other": 5824
+    },
+    "query_bolsonaro/2022_10_20": {
+      "-1": 265525,
+      "-2": 77410,
+      "other": 4989
+    },
+    "query_bolsonaro/2022_10_21": {
+      "-1": 354712,
+      "-2": 60403,
+      "other": 5717
+    },
+    "query_bolsonaro/2022_10_22": {
+      "-1": 327567,
+      "-2": 102250,
+      "other": 5686
+    },
+    "query_lula/2022_10_16": {
+      "-1": 175883,
+      "-2": 47085,
+      "other": 4423
+    },
+    "query_lula/2022_10_17": {
+      "-1": 317759,
+      "-2": 42539,
+      "other": 4493
+    },
+    "query_lula/2022_10_18": {
+      "-1": 297150,
+      "-2": 305074,
+      "other": 3832
+    },
+    "query_lula/2022_10_19": {
+      "-1": 280477,
+      "-2": 50631,
+      "other": 5379
+    },
+    "query_lula/2022_10_20": {
+      "-1": 294012,
+      "-2": 108248,
+      "other": 5053
+    },
+    "query_lula/2022_10_21": {
+      "-1": 285396,
+      "-2": 72173,
+      "other": 5438
+    },
+    "query_lula/2022_10_22": {
+      "-1": 270201,
+      "-2": 71060,
+      "other": 5230
+    },
+    "retweets_query_bolsonaro/2022_10_16": {
+      "-1": 752823,
+      "-2": 160715
+    },
+    "retweets_query_bolsonaro/2022_10_17": {
+      "-1": 1333074,
+      "-2": 185234
+    },
+    "retweets_query_bolsonaro/2022_10_18": {
+      "-1": 1150752,
+      "-2": 1016635
+    },
+    "retweets_query_bolsonaro/2022_10_19": {
+      "-1": 825850,
+      "-2": 164624
+    },
+    "retweets_query_bolsonaro/2022_10_20": {
+      "-1": 766373,
+      "-2": 196500
+    },
+    "retweets_query_bolsonaro/2022_10_21": {
+      "-1": 934801,
+      "-2": 161121
+    },
+    "retweets_query_bolsonaro/2022_10_22": {
+      "-1": 998760,
+      "-2": 291206
+    },
+    "retweets_query_lula/2022_10_16": {
+      "-1": 375107,
+      "-2": 77217
+    },
+    "retweets_query_lula/2022_10_17": {
+      "-1": 682590,
+      "-2": 69822
+    },
+    "retweets_query_lula/2022_10_18": {
+      "-1": 896903,
+      "-2": 807234
+    },
+    "retweets_query_lula/2022_10_19": {
+      "-1": 581310,
+      "-2": 121883
+    },
+    "retweets_query_lula/2022_10_20": {
+      "-1": 813767,
+      "-2": 289392
+    },
+    "retweets_query_lula/2022_10_21": {
+      "-1": 653478,
+      "-2": 178314
+    },
+    "retweets_query_lula/2022_10_22": {
+      "-1": 588128,
+      "-2": 141905
+    }
+  },
+  "schemas": {
+    "media": {
+      "media_key:null, media_type:null, media_url:null, media_view_count:null": 815,
+      "media_key:string, media_type:string, media_url:null, media_view_count:string, __index_level_0__:int64": 91,
+      "media_key:string, media_type:string, media_url:string, media_view_count:null, __index_level_0__:int64": 201,
+      "media_key:string, media_type:string, media_url:string, media_view_count:string, __index_level_0__:int64": 2942,
+      "media_key:string, media_url:string, media_type:string, media_view_count:null, __index_level_0__:int64": 1
+    },
+    "quotes": {
+      "account_id:null, tweet_id:null, interaction_authors:null, interaction_ids:null": 208,
+      "account_id:string, tweet_id:string, interaction_authors:string, interaction_ids:string": 563,
+      "account_id:string, tweet_id:string, interaction_authors:string, interaction_ids:string, __index_level_0__:int64": 9
+    },
+    "replies": {
+      "account_id:null, tweet_id:null, interaction_authors:null, interaction_ids:null": 207,
+      "account_id:string, tweet_id:string, interaction_authors:string, interaction_ids:string": 566,
+      "account_id:string, tweet_id:string, interaction_authors:string, interaction_ids:string, __index_level_0__:int64": 7
+    },
+    "tweets": {
+      "id:null, text:null, created_at:null, source:null, lang:null, conversation_id:null, like_count:null, retweet_count:null, quote_count:null, reply_count:null, type:null, referenced_tweet_id:null, mentions:null, hashtags:null, urls:null, author_id:null, media_keys:null, hashtags_count:null, urls_count:null, mentions_count:null, media_keys_count:null": 620,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 7,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 12,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:string, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 3,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 12,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 5,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 14,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 16,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 10,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:string, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 15,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 13,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 20,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 5,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1242,
+      "id:string, text:string, created_at:string, source:null, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64, __index_level_0__:int64": 13,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 13,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 6,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 17,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:null, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 7,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 4,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 14,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:string, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 2,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 2,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:null, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 35,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 11,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 14,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 73,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:string, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 2,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:string, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:null, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 11,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 19,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 27,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:null, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 59,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:null, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 5,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:null, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 21,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 1626,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hashtags:string, urls:string, author_id:string, media_keys:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64, __index_level_0__:int64": 38,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, hastags:string, urls:string, author_id:string, media_keys:string, hashtags:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64, __index_level_0__:int64": 3,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, urls:string, author_id:string, media_keys:string, hashtags:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64": 25,
+      "id:string, text:string, created_at:string, source:string, lang:string, conversation_id:string, like_count:string, retweet_count:string, quote_count:string, reply_count:string, type:string, referenced_tweet_id:string, mentions:string, urls:string, author_id:string, media_keys:string, hashtags:string, hashtags_count:int64, urls_count:int64, mentions_count:int64, media_keys_count:int64, __index_level_0__:int64": 5
+    },
+    "users": {
+      "Unnamed: 0.1:string, Unnamed: 0:string, account_id:string, account_username:string, account_created_at:string, account_verified:string, account_protected:string, account_location:string, account_have_profile_image:string, account_followers_count:string, account_following_count:string, account_tweets_count:string": 1,
+      "account_id:null, account_username:null, account_created_at:null, account_verified:bool, account_protected:bool, account_location:null, account_have_profile_image:null, account_followers_count:null, account_following_count:null, account_tweets_count:null": 612,
+      "account_id:string, account_username:string, account_created_at:string, account_verified:bool, account_protected:bool, account_location:null, account_have_profile_image:string, account_followers_count:string, account_following_count:string, account_tweets_count:string": 139,
+      "account_id:string, account_username:string, account_created_at:string, account_verified:bool, account_protected:bool, account_location:string, account_have_profile_image:string, account_followers_count:string, account_following_count:string, account_tweets_count:string": 3204,
+      "account_id:string, account_username:string, account_created_at:string, account_verified:string, account_protected:string, account_location:string, account_have_profile_image:string, account_followers_count:string, account_following_count:string, account_tweets_count:string": 94
+    }
+  }
+}

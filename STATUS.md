@@ -4,13 +4,15 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M2 · Repost feasibility and coverage | [Inventory the host data for the October audit](docs/reports/m2-repost-coverage-audit.md#run-on-the-data-host) | Active. Audit scope and output specified. Host inventory and empirical run await SSH access. |
+| M2 · Repost feasibility and coverage | [Reconcile actions and resolve historical authors](docs/reports/m2-repost-coverage-audit.md#what-follows) | Active. Host inventory complete. The distinct-event and historical-author coverage audit is next. |
 
 ## M2 · Repost feasibility and coverage
 
-**Objective.** Measure which observed Lula- and Bolsonaro-context reposts from 16–21 October 2022 have a verified action date, sharing account and historical original author. The researcher will provide a dedicated account on the Ubuntu data host for in-place analysis.
+**Objective.** Measure which observed Lula- and Bolsonaro-context reposts from 16–21 October 2022 have a verified action date, sharing account and historical original author.
 
-**Completion condition.** Archive the reproducible audit, input description, aggregate coverage by day and query, exclusions and a decision to proceed, narrow or stop. The [M2 report](docs/reports/m2-repost-coverage-audit.md) defines the counts and handoff. No empirical coverage figures are available yet.
+**Completion condition.** Archive the reproducible audit, input description, aggregate coverage by day and query, exclusions and a decision to proceed, narrow or stop. The [M2 report](docs/reports/m2-repost-coverage-audit.md) defines the counts and handoff.
+
+**Inventory handoff, 2026-11-26.** Verified explicit repost types, UTC action timestamps, folder-based provenance and historical join fields. File dates differ from São Paulo action dates. The [inventory and aggregate counts](docs/reports/m2-repost-coverage-audit.md#host-inventory-completed-2026-11-26) document the checks. Distinct action counts and author resolution remain open.
 
 ## Research design assessment
 
@@ -85,3 +87,4 @@ Last updated 2026-11-26.
 | 2026-11-26 | Reflexive review · Report 8 | Integrated the [conceptual review](docs/reports/reflexive-report-8.md) into [Q1](docs/reports/m1-review-protocol.md#research-questions) and the [first-pilot decisions](docs/reports/m1-advisor-synthesis.md#decision-criteria). A positive structural test supports excess internal sharing over the tested dates. Independent political labels and a documented opportunity comparison govern stronger terminology. The feasibility audit remains the next empirical dependency. |
 | 2026-11-26 | Research design assessment | [Assessed the thesis seed](docs/reports/research-seed-assessment.md) against the original brief and prior manuscript. Identified the added contribution relative to same-election work, the missing empirical evidence, and a candidate-specific language comparison worth preserving. |
 | 2026-11-26 | M2 · Repost feasibility and coverage | Adopted the assessment and opened the [six-day coverage audit](docs/reports/m2-repost-coverage-audit.md). Defined the first output and the Ubuntu host inventory that begins empirical work once access is available. |
+| 2026-11-26 | M2 · Repost feasibility and coverage | Completed the [host inventory](docs/reports/m2-repost-coverage-audit.md#host-inventory-completed-2026-11-26) and verified that the audit needs action dates from the records and a wider partition search. |
