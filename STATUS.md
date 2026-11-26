@@ -22,6 +22,8 @@ Last updated 2026-11-26.
 
 **Thesis direction handoff, 2026-11-26.** The [integrated synthesis](docs/reports/thesis-direction-synthesis.md) sets out the structural baseline, distinct-item circulation and a priority study of Brazilian Portuguese repertoires. The [M3 protocol](docs/reports/m3-repost-pilot-specification.md) governs the current pilot. The language extension starts with a coverage and attribution audit before independent coding, graph comparisons or prediction with language features.
 
+**Operational checkpoint, 2026-11-26.** Added [large data run guidance](AGENTS.md#large-data-runs) for host-aware performance, resumable execution and completion notifications before the discovery review and manifest freeze.
+
 ## M2 · Repost feasibility and coverage
 
 **Objective.** Measure which observed Lula- and Bolsonaro-context reposts from 16–21 October 2022 have a verified action date, sharing account and historical original author.

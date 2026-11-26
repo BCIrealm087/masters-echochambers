@@ -23,6 +23,13 @@ Unless the researcher explicitly specifies a different workflow, prioritize step
 
 Include a human task only when a critical input is beyond the automated workflow’s capabilities or when credible validation requires independent human judgment. State what is needed and why, ask for the minimum input required, and continue any work that can proceed independently.
 
+## Large data runs
+
+- Treat performance as a design requirement for scripts that process substantial data. Time a representative workload on the Ubuntu research host that stores ITED-Br, identify bottlenecks, and estimate the full run cost. Take available CPU cores, RAM, disk space, storage throughput, and other active workloads into account when choosing worker counts, memory limits, and batch sizes.
+- Attempt and benchmark feasible changes that could bring a run from tens of hours down to a few hours. Consider reusing expensive intermediate work, reducing scans and data movement, and parallelizing independent work within host limits. Check that optimizations preserve the registered method and reproducibility. Record measured gains and consequential tradeoffs with the run.
+- Prefer resumable execution when the overhead is modest. Save completed work in independently verifiable units, such as batches or seed runs, and reuse it after an interruption when the inputs and settings match. Write outputs atomically so partial files can be retried safely. For unattended jobs, prefer a launch method that can survive SSH or Codex disconnection and saves progress and errors locally.
+- When a long background job will run while Codex or agents wait or work elsewhere, consider a practical way to notify the researcher on completion or failure. Choose a mechanism suited to how the researcher accesses the host and use an existing authorized notification channel when available. Include the job status and the location of the local log or results.
+
 ## Research reports for the advisor
 
 Keep a dated Markdown report in `docs/reports/` for each substantive research milestone. Update it when an analysis changes a conclusion, a methodological decision affects the study, or an unresolved question needs discussion. Link the report from [STATUS.md](STATUS.md) and keep routine task updates in the tracker.
