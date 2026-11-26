@@ -58,6 +58,8 @@ The figures below are proposed pilot planning defaults. They should be frozen af
 
 ## Decisions for the next milestone
 
+**Decision recorded 2026-11-26.** The researcher adopted the [M2 coverage audit](m2-repost-coverage-audit.md) as the next milestone and identified an Ubuntu host for the empirical work. The design below records the options considered at M1 close.
+
 The proposed pilot can use the public files and scripted checks. The important decision for the next milestone is the scope of the first result. A structural study can test whether groups repeatedly share internally and report the limits of held-out evidence. A claim about political selectivity additionally needs independently labeled stance or discourse, enough textual coverage, and a comparator aligned with that claim. If the latter becomes essential, ask the research group for the minimum approved extract or location of the original label workbooks. Their involvement becomes necessary when those inputs are unavailable through the public route or a domain judgment cannot be established by automated checks. [Feasibility report](m1-ited-br-feasibility.md) · [Expert review protocol](m1-expert-validation.md)
 
 M1 closes with a ranked agenda and a pilot design. Join coverage, computation costs and held-out patterns remain empirical questions for the subsequent milestone. [Project tracker](../../STATUS.md) · [Milestone roadmap](m1-research-directions.md)
