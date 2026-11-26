@@ -4,7 +4,7 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M2 · Repost feasibility and coverage | [Reconcile actions and resolve historical authors](docs/reports/m2-repost-coverage-audit.md#what-follows) | Active. Host inventory complete. The distinct-event and historical-author coverage audit is next. |
+| Next · Within-corpus repost pilot | [Freeze the graph and holdout analysis specification](docs/reports/m2-repost-coverage-audit.md#decision-and-handoff--2026-11-26) | Queued. M2 is complete. |
 
 ## M2 · Repost feasibility and coverage
 
@@ -13,6 +13,8 @@ Last updated 2026-11-26.
 **Completion condition.** Archive the reproducible audit, input description, aggregate coverage by day and query, exclusions and a decision to proceed, narrow or stop. The [M2 report](docs/reports/m2-repost-coverage-audit.md) defines the counts and handoff.
 
 **Inventory handoff, 2026-11-26.** Verified explicit repost types, UTC action timestamps, folder-based provenance and historical join fields. File dates differ from São Paulo action dates. The [inventory and aggregate counts](docs/reports/m2-repost-coverage-audit.md#host-inventory-completed-2026-11-26) document the checks. Distinct action counts and author resolution remain open.
+
+**Audit handoff, 2026-11-26.** Reconciled 11,988,989 distinct verified reposts and identified both accounts for 11,960,224 (99.760%). The [advisor report](docs/reports/m2-repost-coverage-audit.md#what-did-we-learn) and [aggregate output](docs/reports/m2-repost-coverage.json) record losses by day, query, target reuse and sharer activity. Proceed with the within-corpus pilot. Freeze discovery-only choices and recompute missing-endpoint bounds for assigned sharers before interpreting holdout outcomes.
 
 ## Research design assessment
 
@@ -88,3 +90,4 @@ Last updated 2026-11-26.
 | 2026-11-26 | Research design assessment | [Assessed the thesis seed](docs/reports/research-seed-assessment.md) against the original brief and prior manuscript. Identified the added contribution relative to same-election work, the missing empirical evidence, and a candidate-specific language comparison worth preserving. |
 | 2026-11-26 | M2 · Repost feasibility and coverage | Adopted the assessment and opened the [six-day coverage audit](docs/reports/m2-repost-coverage-audit.md). Defined the first output and the Ubuntu host inventory that begins empirical work once access is available. |
 | 2026-11-26 | M2 · Repost feasibility and coverage | Completed the [host inventory](docs/reports/m2-repost-coverage-audit.md#host-inventory-completed-2026-11-26) and verified that the audit needs action dates from the records and a wider partition search. |
+| 2026-11-26 | M2 · Repost feasibility and coverage | Completed the [full reconciliation and historical-author audit](docs/reports/m2-repost-coverage-audit.md#full-action-and-historical-author-reconciliation). Verified the host manifest, confirmed raw repost row counts independently, and retained both windows and all three query strata for the next pilot. |
