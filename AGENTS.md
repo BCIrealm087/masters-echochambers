@@ -34,6 +34,7 @@ Write for a master’s advisor who knows the field and may be reading the report
 
 ## Data and reproducibility
 
+- On the Ubuntu research machine, the ITED-Br corpus is at `/data/dados/twitter/corpus`. All local user accounts can read the dataset. Read the source files in place and write analysis outputs to a separate working directory.
 - Keep source extracts, tweet text, account-level records, re-identifiable intermediate files and credentials out of Git. Use `data/local/` for local research data and `runs/local/` for working outputs. Archive a description or manifest for restricted inputs and review aggregates and examples before committing them.
 - For an empirical result, record the input version or snapshot, query or selection rules, time window and timezone, relevant preprocessing, graph or model settings, software version, random seed where applicable, and the command or notebook that produced it. Report the counts needed to understand exclusions and reproduce the result.
 - Attribute claims from earlier work to their source. Mark decisions still under discussion and distinguish hypotheses, reproduced results and new findings. Add directories, dependencies and automation when there is concrete work for them to support.
