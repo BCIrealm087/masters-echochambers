@@ -4,7 +4,7 @@ Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 6 · Discovery and robustness of repost communities](docs/reports/reflexive-report-6.md) | Unit complete. Awaiting selection of the next unit. |
+| Incremental reflexive review | [Report 7 · ITED-Br reconstruction and measurement validity](docs/reports/reflexive-report-7.md) | Unit complete. Awaiting selection of the next unit. |
 
 ## Incremental reflexive review
 
@@ -21,6 +21,8 @@ Last updated 2026-11-25.
 **Report 5 completion condition.** Consolidate both reviews into one [statistical validation protocol](docs/reports/reflexive-report-5.md) and reconcile Q1, the eligible population, reference models and pilot decisions. The design is registered. Action provenance, empirical coverage, sampler validity and network power remain to be established.
 
 **Report 6 completion condition.** Register the [graph-discovery benchmark](docs/reports/reflexive-report-6.md) and align the detection, graph-methods and first-pilot protocols with the discovery-only method choice. The design is registered. Verified event fields, the directed implementation check and empirical stability remain open.
+
+**Report 7 completion condition.** Register the [feasibility review](docs/reports/reflexive-report-7.md) and reconcile the first pilot with the pinned schema evidence, historical-author lookup, event-time requirements and missingness decision. The design is registered. True repost classification, historical endpoint recovery, dating and robustness remain empirical questions.
 
 ## M1 · Research directions and literature review
 
@@ -63,3 +65,4 @@ Last updated 2026-11-25.
 | 2026-11-25 | Reflexive review · Report 4 | Integrated the [stance benchmark and falsification criteria](docs/reports/reflexive-report-4.md) into Q2. Recorded the historical reconstruction limits, six controlled graph configurations, two distinct fractional weighting rules, matched text controls and the evidence needed for independent community interpretation. |
 | 2026-11-25 | Reflexive review · Report 5 | Registered the [held-out statistical protocol](docs/reports/reflexive-report-5.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Adopted global inference, a day- and collection-conditioned original-post reference, a prior-tie benchmark, missingness and concentration checks, and untouched replication. |
 | 2026-11-25 | Reflexive review · Report 6 | Integrated the [comparative graph review](docs/reports/reflexive-report-6.md). Recorded the conditional Leiden primary, Louvain fallback, Infomap comparison, hub and date perturbations, and the evidence needed for role, bipartite and temporal extensions. |
+| 2026-11-25 | Reflexive review · Report 7 | Integrated the [measurement-feasibility review](docs/reports/reflexive-report-7.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Replaced the fixed join threshold and neighboring-day lookup cap with a global historical lookup, stratified bounds and sensitivity of the held-out excess. Public ITED-Br supports an audit now. A substantive result remains conditional. |
