@@ -1,10 +1,10 @@
 # Research progress
 
-Last updated 2026-11-25.
+Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 7 · ITED-Br reconstruction and measurement validity](docs/reports/reflexive-report-7.md) | Unit complete. Awaiting selection of the next unit. |
+| Incremental reflexive review | [Report 8 · Conceptual validity of repost-based echo-chamber claims](docs/reports/reflexive-report-8.md) | Unit complete. Awaiting selection of the next unit. |
 
 ## Incremental reflexive review
 
@@ -23,6 +23,8 @@ Last updated 2026-11-25.
 **Report 6 completion condition.** Register the [graph-discovery benchmark](docs/reports/reflexive-report-6.md) and align the detection, graph-methods and first-pilot protocols with the discovery-only method choice. The design is registered. Verified event fields, the directed implementation check and empirical stability remain open.
 
 **Report 7 completion condition.** Register the [feasibility review](docs/reports/reflexive-report-7.md) and reconcile the first pilot with the pinned schema evidence, historical-author lookup, event-time requirements and missingness decision. The design is registered. True repost classification, historical endpoint recovery, dating and robustness remain empirical questions.
+
+**Report 8 completion condition.** Consolidate the [conceptual-validity review](docs/reports/reflexive-report-8.md) and reconcile the research questions, detection protocol and advisor synthesis with its terminology and falsifiers. The interpretation rules are registered. Feasibility, structural persistence, political coherence and selective uptake remain unmeasured.
 
 ## M1 · Research directions and literature review
 
@@ -66,3 +68,4 @@ Last updated 2026-11-25.
 | 2026-11-25 | Reflexive review · Report 5 | Registered the [held-out statistical protocol](docs/reports/reflexive-report-5.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Adopted global inference, a day- and collection-conditioned original-post reference, a prior-tie benchmark, missingness and concentration checks, and untouched replication. |
 | 2026-11-25 | Reflexive review · Report 6 | Integrated the [comparative graph review](docs/reports/reflexive-report-6.md). Recorded the conditional Leiden primary, Louvain fallback, Infomap comparison, hub and date perturbations, and the evidence needed for role, bipartite and temporal extensions. |
 | 2026-11-25 | Reflexive review · Report 7 | Integrated the [measurement-feasibility review](docs/reports/reflexive-report-7.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Replaced the fixed join threshold and neighboring-day lookup cap with a global historical lookup, stratified bounds and sensitivity of the held-out excess. Public ITED-Br supports an audit now. A substantive result remains conditional. |
+| 2026-11-26 | Reflexive review · Report 8 | Integrated the [conceptual review](docs/reports/reflexive-report-8.md) into [Q1](docs/reports/m1-review-protocol.md#research-questions) and the [first-pilot decisions](docs/reports/m1-advisor-synthesis.md#decision-criteria). A positive structural test supports excess internal sharing over the tested dates. Independent political labels and a documented opportunity comparison govern stronger terminology. The feasibility audit remains the next empirical dependency. |
