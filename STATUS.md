@@ -4,7 +4,15 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Next · Within-corpus repost pilot | [Freeze the graph and holdout analysis specification](docs/reports/m2-repost-coverage-audit.md#decision-and-handoff--2026-11-26) | Queued. M2 is complete. |
+| M3 · Within-corpus repost pilot | [Implement and verify discovery and freeze the run manifest](docs/reports/m3-repost-pilot-specification.md) | Queued. Protocol v1 is registered. Holdout outcomes remain unopened. |
+
+## M3 · Within-corpus repost pilot
+
+**Objective.** Measure excess internal reposting in frozen account groups and test whether groups improve prediction beyond prior sharer–author ties.
+
+**Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
+
+**Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
 
 ## M2 · Repost feasibility and coverage
 
@@ -91,3 +99,4 @@ Last updated 2026-11-26.
 | 2026-11-26 | M2 · Repost feasibility and coverage | Adopted the assessment and opened the [six-day coverage audit](docs/reports/m2-repost-coverage-audit.md). Defined the first output and the Ubuntu host inventory that begins empirical work once access is available. |
 | 2026-11-26 | M2 · Repost feasibility and coverage | Completed the [host inventory](docs/reports/m2-repost-coverage-audit.md#host-inventory-completed-2026-11-26) and verified that the audit needs action dates from the records and a wider partition search. |
 | 2026-11-26 | M2 · Repost feasibility and coverage | Completed the [full reconciliation and historical-author audit](docs/reports/m2-repost-coverage-audit.md#full-action-and-historical-author-reconciliation). Verified the host manifest, confirmed raw repost row counts independently, and retained both windows and all three query strata for the next pilot. |
+| 2026-11-26 | M3 · Within-corpus repost pilot | Registered the [pilot specification](docs/reports/m3-repost-pilot-specification.md) before opening holdout outcomes. |
