@@ -4,9 +4,11 @@ These instructions apply throughout `BCIrealm087/masters-echochambers`, the work
 
 ## Research scope
 
+- Use the [integrated thesis direction](docs/reports/thesis-direction-synthesis.md) to plan new work and the registered protocol linked in [STATUS.md](STATUS.md) to execute the active study. Prioritize directed graph discovery and held-out validation, followed by item circulation and a repertoire study where coverage supports it.
 - Develop computational methods for building graphs from documented subsets of ITED-Br, detecting candidate echo chambers and studying language and information circulation within and across them. Use sociopolitical interpretation to frame questions and explain what the methods can establish.
 - Use the [prior study](docs/prior-study.md) as a baseline for hashtag co-occurrence and candidate-relative stance. When proposing a new graph, state what one node and one edge represent. Distinguish hashtag communities, account communities and groups defined by a stance label.
 - Explain what observable evidence warrants an echo-chamber interpretation. Keep community detection and the evidence used to validate that interpretation explicit. For example, if shared hashtags define a group, finding the same hashtags within it provides no independent check.
+- Treat a linguistic repertoire as a pattern of references and uses in observed communication. For tests involving language, distinguish authorship from amplification, learn features within the training period, and use independent evidence for interpretation. Keep candidate sets and scored actions comparable when attributing predictive gain to new features. Record coverage and use an untouched evaluation interval for confirmation after data-informed redesign.
 - Identify the evidence behind claims about people. A repost records an act of sharing. A claim about endorsement, trust, belief or exposure needs its own justification. Preserve relevant Portuguese wording and election context when interpreting political language.
 
 ## Milestones and the research record

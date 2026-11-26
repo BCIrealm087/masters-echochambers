@@ -20,6 +20,8 @@ Last updated 2026-11-26.
 
 **Discovery fitting checkpoint, 2026-11-26.** Rechecked the M2 footer fingerprint and ran discovery-only calibration for context and tie history across 3,570,755 validation actions. Weighted and binary Leiden, fold Leiden, weighted Louvain and Infomap fits are underway. Group calibration and partition-dependent perturbations await the selected grids. [Implementation report](docs/reports/m3-discovery-implementation.md#discovery-fitting-checkpoint)
 
+**Thesis direction handoff, 2026-11-26.** The [integrated synthesis](docs/reports/thesis-direction-synthesis.md) sets out the structural baseline, distinct-item circulation and a priority study of Brazilian Portuguese repertoires. The [M3 protocol](docs/reports/m3-repost-pilot-specification.md) governs the current pilot. The language extension starts with a coverage and attribution audit before independent coding, graph comparisons or prediction with language features.
+
 ## M2 · Repost feasibility and coverage
 
 **Objective.** Measure which observed Lula- and Bolsonaro-context reposts from 16–21 October 2022 have a verified action date, sharing account and historical original author.
@@ -108,3 +110,4 @@ Last updated 2026-11-26.
 | 2026-11-26 | M3 · Within-corpus repost pilot | Registered the [pilot specification](docs/reports/m3-repost-pilot-specification.md) before opening holdout outcomes. |
 | 2026-11-26 | Thesis design | Mapped the [prospective computational pipeline](docs/reports/thesis-computational-pipeline.md) from Parquet reconciliation to community discovery, held-out reference testing, author prediction and conditional political interpretation. The M3 specification governs pilot execution. |
 | 2026-11-26 | Thesis design | Recorded the researcher's observation of culturally distinct hashtag clusters and mapped [prospective tests of linguistic repertoires](docs/reports/linguistic-repertoire-hypothesis.md) for community characterization, graph construction and held-out author prediction. |
+| 2026-11-26 | Thesis design | Integrated the [research direction and study sequence](docs/reports/thesis-direction-synthesis.md). Defined the roles of the repost baseline, distinct-item circulation, independent language validation and matched tests of linguistic information. |

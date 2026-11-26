@@ -1,10 +1,12 @@
 # Can cultural references help explain who amplifies whom?
 
-**Prospective thesis extension · 2026-11-26**
+**Priority language extension · Prospective tests · 2026-11-26**
 
 While examining the earlier hashtag co-occurrence graphs, the researcher noticed tightly connected sets of tags that appeared to draw on different cultural vocabularies. Examples recalled from that work include football metaphors, references to Marvel films and expressions associated with different strands of Brazilian political discourse. These are exploratory observations from visual inspection. Their prevalence, interpretation and relationship to account communities remain to be measured. [Prior study](../prior-study.md)
 
 The thesis hypothesis is that **accounts can share ways of expressing a political position, and those ways of speaking may help explain whose material they amplify later**. A *linguistic repertoire* here means a recurring combination of references, expressions and rhetorical moves in observed communication. Several repertoires can coexist in one account, and different groups can draw on the same repertoire. The observed use of a reference depends on its speaker and context. [Eckert on the social meaning of variation](https://doi.org/10.1111/j.1467-9841.2008.00374.x)
+
+The [integrated thesis direction](thesis-direction-synthesis.md) places this study after the structural baseline and prioritizes validation of attributable text before predictive and graph comparisons. The tests here specify the evidence needed for each role of language.
 
 ## Three tests with distinct outcomes
 
