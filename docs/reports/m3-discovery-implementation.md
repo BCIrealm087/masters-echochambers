@@ -39,3 +39,20 @@ python3 scripts/m3_discovery.py --ledger runs/local/m3-discovery/discovery.parqu
 ```
 
 The empirical weighted Leiden grid is the first fitting run. The full grid, sensitivity runs, discovery-only calibration and reference checks must be assessed before the run manifest can be frozen.
+
+## Discovery fitting checkpoint
+
+The host footer fingerprint matches the M2 snapshot. The empirical weighted and binary Leiden grids, both weighted Leiden rolling-fold grids, and the weighted directed Louvain grid have started. Directed Infomap 2.8.0 runs on the weighted, binary and reversed weighted graphs with 20 trials and seed 20. The comparison flattens the finest modules and retains the hierarchy locally. The leave-day-out and hub-removal runs use the selected primary settings after its grid finishes.
+
+The discovery-only prediction code aggregates the risk set by query provenance and subtracts the focal sharer from the author support. A synthetic two-day fixture reproduced the scalar scoring equations, including warm and unseen destinations and the same-group probability mass. The empirical context and dyad stages selected a context prior mass of 100, a dyad prior mass of 100, and a one-day recency half-life over 1,929,561 October 17 actions and 1,641,194 October 18 actions. This is a discovery calibration result. The membership coefficient awaits fold partitions selected by the registered rule.
+
+For the two fold grids, use `--before 2022-10-17` and `--before 2022-10-18` with the same weighted grid invocation and separate output directories. Use `--binary` or `--method louvain` for the corresponding full discovery comparisons. After the grids complete, the calibration and partition-dependent perturbations can run from the discovery ledger.
+
+```bash
+python3 scripts/m3_calibrate.py runs/local/m3-discovery/discovery.parquet \
+  runs/local/m3-discovery/leiden-fold-17 runs/local/m3-discovery/leiden-fold-18
+python3 scripts/m3_sensitivities.py runs/local/m3-discovery/discovery.parquet \
+  runs/local/m3-discovery/perturbations --primary runs/local/m3-discovery/leiden-weighted
+```
+
+The empirical partition, large-stratum reference validation and run manifest remain pending. The holdout outcomes remain unopened.
