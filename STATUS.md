@@ -4,7 +4,7 @@ Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 5 · Statistical validation of held-out repost allocation](docs/reports/reflexive-report-5.md) | Unit complete. Awaiting selection of the next unit. |
+| Incremental reflexive review | [Report 6 · Discovery and robustness of repost communities](docs/reports/reflexive-report-6.md) | Unit complete. Awaiting selection of the next unit. |
 
 ## Incremental reflexive review
 
@@ -19,6 +19,8 @@ Last updated 2026-11-25.
 **Report 4 completion condition.** Register the stance review as one [advisor report](docs/reports/reflexive-report-4.md) and align Q2, the graph benchmark, feasibility record and ranked synthesis. The design is registered. A documented hashtag extract and independent reference labels are the first dependencies. Contextual evaluation additionally requires attributable Portuguese text.
 
 **Report 5 completion condition.** Consolidate both reviews into one [statistical validation protocol](docs/reports/reflexive-report-5.md) and reconcile Q1, the eligible population, reference models and pilot decisions. The design is registered. Action provenance, empirical coverage, sampler validity and network power remain to be established.
+
+**Report 6 completion condition.** Register the [graph-discovery benchmark](docs/reports/reflexive-report-6.md) and align the detection, graph-methods and first-pilot protocols with the discovery-only method choice. The design is registered. Verified event fields, the directed implementation check and empirical stability remain open.
 
 ## M1 · Research directions and literature review
 
@@ -60,3 +62,4 @@ Last updated 2026-11-25.
 | 2026-11-25 | Reflexive review · Report 3 | Integrated [held-out author flow and original-post repertoires](docs/reports/reflexive-report-3.md) into the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Recorded endpoint bounds, viral-source sensitivity, audience-defined source groups and the data required for event, stance and interaction-layer comparisons. Empirical outcomes remain open. |
 | 2026-11-25 | Reflexive review · Report 4 | Integrated the [stance benchmark and falsification criteria](docs/reports/reflexive-report-4.md) into Q2. Recorded the historical reconstruction limits, six controlled graph configurations, two distinct fractional weighting rules, matched text controls and the evidence needed for independent community interpretation. |
 | 2026-11-25 | Reflexive review · Report 5 | Registered the [held-out statistical protocol](docs/reports/reflexive-report-5.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Adopted global inference, a day- and collection-conditioned original-post reference, a prior-tie benchmark, missingness and concentration checks, and untouched replication. |
+| 2026-11-25 | Reflexive review · Report 6 | Integrated the [comparative graph review](docs/reports/reflexive-report-6.md). Recorded the conditional Leiden primary, Louvain fallback, Infomap comparison, hub and date perturbations, and the evidence needed for role, bipartite and temporal extensions. |

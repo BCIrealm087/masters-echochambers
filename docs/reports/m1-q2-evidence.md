@@ -62,3 +62,14 @@ The November 25 review extends the M1 search record with literature cited in the
 | [BERTabaporu](https://aclanthology.org/2023.ranlp-1.24/) and [Brazilian Portuguese stance and sentiment annotation](https://aclanthology.org/2025.nlp4dh-1.32/) | A Brazilian Twitter encoder is a relevant comparator to TF-IDF. Independent coding with disagreement retained is feasible in principle. Earlier tasks have different targets and sampling frames. |
 | [Heterophily benchmark reassessment](https://arxiv.org/abs/2302.11640) and [signed user–entity modeling](https://aclanthology.org/2024.lrec-main.1327/) | Group duplicate items across partitions and measure label compatibility. An unsigned co-occurrence edge does not identify antagonism. |
 | [Probability calibration](https://proceedings.mlr.press/v70/guo17a.html) and [selective classification](https://proceedings.mlr.press/v130/gangrade21a.html) | Fit calibration and select abstention rules on development labels, then report class precision at the retained coverage on the final test. A raw propagation score has no established probability interpretation here. |
+
+## Reflexive report 6 evidence addendum
+
+The [comparative review and benchmark](reflexive-report-6.md) extends the initial Q2-17 screening decision to include a second directed modularity optimizer. The source literature motivates comparisons. The proposed settings and budgets still require tests on the pinned ITED-Br slice.
+
+| Evidence | Consequence for account discovery |
+| --- | --- |
+| [Leicht and Newman, directed modularity](https://doi.org/10.1103/PhysRevLett.100.118703) · [Traag et al., Leiden](https://doi.org/10.1038/s41598-019-41695-z) · [resolution limit](https://doi.org/10.1073/pnas.0605965104) | Hold the objective fixed while comparing optimizers. Check implementation, connectivity and sensitivity to resolution. |
+| [Rosvall and Bergstrom, map equation](https://doi.org/10.1073/pnas.0706851105) · [Infomap settings](https://mapequation.org/infomap-python-docs/api/infomap.html) | Record edge orientation, flow model, teleportation, trials and hierarchy when interpreting retention of modeled flow. |
+| [Karrer and Newman, degree correction](https://doi.org/10.1103/PhysRevE.83.016107) · [Peixoto, block-model inference](https://doi.org/10.1103/PhysRevE.89.012804) | A role-based alternative can distinguish groups of high-popularity sources from internally cohesive blocs. |
+| [Barber, bipartite modularity](https://doi.org/10.1103/PhysRevE.76.066102) · [Mucha et al., multislice networks](https://doi.org/10.1126/science.1184819) · [LFR benchmarks](https://doi.org/10.1103/PhysRevE.80.016118) | Preserve both node types when testing co-amplification. Measure temporal drift before coupling slices. Test synthetic recovery under heterogeneous degrees, group sizes and mixing. |
