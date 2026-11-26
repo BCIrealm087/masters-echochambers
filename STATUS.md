@@ -4,7 +4,7 @@ Last updated 2026-11-25.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 3 · Circulation within and across communities](docs/reports/reflexive-report-3.md) | Unit complete. Awaiting selection of the next unit. |
+| Incremental reflexive review | [Report 4 · Reliability of candidate-relative stance](docs/reports/reflexive-report-4.md) | Unit complete. Awaiting selection of the next unit. |
 
 ## Incremental reflexive review
 
@@ -15,6 +15,8 @@ Last updated 2026-11-25.
 **Report 2 completion condition.** Consolidate the conversation and Deep Research PDF into one [advisor report](docs/reports/reflexive-report-2.md) and align the Q3 question, [codebook](docs/reports/m1-political-language-taxonomy.md), [evidence notes](docs/reports/m1-q3-evidence.md), expert protocol and ranked synthesis. The design is registered. Language estimates depend on recoverable text and independent validation.
 
 **Report 3 completion condition.** Register the circulation review as one [advisor report](docs/reports/reflexive-report-3.md) and reconcile the Q1 question, feasibility audit, detection protocol and first pilot. The design is registered. The first empirical dependency is a dated, typed event table with measured target coverage. Distinct-post overlap is the first structural extension.
+
+**Report 4 completion condition.** Register the stance review as one [advisor report](docs/reports/reflexive-report-4.md) and align Q2, the graph benchmark, feasibility record and ranked synthesis. The design is registered. A documented hashtag extract and independent reference labels are the first dependencies. Contextual evaluation additionally requires attributable Portuguese text.
 
 ## M1 · Research directions and literature review
 
@@ -54,3 +56,4 @@ Last updated 2026-11-25.
 | 2026-11-25 | Reflexive review · Report 1 | Integrated both source reviews into the [three-format comparison and expert evaluation](docs/reports/reflexive-report-1.md). Documented feasibility limits, disagreement handling and criteria for a larger thesis role. |
 | 2026-11-25 | Reflexive review · Report 2 | Integrated both reviews into the [Q3 measurement design](docs/reports/reflexive-report-2.md). Recorded the text-coverage decision, independent Portuguese annotation and model benchmark, four authorship/circulation estimands, and outcomes that would narrow a group claim. The public-data structural pilot retains priority. |
 | 2026-11-25 | Reflexive review · Report 3 | Integrated [held-out author flow and original-post repertoires](docs/reports/reflexive-report-3.md) into the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Recorded endpoint bounds, viral-source sensitivity, audience-defined source groups and the data required for event, stance and interaction-layer comparisons. Empirical outcomes remain open. |
+| 2026-11-25 | Reflexive review · Report 4 | Integrated the [stance benchmark and falsification criteria](docs/reports/reflexive-report-4.md) into Q2. Recorded the historical reconstruction limits, six controlled graph configurations, two distinct fractional weighting rules, matched text controls and the evidence needed for independent community interpretation. |

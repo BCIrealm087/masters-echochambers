@@ -41,7 +41,7 @@ Review alternatives for the earlier hashtag graph and for account-level interact
 
 **Deliverable.** A small set of baseline and alternative configurations with the rationale, proposed evaluation and computational assumptions for each.
 
-**Result.** The [graph methods report](m1-graph-methods.md) proposes crossing raw and fractional hashtag co-occurrence with GFHF and LGC, using fixed inputs and splits and testing sensitivity to frequent seeds. For account communities, it compares directed modularity and Infomap on matched repost graphs. Both tracks specify coverage, validation and cost measures. The [Q2 evidence notes](m1-q2-evidence.md) record the literature and implementation checks.
+**Result.** The [graph methods report](m1-graph-methods.md) originally paired GFHF and LGC with raw and fractional hashtag graphs. [Reflexive Report 4](reflexive-report-4.md) adds Poisson to the primary comparison, separates two fractional rules, and specifies independent type and contextual references, matched text controls and abstention. For account communities, it compares directed modularity and Infomap on matched repost graphs. Both tracks specify coverage, validation and cost measures. The [Q2 evidence notes](m1-q2-evidence.md) record the literature and implementation checks.
 
 ## Step 5 — Draft a taxonomy for political language and tactics
 

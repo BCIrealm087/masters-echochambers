@@ -11,7 +11,7 @@ The researcher supplied Revision 1 of *Political Hashtag Networks and Polarizati
 | Stance classification | Three political scientists assessed hashtags relative to each candidate. Consensus yielded 409 labeled seeds for Lula and 404 for Bolsonaro. Gaussian Fields and Harmonic Functions (GFHF) propagated pro, anti and neutral/undefined labels over the hashtag graph. | §§3.2–3.4.2, pp. 7–9 |
 | Account score | For each candidate query, the study subtracted the number of anti-candidate hashtags an account used from its number of pro-candidate hashtags, then divided by its total hashtag count. The reported distribution included accounts with at least ten posts. | §4, Eq. 1 and Fig. 1, p. 9 |
 
-One detail matters for future replication. Section 3.2 describes selecting the 500 most frequent hashtags per list for manual labeling. Section 3.4 describes a random sample. Record that discrepancy until the original selection procedure can be checked.
+One detail matters for future replication. Section 3.2 describes selecting the 500 most frequent hashtags per list for manual labeling. Section 3.4 describes a random sample. The published code reads completed workbooks, so it cannot resolve the discrepancy. The manuscript provides no independent held-out reference for the accuracy of propagated stance. The new [stance benchmark](reports/reflexive-report-4.md) treats the historical pipeline as a reconstruction until the original inputs and run settings can be recovered.
 
 ## What carries into the master’s research
 
