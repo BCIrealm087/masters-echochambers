@@ -148,6 +148,8 @@ Report each model’s mean log score and paired gain, with uncertainty clustered
 
 ## 8. Find out what crossed the boundary
 
+The researcher's observation of culturally distinct hashtag clusters motivates a further test. Earlier linguistic repertoires can be compared with repost communities, added to graph representations or used as features in the author-choice model. The [prospective repertoire study](linguistic-repertoire-hypothesis.md) sets out separate evaluations for each use.
+
 **First structural extension.** Construct a bipartite graph of frozen-group sharers and distinct original posts. For each pair of groups, measure overlap in exact originals and compare it with a reference preserving each sharer’s number of distinct originals and each item’s distinct audience size. A post with a known ID but unresolved author can enter this analysis if the sharer has an independently established discovery assignment. Report the change in coverage. Repertoire overlap, author flow and event volume can tell different stories. Two groups may favor different authors while both circulate reports on the same debate. Identifying common themes across different posts takes content evidence. [Circulation design](reflexive-report-3.md)
 
 **Selected language extension.** Ask, separately for Lula and Bolsonaro, whether candidate criticism is widespread in members’ own writing or gains prominence through repeated sharing of a few originals. The host schema includes text fields. M2 validated linkage, while the fraction of recoverable, attributable and codable Portuguese text by group, time and interaction type still needs measurement. If coverage permits, use the following sequence.
