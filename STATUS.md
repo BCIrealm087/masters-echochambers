@@ -4,7 +4,15 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| Incremental reflexive review | [Report 8 · Conceptual validity of repost-based echo-chamber claims](docs/reports/reflexive-report-8.md) | Unit complete. Awaiting selection of the next unit. |
+| Research design assessment | [Assess the thesis proposal against the researcher's original aims](docs/reports/research-seed-assessment.md) | Assessment complete. The proposed next milestone is the repost feasibility pilot. |
+
+## Research design assessment
+
+**Objective.** Assess what the prior article, M1 and the eight reflexive reviews contribute to a Computer Science thesis on political echo chambers, and identify the most consequential gaps.
+
+**Completion condition.** Archive an advisor assessment that distinguishes evidence in hand from proposed tests, identifies a feasible core contribution and explains how the original questions about language, circulation and trust can develop from it.
+
+**Handoff, 2026-11-26.** The [assessment](docs/reports/research-seed-assessment.md) identifies a test of what frozen account groups add beyond familiar sources and a follow-up on how candidate criticism is written and amplified. The first empirical dependency is the [dated repost and historical-author audit](docs/reports/reflexive-report-7.md#decision-sequence-and-alternatives). The pilot has yet to run.
 
 ## Incremental reflexive review
 
@@ -69,3 +77,4 @@ Last updated 2026-11-26.
 | 2026-11-25 | Reflexive review · Report 6 | Integrated the [comparative graph review](docs/reports/reflexive-report-6.md). Recorded the conditional Leiden primary, Louvain fallback, Infomap comparison, hub and date perturbations, and the evidence needed for role, bipartite and temporal extensions. |
 | 2026-11-25 | Reflexive review · Report 7 | Integrated the [measurement-feasibility review](docs/reports/reflexive-report-7.md) and revised the [first pilot](docs/reports/m1-advisor-synthesis.md#proposed-first-pilot). Replaced the fixed join threshold and neighboring-day lookup cap with a global historical lookup, stratified bounds and sensitivity of the held-out excess. Public ITED-Br supports an audit now. A substantive result remains conditional. |
 | 2026-11-26 | Reflexive review · Report 8 | Integrated the [conceptual review](docs/reports/reflexive-report-8.md) into [Q1](docs/reports/m1-review-protocol.md#research-questions) and the [first-pilot decisions](docs/reports/m1-advisor-synthesis.md#decision-criteria). A positive structural test supports excess internal sharing over the tested dates. Independent political labels and a documented opportunity comparison govern stronger terminology. The feasibility audit remains the next empirical dependency. |
+| 2026-11-26 | Research design assessment | [Assessed the thesis seed](docs/reports/research-seed-assessment.md) against the original brief and prior manuscript. Identified the added contribution relative to same-election work, the missing empirical evidence, and a candidate-specific language comparison worth preserving. |
