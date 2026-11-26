@@ -1,0 +1,96 @@
+{
+  "duckdb": "1.5.6",
+  "discovery_ledger_sha256": "657ceaf3b2369f8524555ccf0b945865f769f479800207b04b5ad7f51e4781d6",
+  "counts": [
+    {
+      "day": "2022-10-16",
+      "membership": "Bolsonaro only",
+      "actions": 1722396,
+      "unresolved_authors": 5256,
+      "unresolved_sharers": 0,
+      "self_reposts": 2973,
+      "eligible_actions": 1714167,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-16",
+      "membership": "Lula only",
+      "actions": 862511,
+      "unresolved_authors": 5642,
+      "unresolved_sharers": 0,
+      "self_reposts": 1744,
+      "eligible_actions": 855125,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-16",
+      "membership": "both",
+      "actions": 627313,
+      "unresolved_authors": 1674,
+      "unresolved_sharers": 0,
+      "self_reposts": 758,
+      "eligible_actions": 624881,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-17",
+      "membership": "Bolsonaro only",
+      "actions": 920853,
+      "unresolved_authors": 3485,
+      "unresolved_sharers": 0,
+      "self_reposts": 1695,
+      "eligible_actions": 915673,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-17",
+      "membership": "Lula only",
+      "actions": 624263,
+      "unresolved_authors": 2449,
+      "unresolved_sharers": 0,
+      "self_reposts": 1437,
+      "eligible_actions": 620377,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-17",
+      "membership": "both",
+      "actions": 394523,
+      "unresolved_authors": 255,
+      "unresolved_sharers": 0,
+      "self_reposts": 757,
+      "eligible_actions": 393511,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-18",
+      "membership": "Bolsonaro only",
+      "actions": 778115,
+      "unresolved_authors": 1333,
+      "unresolved_sharers": 0,
+      "self_reposts": 1713,
+      "eligible_actions": 775069,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-18",
+      "membership": "Lula only",
+      "actions": 626467,
+      "unresolved_authors": 2061,
+      "unresolved_sharers": 0,
+      "self_reposts": 1641,
+      "eligible_actions": 622765,
+      "publication_after_action": 0
+    },
+    {
+      "day": "2022-10-18",
+      "membership": "both",
+      "actions": 244235,
+      "unresolved_authors": 309,
+      "unresolved_sharers": 0,
+      "self_reposts": 566,
+      "eligible_actions": 243360,
+      "publication_after_action": 0
+    }
+  ]
+}

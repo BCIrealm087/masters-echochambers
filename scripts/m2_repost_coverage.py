@@ -19,14 +19,14 @@ def rows(db, query):
     return [dict(zip(keys, row)) for row in result.fetchall()]
 
 
-def audit(db, root):
+def reconcile(db, root, window_end=WINDOW_END):
     db.read_parquet(str(root / "tweets" / "*" / "*.parquet"), filename=True).create_view(
         "corpus"
     )
     # The fixed offset is valid throughout this window. Dates outside it only
     # indicate whether a row could belong to the audit.
     zone = ZoneInfo("America/Sao_Paulo")
-    for boundary in (WINDOW_START, WINDOW_END):
+    for boundary in (WINDOW_START, window_end):
         assert datetime.fromisoformat(boundary).replace(tzinfo=zone).utcoffset() == timedelta(hours=-3)
     db.execute(f"""
         CREATE MACRO usable_id(value) AS
@@ -54,7 +54,7 @@ def audit(db, root):
         SELECT *, local_day(action_time) AS action_day, local_day(id_time) AS id_day
         FROM timed;
         CREATE MACRO in_window(day_value) AS
-            coalesce(day_value >= DATE '{WINDOW_START}' AND day_value < DATE '{WINDOW_END}', false);
+            coalesce(day_value >= DATE '{WINDOW_START}' AND day_value < DATE '{window_end}', false);
         CREATE TEMP TABLE candidate_ids AS
             SELECT DISTINCT post_id FROM candidate_copies
             WHERE post_id IS NOT NULL AND (in_window(action_day) OR in_window(id_day));
@@ -133,6 +133,12 @@ def audit(db, root):
                CASE WHEN day < DATE '{HOLDOUT_START}' THEN 'discovery'
                     ELSE 'holdout' END AS interval
         FROM reposts LEFT JOIN targets USING (target) LEFT JOIN historical USING (target);
+    """)
+
+
+def audit(db, root):
+    reconcile(db, root)
+    db.execute("""
         CREATE TEMP TABLE sharer_activity AS
             SELECT interval, sharer, count(*) AS action_count
             FROM coverage WHERE sharer IS NOT NULL GROUP BY interval, sharer;

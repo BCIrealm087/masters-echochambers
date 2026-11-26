@@ -4,7 +4,7 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Implement and verify discovery and freeze the run manifest](docs/reports/m3-repost-pilot-specification.md) | Queued. Protocol v1 is registered. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Implement and verify discovery and freeze the run manifest](docs/reports/m3-repost-pilot-specification.md) | In progress. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -12,7 +12,11 @@ Last updated 2026-11-26.
 
 **Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
 
+**Current task.** Reproduce the M2 reconciliation for 16–18 October 2022, verify the graph optimizers and comparison code, and archive the fitted partition hashes and executable manifest before scoring any holdout outcomes.
+
 **Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
+
+**Implementation checkpoint, 2026-11-26.** Reconciled 6,764,928 eligible discovery actions, matching M2 coverage in all nine discovery strata. Both optimizers passed the directed fixture, and small synthetic inference and prediction checks passed. The empirical grid, discovery calibration and executable freeze are pending. [Implementation report](docs/reports/m3-discovery-implementation.md) · [Aggregate extract](docs/reports/m3-discovery-extract.json)
 
 ## M2 · Repost feasibility and coverage
 
