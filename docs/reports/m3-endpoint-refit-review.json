@@ -1,0 +1,414 @@
+{
+  "internal-frequent": {
+    "grid": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 19,
+          "median_ari": 0.9940100447373126,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9949111702802661
+        },
+        {
+          "resolution": 0.75,
+          "seed": 2,
+          "median_ari": 0.5888447312877101,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8008741770589266
+        },
+        {
+          "resolution": 1.0,
+          "seed": 11,
+          "median_ari": 0.9745772920313143,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9814300616565407
+        },
+        {
+          "resolution": 1.25,
+          "seed": 19,
+          "median_ari": 0.9753023129785725,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9821492315951164
+        },
+        {
+          "resolution": 1.5,
+          "seed": 3,
+          "median_ari": 0.8180518489194237,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8462489121659468
+        },
+        {
+          "resolution": 2.0,
+          "seed": 14,
+          "median_ari": 0.7225018765375968,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7592158694161153
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 19,
+        "median_ari": 0.9940100447373126,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9949111702802661
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": null,
+      "vertices": 661907,
+      "arcs": 4490755,
+      "actions": 6787392,
+      "graph_sha256": "2f2832fcd1d246665c1e2749001bd844023a95f5a9a743380fade637bd7f86d2",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "38d8ac1115058b61c545fc14b44b9c4cba1044656ccf495571fb3c7c4ea0b182",
+      "grid_report_sha256": "2f608a0c6acae1e3c18823cae53a599f23dffce6b4308bdc97fdba3e0de15120",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4045,
+        "eligible_groups": 8,
+        "largest_group_accounts": 424447,
+        "eligible_group_sharers": 625875,
+        "eligible_group_actions": 6779009,
+        "seed": 19,
+        "resolution": 0.5,
+        "modularity": 0.7339364315609895
+      }
+    },
+    "comparison": {
+      "common_accounts": 660089,
+      "ari": 0.9932996180804163,
+      "ami": 0.9815617251292373,
+      "vi_nats": 0.03812477074722054,
+      "mean_best_jaccard_primary_groups": 0.9946809146031849
+    },
+    "completion_sha256": "3a7d53941d29e44623706721c3ab3cd802839edd43441aafb4402e74f4ae6052",
+    "reference_rehearsal": {
+      "draws": 8,
+      "slots": 6787392,
+      "proposals": 4605
+    }
+  },
+  "internal-rare": {
+    "grid": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 4,
+          "median_ari": 0.993823959473543,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9950410223754039
+        },
+        {
+          "resolution": 0.75,
+          "seed": 0,
+          "median_ari": 0.9446922355589488,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8525238121940667
+        },
+        {
+          "resolution": 1.0,
+          "seed": 15,
+          "median_ari": 0.9959484784272156,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9856622456431727
+        },
+        {
+          "resolution": 1.25,
+          "seed": 9,
+          "median_ari": 0.9724811690768876,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.981427252383529
+        },
+        {
+          "resolution": 1.5,
+          "seed": 18,
+          "median_ari": 0.8383856143229047,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.862796612438499
+        },
+        {
+          "resolution": 2.0,
+          "seed": 1,
+          "median_ari": 0.7221483931902762,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.757718078960799
+        }
+      ],
+      "selected": {
+        "resolution": 1.0,
+        "seed": 15,
+        "median_ari": 0.9959484784272156,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9856622456431727
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": null,
+      "vertices": 661907,
+      "arcs": 4499008,
+      "actions": 6787392,
+      "graph_sha256": "517b7f9ba3229cb9acbfbdef771654b45570505ad32185f161e99a2c9859278a",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "9866c57131376800588c7450a7424670ef67a4c5ed666fd484c799ddc965ebed",
+      "grid_report_sha256": "ebf78fb22406d6b51c4db349405774619ab9cbe1d26aea2349f5d0964c74a42e",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4973,
+        "eligible_groups": 13,
+        "largest_group_accounts": 286700,
+        "eligible_group_sharers": 624224,
+        "eligible_group_actions": 6775051,
+        "seed": 15,
+        "resolution": 1.0,
+        "modularity": 0.5207196567521808
+      }
+    },
+    "comparison": {
+      "common_accounts": 660089,
+      "ari": 0.5183443242356076,
+      "ami": 0.6601628767821098,
+      "vi_nats": 0.8517420408848526,
+      "mean_best_jaccard_primary_groups": 0.9180836292257425
+    },
+    "completion_sha256": "a66cdea215b22165824020f4f96cfbf9caf72dcf4fc963a57358f6493952e7d7",
+    "reference_rehearsal": {
+      "draws": 8,
+      "slots": 6787392,
+      "proposals": 4626
+    }
+  },
+  "external-frequent": {
+    "grid": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 5,
+          "median_ari": 0.9937759533175088,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9945170796168186
+        },
+        {
+          "resolution": 0.75,
+          "seed": 16,
+          "median_ari": 0.5933100858802332,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8122085903606159
+        },
+        {
+          "resolution": 1.0,
+          "seed": 8,
+          "median_ari": 0.986442763461897,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9829269296574198
+        },
+        {
+          "resolution": 1.25,
+          "seed": 9,
+          "median_ari": 0.9707771532525831,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9807175725482191
+        },
+        {
+          "resolution": 1.5,
+          "seed": 4,
+          "median_ari": 0.8421825947115323,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8751870535756255
+        },
+        {
+          "resolution": 2.0,
+          "seed": 10,
+          "median_ari": 0.7255999040898935,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7542786130702767
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 5,
+        "median_ari": 0.9937759533175088,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9945170796168186
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": null,
+      "vertices": 661907,
+      "arcs": 4499301,
+      "actions": 6787392,
+      "graph_sha256": "3e5d4826c848fa68ed6737a4f12a3555915bbdcb81cc37a505b634fd3519b87c",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "67b09598588e7d6dc5eed8c2b6bc31b06c9413ba7743acb24991952d13a3fb47",
+      "grid_report_sha256": "b7a938fd1f990b484f89bd4498d34052cb51da130b9c505abcd4555a6c6a1a52",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4045,
+        "eligible_groups": 9,
+        "largest_group_accounts": 424945,
+        "eligible_group_sharers": 625820,
+        "eligible_group_actions": 6778928,
+        "seed": 5,
+        "resolution": 0.5,
+        "modularity": 0.7311371181100439
+      }
+    },
+    "comparison": {
+      "common_accounts": 660089,
+      "ari": 0.9879934642006075,
+      "ami": 0.9685718867548004,
+      "vi_nats": 0.06480307236285654,
+      "mean_best_jaccard_primary_groups": 0.9936045208655355
+    },
+    "completion_sha256": "88221ca03b3f5d24297303e4a82598f75f9329464660ac3b1269debadde45981",
+    "reference_rehearsal": {
+      "draws": 8,
+      "slots": 6787392,
+      "proposals": 4626
+    }
+  },
+  "external-rare": {
+    "grid": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 4,
+          "median_ari": 0.9939450463412491,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9949173113200721
+        },
+        {
+          "resolution": 0.75,
+          "seed": 0,
+          "median_ari": 0.5850350503646109,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8118447273469872
+        },
+        {
+          "resolution": 1.0,
+          "seed": 8,
+          "median_ari": 0.9953579248752926,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9844576673332979
+        },
+        {
+          "resolution": 1.25,
+          "seed": 5,
+          "median_ari": 0.9727073931253296,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9823098397951358
+        },
+        {
+          "resolution": 1.5,
+          "seed": 19,
+          "median_ari": 0.8380789992061655,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8694145557913908
+        },
+        {
+          "resolution": 2.0,
+          "seed": 7,
+          "median_ari": 0.722105141362497,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7568761482750503
+        }
+      ],
+      "selected": {
+        "resolution": 1.0,
+        "seed": 8,
+        "median_ari": 0.9953579248752926,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9844576673332979
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": null,
+      "vertices": 661907,
+      "arcs": 4499047,
+      "actions": 6787392,
+      "graph_sha256": "1320eceb8b688e1c4599c93474badee95e7b964363ce202a55ed3766ca767e2e",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "5971408572b5d679ac99e03a9dcfcc668f53a34c032686448ce968107454cf7e",
+      "grid_report_sha256": "65275d8bc1added0560f047232b339139757fcc57aae7cb458235015420b4752",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4986,
+        "eligible_groups": 13,
+        "largest_group_accounts": 286566,
+        "eligible_group_sharers": 624147,
+        "eligible_group_actions": 6774754,
+        "seed": 8,
+        "resolution": 1.0,
+        "modularity": 0.5206682633652908
+      }
+    },
+    "comparison": {
+      "common_accounts": 660089,
+      "ari": 0.5179181683012063,
+      "ami": 0.6596093108781105,
+      "vi_nats": 0.8534412196337464,
+      "mean_best_jaccard_primary_groups": 0.9187632073484725
+    },
+    "completion_sha256": "99718f8c7ee1da64fc5619fc30cf39c5446fe15ae04e57c98e533270781aa799",
+    "reference_rehearsal": {
+      "draws": 8,
+      "slots": 6787392,
+      "proposals": 4626
+    }
+  }
+}

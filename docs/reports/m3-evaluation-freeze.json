@@ -1,0 +1,402 @@
+{
+  "date_utc": "2026-11-27",
+  "holdout_outcomes": "unopened",
+  "protocol": "m3-repost-pilot-specification.md",
+  "discovery_freeze_sha256": "6842e82d34ad66cdb623531347f64f7f0b167be965f0689a4453080e034310ce",
+  "holdout_dates": [
+    "2022-10-19",
+    "2022-10-20",
+    "2022-10-21"
+  ],
+  "action_timezone": "America/Sao_Paulo",
+  "holdout_ledger_sha256": "1863b0d0d87d586033c98b15c6af291bf9aeed25df0b3d45388f4424d5d03828",
+  "primary_margins_sha256": "15f16b18c8d377aedc1288288635fa996dfb5907e3a7deff027491eb21202c64",
+  "primary_margins": [
+    {
+      "day": "2022-10-19",
+      "context": "Bolsonaro only",
+      "actions": 684806,
+      "resolved_authors": 683747,
+      "known_sharers": 684806,
+      "assigned_sharers": 646759,
+      "unassigned_sharers": 38047,
+      "self_reposts": 1657,
+      "eligible": 644295,
+      "external_authors": 8782,
+      "missing_authors_assigned": 902,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 76
+    },
+    {
+      "day": "2022-10-19",
+      "context": "Lula only",
+      "actions": 749393,
+      "resolved_authors": 748604,
+      "known_sharers": 749393,
+      "assigned_sharers": 692652,
+      "unassigned_sharers": 56741,
+      "self_reposts": 1680,
+      "eligible": 690402,
+      "external_authors": 9397,
+      "missing_authors_assigned": 687,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 31
+    },
+    {
+      "day": "2022-10-19",
+      "context": "both",
+      "actions": 242688,
+      "resolved_authors": 242615,
+      "known_sharers": 242688,
+      "assigned_sharers": 224984,
+      "unassigned_sharers": 17704,
+      "self_reposts": 492,
+      "eligible": 224458,
+      "external_authors": 1529,
+      "missing_authors_assigned": 61,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 21
+    },
+    {
+      "day": "2022-10-20",
+      "context": "Bolsonaro only",
+      "actions": 1002865,
+      "resolved_authors": 1001953,
+      "known_sharers": 1002865,
+      "assigned_sharers": 930166,
+      "unassigned_sharers": 72699,
+      "self_reposts": 2790,
+      "eligible": 926742,
+      "external_authors": 13825,
+      "missing_authors_assigned": 798,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 38
+    },
+    {
+      "day": "2022-10-20",
+      "context": "Lula only",
+      "actions": 572241,
+      "resolved_authors": 571538,
+      "known_sharers": 572241,
+      "assigned_sharers": 517517,
+      "unassigned_sharers": 54724,
+      "self_reposts": 1660,
+      "eligible": 515370,
+      "external_authors": 12938,
+      "missing_authors_assigned": 590,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 18
+    },
+    {
+      "day": "2022-10-20",
+      "context": "both",
+      "actions": 223142,
+      "resolved_authors": 222956,
+      "known_sharers": 223142,
+      "assigned_sharers": 206384,
+      "unassigned_sharers": 16758,
+      "self_reposts": 621,
+      "eligible": 205619,
+      "external_authors": 2936,
+      "missing_authors_assigned": 177,
+      "illegal_time_or_reference": 0,
+      "same_second": 1,
+      "repeat_sharer_post_actions": 13
+    },
+    {
+      "day": "2022-10-21",
+      "context": "Bolsonaro only",
+      "actions": 999940,
+      "resolved_authors": 998627,
+      "known_sharers": 999940,
+      "assigned_sharers": 918567,
+      "unassigned_sharers": 81373,
+      "self_reposts": 2884,
+      "eligible": 914652,
+      "external_authors": 17880,
+      "missing_authors_assigned": 1198,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 91
+    },
+    {
+      "day": "2022-10-21",
+      "context": "Lula only",
+      "actions": 485527,
+      "resolved_authors": 484356,
+      "known_sharers": 485527,
+      "assigned_sharers": 440422,
+      "unassigned_sharers": 45105,
+      "self_reposts": 1768,
+      "eligible": 437734,
+      "external_authors": 10907,
+      "missing_authors_assigned": 1058,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 19
+    },
+    {
+      "day": "2022-10-21",
+      "context": "both",
+      "actions": 227711,
+      "resolved_authors": 227616,
+      "known_sharers": 227711,
+      "assigned_sharers": 211492,
+      "unassigned_sharers": 16219,
+      "self_reposts": 516,
+      "eligible": 210942,
+      "external_authors": 3411,
+      "missing_authors_assigned": 74,
+      "illegal_time_or_reference": 0,
+      "same_second": 0,
+      "repeat_sharer_post_actions": 18
+    }
+  ],
+  "group_margin_dispositions": {
+    "total": 4061,
+    "eligible": 5
+  },
+  "endpoint_scenarios": {
+    "internal-frequent": {
+      "partition_file": "0.5-19.npy",
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "partition_sha256": "38d8ac1115058b61c545fc14b44b9c4cba1044656ccf495571fb3c7c4ea0b182",
+      "graph_sha256": "2f2832fcd1d246665c1e2749001bd844023a95f5a9a743380fade637bd7f86d2",
+      "holdout_ledger_sha256": "a231881b46811b325a281acf188888cf8a0cf29d36c882e66f877f2e4107be4f",
+      "holdout_eligible_actions": 4776150,
+      "posts_imputed": 2890,
+      "actions_imputed": 6301,
+      "inherited_actions": 326,
+      "blocked_overlap_actions": 0,
+      "still_unresolved_actions": 0
+    },
+    "internal-rare": {
+      "partition_file": "1.0-15.npy",
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "partition_sha256": "9866c57131376800588c7450a7424670ef67a4c5ed666fd484c799ddc965ebed",
+      "graph_sha256": "517b7f9ba3229cb9acbfbdef771654b45570505ad32185f161e99a2c9859278a",
+      "holdout_ledger_sha256": "22ed7d0a4018a19a7cc64f731ff458875526c8de7b6cfbfdd5cf812468637d43",
+      "holdout_eligible_actions": 4776150,
+      "posts_imputed": 2890,
+      "actions_imputed": 6301,
+      "inherited_actions": 326,
+      "blocked_overlap_actions": 0,
+      "still_unresolved_actions": 0
+    },
+    "external-frequent": {
+      "partition_file": "0.5-5.npy",
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "partition_sha256": "67b09598588e7d6dc5eed8c2b6bc31b06c9413ba7743acb24991952d13a3fb47",
+      "graph_sha256": "3e5d4826c848fa68ed6737a4f12a3555915bbdcb81cc37a505b634fd3519b87c",
+      "holdout_ledger_sha256": "505a25b365ccfb1f9e97baed7a50fbd757f50b33bbd6da138b7785f5c0b2c481",
+      "holdout_eligible_actions": 4776150,
+      "posts_imputed": 2890,
+      "actions_imputed": 6301,
+      "inherited_actions": 326,
+      "blocked_overlap_actions": 0,
+      "still_unresolved_actions": 0
+    },
+    "external-rare": {
+      "partition_file": "1.0-8.npy",
+      "accounts_sha256": "5232b76b49dabe9acff6aefd9c311bf893333732e5d999998ebf3d3595faa052",
+      "partition_sha256": "5971408572b5d679ac99e03a9dcfcc668f53a34c032686448ce968107454cf7e",
+      "graph_sha256": "1320eceb8b688e1c4599c93474badee95e7b964363ce202a55ed3766ca767e2e",
+      "holdout_ledger_sha256": "13b8e3b1b82bc67cad8f1ae6bfddb45460618cd04da4f89a2f24cf0e7ad851ae",
+      "holdout_eligible_actions": 4776150,
+      "posts_imputed": 2890,
+      "actions_imputed": 6301,
+      "inherited_actions": 326,
+      "blocked_overlap_actions": 0,
+      "still_unresolved_actions": 0
+    }
+  },
+  "implementation_sha256": {
+    "m2_host_inventory.py": "2a403154950ca26a0cc08f50affa59c900787620bd7827314d03ee4ffe115f49",
+    "m2_repost_coverage.py": "07cac858a4dd2852309ccd06723e2d1935bae82b99ec12bfd6fd967936d68f45",
+    "m3_holdout.py": "040281e4a5b366d98ec3398c177a5686f4d3650a6d24479c979f631b38385ab7",
+    "m3_holdout_completions.py": "df6ba3d7cd148b14cd0d3b2096eebdc87e2087777851e54f03f04db9bbea2ad0",
+    "m3_complete_endpoints.py": "1f15ec07c10a2914e4d05e2dae37078a47379d3434c083f43031815a1106e7c0",
+    "m3_calibrate.py": "ca564f8d10da48ff31ec0aaf7dd4124aa0ead41887fabd7b0b5ad41533b470bb",
+    "m3_reference_score.py": "e59be322aaf4c53f06d8ca81095e292ec8219e4f733b0b65cec0fb01882dab57",
+    "m3_reference_score.cpp": "9f478c60d84f54e4f97d21a89f366ab28fa4d655f7c6c9f49b690cfcb699492e",
+    "m3_distinct_dyads.py": "0e99e6fa46c6736fe760c17b858d28016340fb7632a1805ca0e53885b47b0fdb",
+    "m3_freeze_evaluation.py": "a2153710a83b7f299233476c9ae5feab53baacbfff0e30fcf79f255a1c225b79"
+  },
+  "reference_binary_sha256": "0dd99c320b4375b4baed4169b46f99471dbc03b357e187bfaee59fdcd7f21e5e",
+  "reference_compile_flags": [
+    "-O3",
+    "-std=c++17",
+    "-Wall",
+    "-Wextra"
+  ],
+  "software": {
+    "python": "3.10.12",
+    "duckdb": "1.5.6",
+    "numpy": "1.26.4"
+  },
+  "prediction_calibration": {
+    "context_mass": 100,
+    "dyad_mass": 100,
+    "half_life_days": 1,
+    "beta": 2,
+    "membership_calibrated": true,
+    "context_log_scores": [
+      [
+        100,
+        -29824423.12517442
+      ],
+      [
+        10,
+        -30390146.090881523
+      ],
+      [
+        1,
+        -30955011.044345714
+      ]
+    ],
+    "history_log_scores": [
+      [
+        100,
+        null,
+        -28889471.406174757
+      ],
+      [
+        100,
+        3,
+        -28843735.415392634
+      ],
+      [
+        100,
+        1,
+        -28839550.600724045
+      ],
+      [
+        10,
+        null,
+        -30472844.23722499
+      ],
+      [
+        10,
+        3,
+        -30170341.45424309
+      ],
+      [
+        10,
+        1,
+        -29694902.490407884
+      ],
+      [
+        1,
+        null,
+        -33996280.99930244
+      ],
+      [
+        1,
+        3,
+        -33515988.47859234
+      ],
+      [
+        1,
+        1,
+        -32645945.349608317
+      ]
+    ],
+    "beta_log_score_gains": [
+      [
+        0,
+        0.0
+      ],
+      [
+        -0.5,
+        -602419.6433976123
+      ],
+      [
+        0.5,
+        440996.7470523962
+      ],
+      [
+        -1,
+        -1376929.0111507906
+      ],
+      [
+        1,
+        742355.2425133833
+      ],
+      [
+        -2,
+        -3414451.957017082
+      ],
+      [
+        2,
+        1037006.0220951695
+      ]
+    ],
+    "fold_actions": [
+      1929561,
+      1641194
+    ]
+  },
+  "reference_settings": {
+    "draws": 9999,
+    "batch_size": 64,
+    "seed": 20261127,
+    "proposals_per_draw": 10000,
+    "default_workers": 8,
+    "sampler": "exact time-ordered assignment, rejecting any self-repost",
+    "primary_strata": [
+      "day",
+      "context"
+    ],
+    "secondary_group_adjustment": "Holm",
+    "group_minimum_actions": 100,
+    "group_minimum_sharers": 20,
+    "one_sided_alpha": 0.05,
+    "primary_practical_screen_pp": 5,
+    "practical_screens_pp": [
+      2.5,
+      5,
+      10,
+      20
+    ],
+    "proposal_budget_failure": "record feasibility limit and withhold affected p-value"
+  },
+  "registered_runs": {
+    "primary": {
+      "stratify": "day-context",
+      "secondary": true
+    },
+    "alternative_strata": [
+      "day",
+      "pooled"
+    ],
+    "frequency_exclusions": {
+      "author": [
+        "1",
+        "5",
+        "1%"
+      ],
+      "target": [
+        "1",
+        "5",
+        "1%"
+      ]
+    },
+    "endpoint_cases": [
+      "internal-frequent",
+      "internal-rare",
+      "external-frequent",
+      "external-rare"
+    ],
+    "additional_stages": [
+      "distinct-dyads",
+      "endpoint-bounds",
+      "circulation-diagnostics",
+      "prediction"
+    ]
+  }
+}

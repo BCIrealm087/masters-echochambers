@@ -1,8 +1,10 @@
 """Prepare M3 holdout inputs and explicitly invoke frozen primary evaluations."""
 import argparse
 from datetime import date
+from importlib.metadata import version
 import json
 from pathlib import Path
+import platform
 from types import SimpleNamespace
 
 import duckdb
@@ -294,6 +296,21 @@ def prediction(discovery, evaluation, membership, settings, days=HOLDOUT_DAYS,
     return result
 
 
+def verify_evaluation(work, binary):
+    plan = json.loads((REPORTS / "m3-evaluation-freeze.json").read_text())
+    for name, expected in plan["implementation_sha256"].items():
+        if digest(REPOSITORY / "scripts" / name) != expected:
+            raise ValueError(f"Evaluation source fingerprint mismatch: {name}")
+    if (platform.python_version() != plan["software"]["python"] or
+            any(version(name) != plan["software"][name] for name in ("duckdb", "numpy"))):
+        raise ValueError("Evaluation package versions differ from the frozen settings")
+    if digest(work / "margins.json") != plan["primary_margins_sha256"]:
+        raise ValueError("Primary holdout margins differ from the evaluation freeze")
+    if binary is not None and digest(binary) != plan["reference_binary_sha256"]:
+        raise ValueError("Reference binary differs from the evaluation freeze")
+    return plan
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("stage", choices=("prepare-margins", "primary-reference", "prediction",
@@ -309,6 +326,9 @@ def main():
                         default="day-context")
     parser.add_argument("--exclude", nargs=2, metavar=("FIELD", "TOP"))
     parser.add_argument("--secondary", action="store_true")
+    parser.add_argument("--scenario", choices=("internal-frequent", "internal-rare",
+                                               "external-frequent", "external-rare"))
+    parser.add_argument("--refits", type=Path)
     args = parser.parse_args()
     settings = verify_frozen(args.discovery, args.accounts, args.membership)
     if args.stage == "prepare-margins":
@@ -318,10 +338,15 @@ def main():
                          np.load(args.membership))
         atomic_json(args.work / "margins.json", result)
     else:
+        plan = verify_evaluation(args.work, args.binary)
+        reference = plan["reference_settings"]
         ledger = args.work / "holdout.parquet"
         marker = json.loads((args.work / "margins.json").read_text())
         if digest(ledger) != marker["ledger_sha256"]:
             raise ValueError("Prepared holdout ledger fingerprint mismatch")
+        if args.scenario and (args.stage != "primary-reference" or args.refits is None
+                              or args.stratify != "day-context" or args.exclude or args.secondary):
+            parser.error("--scenario requires primary-reference, --refits, and primary strata")
         if args.stage == "prediction":
             result = prediction(args.discovery, ledger, (np.load(args.accounts),
                                 np.load(args.membership)), settings)
@@ -334,8 +359,9 @@ def main():
                 parser.error("distinct-dyads requires --binary and a positive worker count")
             result = score_distinct_dyads(
                 args.binary, ledger, args.accounts, args.membership,
-                args.work / "reference-distinct-dyads", draws=9999, workers=args.workers,
-                seed=20261127, days=HOLDOUT_DAYS)
+                args.work / "reference-distinct-dyads", draws=reference["draws"],
+                workers=args.workers, seed=reference["seed"], days=HOLDOUT_DAYS,
+                cap=reference["proposals_per_draw"])
         else:
             if args.binary is None or args.workers < 1:
                 parser.error("primary-reference requires --binary and a positive worker count")
@@ -343,12 +369,29 @@ def main():
                                  or args.exclude[1] not in ("1", "5", "1%")):
                 parser.error("--exclude takes author or target followed by 1, 5, or 1%")
             suffix = "-".join(args.exclude or ())
-            result = run(SimpleNamespace(ledger=ledger, accounts=args.accounts,
-                         membership=args.membership, binary=args.binary,
+            accounts, membership = args.accounts, args.membership
+            if args.scenario:
+                scenario = plan["endpoint_scenarios"][args.scenario]
+                ledger = args.work / "endpoint-completions" / f"{args.scenario}.parquet"
+                refit = args.refits / args.scenario
+                accounts = refit / "accounts.npy"
+                membership = refit / scenario["partition_file"]
+                for path, expected in (
+                    (ledger, scenario["holdout_ledger_sha256"]),
+                    (accounts, scenario["accounts_sha256"]),
+                    (membership, scenario["partition_sha256"]),
+                ):
+                    if digest(path) != expected:
+                        raise ValueError(f"Scenario artifact fingerprint mismatch: {path}")
+                suffix = args.scenario
+            result = run(SimpleNamespace(ledger=ledger, accounts=accounts,
+                         membership=membership, binary=args.binary,
                          output=args.work / f"reference-{args.stratify}-{suffix}-{args.secondary}",
                          days=HOLDOUT_DAYS, stratify=args.stratify, exclude=args.exclude,
-                         draws=9999, batch_size=64, workers=args.workers, seed=20261127,
-                         proposals_per_draw=10000, secondary=args.secondary))
+                         draws=reference["draws"], batch_size=reference["batch_size"],
+                         workers=args.workers, seed=reference["seed"],
+                         proposals_per_draw=reference["proposals_per_draw"],
+                         secondary=args.secondary))
     print(json.dumps(result, indent=2, allow_nan=False))
 
 

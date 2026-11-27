@@ -4,7 +4,7 @@ Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Complete the missing-author sensitivity and freeze evaluation](docs/reports/m3-endpoint-completions.md) | Four discovery completions verified. Resumable refits running. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Run the frozen holdout evaluation](docs/reports/m3-evaluation-freeze.md) | Evaluation frozen and holdout margins verified. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -12,7 +12,7 @@ Last updated 2026-11-27.
 
 **Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
 
-**Current task.** Complete or document the feasibility limits of post-level missing-author completions and corresponding discovery refits. Freeze the executable configuration and verify holdout margins before scoring outcomes.
+**Current task.** Run the frozen holdout’s primary reference and prediction comparisons and the registered sensitivities. Archive shareable estimates, uncertainty and any inference feasibility limits.
 
 **Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
 
@@ -35,6 +35,8 @@ Last updated 2026-11-27.
 **Endpoint completion checkpoint, 2026-11-27.** Verified [four post-level discovery completions](docs/reports/m3-endpoint-completions.md) covering 22,464 previously unresolved actions. Started all four registered refits with per-seed recovery in a detached tmux session. Refit results and matched-reference feasibility remain pending.
 
 **Circulation follow-up handoff, 2026-11-27.** Adopted a [literature-based protocol for prior contact about the same item](docs/reports/repost-intermediaries.md). The [reference query](scripts/repost_prior_contact.sql) passed its synthetic checks. After the M3 baseline, audit the discovery-period quote and reply joins alongside distinct-item circulation. The deliverable is the rate of documented cross-group contact before internal reposts, with its coverage, or the measured reason it cannot be estimated. M3 v1 governs the active endpoint refits and holdout preparation.
+
+**Evaluation freeze handoff, 2026-11-27.** Reviewed the 480 discovery refits, verified 4,770,214 eligible holdout actions and five group-test margins, and froze the [executable evaluation](docs/reports/m3-evaluation-freeze.json). The [advisor report](docs/reports/m3-evaluation-freeze.md) records partition sensitivity and legality checks. No outcome scoring has started.
 
 ## M2 · Repost feasibility and coverage
 
