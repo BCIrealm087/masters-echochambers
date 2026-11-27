@@ -1,0 +1,274 @@
+{
+  "date_utc": "2026-11-27",
+  "discovery_freeze": "m3-discovery-freeze.json",
+  "implementation_sha256": {
+    "m3_reference_score.cpp": "5afdef8ed2477c9c0537977c3dd8525ad8615314aad48b8599d0630e9982e306",
+    "m3_reference_score.py": "8640c3472c6f822870eaecf94668afc16bf17f71ea1c1aa4d627ba0821abac4b",
+    "m3_reference_simulation.py": "5083858dc6482f33bd8da7c106edb8b47f07fb92087048d5449da8183fcfea24"
+  },
+  "discovery_benchmark": {
+    "configuration": {
+      "ledger_sha256": "657ceaf3b2369f8524555ccf0b945865f769f479800207b04b5ad7f51e4781d6",
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59",
+      "membership_sha256": "0f53ca34a1ed5b0a9142bb3679eeca3ea0be3932de20d439d20ce3e18c0ca679",
+      "binary_sha256": "ff24d068337db3a2d91b01af0b8ef0fef0a433898d5b8f4d10f9a1a766d31582",
+      "driver_sha256": "8640c3472c6f822870eaecf94668afc16bf17f71ea1c1aa4d627ba0821abac4b",
+      "draws": 64,
+      "batch_size": 8,
+      "seed": 20261127,
+      "proposals_per_draw": 10000
+    },
+    "host_logical_cores": 16,
+    "workers": 8,
+    "slots": 6764928,
+    "batches": 72,
+    "resume_batches_reused": 71,
+    "seconds_since_config": 48.892393350601196,
+    "strata": [
+      {
+        "day": "2022-10-16",
+        "context": "Bolsonaro only",
+        "slots": 1714167,
+        "proposals": 17078
+      },
+      {
+        "day": "2022-10-16",
+        "context": "Lula only",
+        "slots": 855125,
+        "proposals": 1354
+      },
+      {
+        "day": "2022-10-16",
+        "context": "both",
+        "slots": 624881,
+        "proposals": 311
+      },
+      {
+        "day": "2022-10-17",
+        "context": "Bolsonaro only",
+        "slots": 915673,
+        "proposals": 2392
+      },
+      {
+        "day": "2022-10-17",
+        "context": "Lula only",
+        "slots": 620377,
+        "proposals": 467
+      },
+      {
+        "day": "2022-10-17",
+        "context": "both",
+        "slots": 393511,
+        "proposals": 198
+      },
+      {
+        "day": "2022-10-18",
+        "context": "Bolsonaro only",
+        "slots": 775069,
+        "proposals": 2922
+      },
+      {
+        "day": "2022-10-18",
+        "context": "Lula only",
+        "slots": 622765,
+        "proposals": 609
+      },
+      {
+        "day": "2022-10-18",
+        "context": "both",
+        "slots": 243360,
+        "proposals": 118
+      }
+    ]
+  },
+  "simulation": {
+    "seed": 20261127,
+    "fixtures": [
+      {
+        "expected": [
+          0.5,
+          0.0,
+          0.0,
+          0.5
+        ],
+        "sampled": [
+          0.5005,
+          0.0,
+          0.0,
+          0.4995
+        ],
+        "proposals": 30016
+      },
+      {
+        "expected": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "sampled": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "proposals": 10000
+      },
+      {
+        "expected": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampled": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "proposals": 29991
+      },
+      {
+        "expected": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "sampled": [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "proposals": 30016
+      }
+    ],
+    "inputs": [
+      {
+        "day": "2022-10-16",
+        "context": "Bolsonaro only",
+        "max_post_actions": 24175,
+        "max_sharer_actions": 1490
+      },
+      {
+        "day": "2022-10-16",
+        "context": "Lula only",
+        "max_post_actions": 11821,
+        "max_sharer_actions": 305
+      },
+      {
+        "day": "2022-10-16",
+        "context": "both",
+        "max_post_actions": 13319,
+        "max_sharer_actions": 465
+      },
+      {
+        "day": "2022-10-17",
+        "context": "Bolsonaro only",
+        "max_post_actions": 12608,
+        "max_sharer_actions": 562
+      },
+      {
+        "day": "2022-10-17",
+        "context": "Lula only",
+        "max_post_actions": 14951,
+        "max_sharer_actions": 233
+      },
+      {
+        "day": "2022-10-17",
+        "context": "both",
+        "max_post_actions": 9627,
+        "max_sharer_actions": 396
+      },
+      {
+        "day": "2022-10-18",
+        "context": "Bolsonaro only",
+        "max_post_actions": 8446,
+        "max_sharer_actions": 951
+      },
+      {
+        "day": "2022-10-18",
+        "context": "Lula only",
+        "max_post_actions": 13126,
+        "max_sharer_actions": 291
+      },
+      {
+        "day": "2022-10-18",
+        "context": "both",
+        "max_post_actions": 7884,
+        "max_sharer_actions": 214
+      }
+    ],
+    "scenarios": [
+      {
+        "replicates": 1000,
+        "beta": 0,
+        "concentrated_slots": false,
+        "group_selective_loss": false,
+        "rejection_rate": 0.01,
+        "full_data_rejection_rate": 0.01,
+        "significance_and_five_point_rate": 0.01,
+        "mean_excess_percentage_points": -0.8928240740740753,
+        "mean_removed_slots": 0.0
+      },
+      {
+        "replicates": 1000,
+        "beta": 1.5,
+        "concentrated_slots": false,
+        "group_selective_loss": false,
+        "rejection_rate": 0.389,
+        "full_data_rejection_rate": 0.389,
+        "significance_and_five_point_rate": 0.389,
+        "mean_excess_percentage_points": 26.267175925925923,
+        "mean_removed_slots": 0.0
+      },
+      {
+        "replicates": 1000,
+        "beta": 0,
+        "concentrated_slots": true,
+        "group_selective_loss": false,
+        "rejection_rate": 0.014,
+        "full_data_rejection_rate": 0.014,
+        "significance_and_five_point_rate": 0.014,
+        "mean_excess_percentage_points": 0.009097840136054514,
+        "mean_removed_slots": 0.0
+      },
+      {
+        "replicates": 1000,
+        "beta": 1.5,
+        "concentrated_slots": true,
+        "group_selective_loss": false,
+        "rejection_rate": 0.409,
+        "full_data_rejection_rate": 0.409,
+        "significance_and_five_point_rate": 0.409,
+        "mean_excess_percentage_points": 20.809097840136054,
+        "mean_removed_slots": 0.0
+      },
+      {
+        "replicates": 1000,
+        "beta": 0,
+        "concentrated_slots": true,
+        "group_selective_loss": true,
+        "rejection_rate": 0.003,
+        "full_data_rejection_rate": 0.007,
+        "significance_and_five_point_rate": 0.003,
+        "mean_excess_percentage_points": -0.3216585740312381,
+        "mean_removed_slots": 2.81
+      },
+      {
+        "replicates": 1000,
+        "beta": 1.5,
+        "concentrated_slots": true,
+        "group_selective_loss": true,
+        "rejection_rate": 0.279,
+        "full_data_rejection_rate": 0.423,
+        "significance_and_five_point_rate": 0.279,
+        "mean_excess_percentage_points": 18.86043990704273,
+        "mean_removed_slots": 2.81
+      }
+    ]
+  },
+  "holdout_status": "unopened"
+}

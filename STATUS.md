@@ -1,10 +1,10 @@
 # Research progress
 
-Last updated 2026-11-26.
+Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Implement and validate the matched-post scorer](docs/reports/m3-discovery-implementation.md#matched-post-reference-feasibility) | Discovery frozen. Executable scoring and registered simulations pending. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-reference-validation.md#reproduction-and-handoff) | Primary reference scorer validated on discovery. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -12,7 +12,7 @@ Last updated 2026-11-26.
 
 **Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
 
-**Current task.** Implement resumable matched-post scoring and run the registered null and injected-affinity simulations on discovery inputs. Archive the validated scoring revision or document the inference feasibility limit before opening any holdout outcomes.
+**Current task.** Prepare and verify the holdout evaluation entry point and registered comparisons. Check the eligible population, scoring inputs, and sensitivity implementation before scoring outcomes.
 
 **Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
 
@@ -25,6 +25,8 @@ Last updated 2026-11-26.
 **Operational checkpoint, 2026-11-26.** Added [large data run guidance](AGENTS.md#large-data-runs) for host-aware performance, resumable execution and completion notifications before the discovery review and manifest freeze.
 
 **Discovery freeze handoff, 2026-11-26.** Verified the [frozen partition, sensitivities and prediction settings](docs/reports/m3-discovery-freeze.json). The [discovery review](docs/reports/m3-discovery-implementation.md#discovery-freeze--2026-11-26) explains the Leiden result and the scale benchmark for exact rejection. The benchmark supports implementing the reference scorer. The holdout gate remains closed pending scoring and simulation checks.
+
+**Reference validation handoff, 2026-11-27.** The [reference validation report](docs/reports/m3-reference-validation.md) records exhaustive fixture checks, a resumable 64-draw corpus benchmark, and 1,000 null and injected-affinity replicates per scenario. The primary scorer and its aggregate evidence are archived. The holdout evaluation entry point and secondary and sensitivity statistics remain pending.
 
 ## M2 · Repost feasibility and coverage
 
