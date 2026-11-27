@@ -10,7 +10,8 @@ import leidenalg
 import networkx as nx
 import numpy as np
 from scipy.sparse import coo_matrix
-from sklearn.metrics import adjusted_mutual_info_score, adjusted_rand_score
+from scipy.stats import hypergeom
+from sklearn.metrics import adjusted_rand_score
 from sklearn.metrics.cluster import entropy, mutual_info_score
 
 RESOLUTIONS = (0.5, 0.75, 1.0, 1.25, 1.5, 2.0)
@@ -117,16 +118,38 @@ def compare(first_accounts, first, second_accounts, second):
     jaccard = overlap.data / (
         np.bincount(a)[overlap.row] + np.bincount(b)[overlap.col] - overlap.data
     )
+    information = mutual_info_score(a, b)
+    a_entropy, b_entropy = entropy(a), entropy(b)
+    expected = expected_information(np.bincount(a), np.bincount(b), len(a))
+    normalizer = (a_entropy + b_entropy) / 2 - expected
+    epsilon = np.finfo(float).eps
+    normalizer = min(normalizer, -epsilon) if normalizer < 0 else max(normalizer, epsilon)
+    ari = adjusted_rand_score(a, b)
     return {
         "common_accounts": len(ai),
-        "ari": adjusted_rand_score(a, b),
-        "ami": adjusted_mutual_info_score(a, b),
-        "vi_nats": entropy(a) + entropy(b) - 2 * mutual_info_score(a, b),
+        "ari": ari,
+        "ami": 1.0 if ari == 1 else (information - expected) / normalizer,
+        "vi_nats": max(0.0, a_entropy + b_entropy - 2 * information),
         "mean_best_jaccard_primary_groups": float(
             coo_matrix((jaccard, (overlap.row, overlap.col))).tocsr().max(axis=1)
             .toarray().ravel()[np.unique(a)].mean()
         ),
     }
+
+
+def expected_information(first_sizes, second_sizes, total):
+    """Compute the permutation expectation once per distinct pair of group sizes."""
+    first, first_counts = np.unique(first_sizes[first_sizes > 0], return_counts=True)
+    second, second_counts = np.unique(second_sizes[second_sizes > 0], return_counts=True)
+    result = 0.0
+    for a, multiplicity in zip(first, first_counts):
+        for b, count in zip(second, second_counts):
+            overlap = np.arange(max(1, int(a + b - total)), min(a, b) + 1, dtype=float)
+            probability = hypergeom.pmf(overlap, total, a, b)
+            result += multiplicity * count * np.dot(
+                probability, (overlap / total) * np.log(overlap * total / (a * float(b)))
+            )
+    return result
 
 
 def grid(method, graph, arcs, out_actions, directory):

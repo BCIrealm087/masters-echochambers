@@ -4,7 +4,7 @@ Last updated 2026-11-26.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Implement and verify discovery and freeze the run manifest](docs/reports/m3-repost-pilot-specification.md) | In progress. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Implement and validate the matched-post scorer](docs/reports/m3-discovery-implementation.md#matched-post-reference-feasibility) | Discovery frozen. Executable scoring and registered simulations pending. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -12,7 +12,7 @@ Last updated 2026-11-26.
 
 **Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
 
-**Current task.** Complete the registered discovery grids and sensitivity fits, calibrate the rolling prediction models, and validate the reference before archiving the partition and executable manifest. Keep holdout outcomes unopened.
+**Current task.** Implement resumable matched-post scoring and run the registered null and injected-affinity simulations on discovery inputs. Archive the validated scoring revision or document the inference feasibility limit before opening any holdout outcomes.
 
 **Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
 
@@ -23,6 +23,8 @@ Last updated 2026-11-26.
 **Thesis direction handoff, 2026-11-26.** The [integrated synthesis](docs/reports/thesis-direction-synthesis.md) sets out the structural baseline, distinct-item circulation and a priority study of Brazilian Portuguese repertoires. The [M3 protocol](docs/reports/m3-repost-pilot-specification.md) governs the current pilot. The language extension starts with a coverage and attribution audit before independent coding, graph comparisons or prediction with language features.
 
 **Operational checkpoint, 2026-11-26.** Added [large data run guidance](AGENTS.md#large-data-runs) for host-aware performance, resumable execution and completion notifications before the discovery review and manifest freeze.
+
+**Discovery freeze handoff, 2026-11-26.** Verified the [frozen partition, sensitivities and prediction settings](docs/reports/m3-discovery-freeze.json). The [discovery review](docs/reports/m3-discovery-implementation.md#discovery-freeze--2026-11-26) explains the Leiden result and the scale benchmark for exact rejection. The benchmark supports implementing the reference scorer. The holdout gate remains closed pending scoring and simulation checks.
 
 ## M2 · Repost feasibility and coverage
 

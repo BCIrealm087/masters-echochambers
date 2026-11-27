@@ -56,3 +56,30 @@ python3 scripts/m3_sensitivities.py runs/local/m3-discovery/discovery.parquet \
 ```
 
 The empirical partition, large-stratum reference validation and run manifest remain pending. The holdout outcomes remain unopened.
+
+## Discovery freeze · 2026-11-26
+
+Weighted directed Leiden selected resolution 0.5 and seed 3. All 20 runs at that resolution qualified, with median pairwise adjusted Rand index (ARI) 0.9923. The verified graph contains 660,089 accounts, 4,484,125 directed arcs and 6,764,928 actions. The selected partition contains 4,061 groups, of which eight pass the discovery size and activity thresholds. Sharers in those eight groups made 6,756,510 discovery actions. The largest group contains 422,524 accounts (64.0%). All 120 Louvain fits failed the registered weak-connectivity criterion. The [discovery manifest](m3-discovery-freeze.json) records the selected membership and account-vector hashes, graph hashes, software and aggregate diagnostics.
+
+| Comparison with primary | ARI on common accounts |
+| --- | ---: |
+| Binary Leiden | 0.987 |
+| Leiden omitting one discovery day | 0.909–0.963 |
+| Leiden removing top in-strength accounts | 0.882–0.973 |
+| Weighted Infomap, finest modules | 0.007 |
+| Binary Infomap, finest modules | 0.008 |
+| Weighted Infomap, reversed arcs | 0.003 |
+
+Similarity across Leiden runs supports stability under its objective, with larger changes when the highest in-strength vertices are removed. Infomap gives a substantially different account grouping. Its high unweighted mean best-group Jaccard overlap coexists with low pairwise agreement because the two summaries weight group sizes differently. These comparisons describe the structure produced by the methods. Political alignment and persistence require their own evidence.
+
+Rolling calibration selected a context prior mass of 100, a dyad prior mass of 100, a one-day history half-life, and a membership coefficient of 2, the upper end of the registered grid. These settings were selected on discovery dates and are frozen for evaluation.
+
+### Matched-post reference feasibility
+
+A time-ordered proposal sorts the action slots and releases distinct original-post slots when their publication time becomes eligible. At each action it selects uniformly from released, unused slots. The pool size at each step depends only on publication and action times, so all complete time-feasible assignments have the same proposal probability. Reject any proposal that pairs a sharer with their own post. Conditioning on acceptance yields a uniform draw under both constraints, including legal assignments in disconnected pair-swap spaces. Early rejection at the first invalid pairing preserves the accepted distribution. Compiled probe acceptance rates agreed with exhaustive enumeration on three fixtures, including a disconnected swap space and repeated original slots.
+
+Among the eligible discovery actions, 358 actions repeat a sharer–post pair within a day and query stratum, and three pairings occur in the same whole second as publication. The ledger preserves those multiplicities and the reference treats same-second publication as eligible. No observed pairing violated the time rule.
+
+On the 16-core Ubuntu host, the C++ probe used up to eight concurrent strata workers and finished 2,048 early-rejection proposals per stratum in about 21 seconds wall time. Acceptance ranged from 6 to 961 proposals per stratum. Extrapolating the slowest stratum's measured throughput gives roughly seven hours on one worker for 9,999 accepted draws at that stratum's observed acceptance rate. Batching independent draws across workers could shorten that time. This estimate uses six acceptances, excludes scoring and sensitivity costs, and can change if holdout margins differ. The probe measures candidate feasibility. Executable scoring, independent resumable batches, and the registered null and injected-affinity simulations are still needed before the holdout can be opened.
+
+Reproduce the probe with GCC 11.4.0 using `g++ -O3 -std=c++17` on [the probe source](../../scripts/m3_reference_probe.cpp). Run [the driver](../../scripts/m3_reference_probe.py) with the discovery ledger, compiled binary, and `--early-reject --draws 2048 --workers 8 --seed 20261126`. The manifest builder verifies local memberships, the ledger fingerprint and a rebuilt primary graph. The partition and prediction settings are frozen. The holdout outcomes remain unopened.

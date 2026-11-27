@@ -1,0 +1,1314 @@
+{
+  "freeze_date_utc": "2026-11-26",
+  "protocol": "m3-repost-pilot-specification.md",
+  "fitting_source_revision": "678b5ea454bbe71d26b03354a8442779b69ddc8f",
+  "implementation_sha256": {
+    "m2_repost_coverage.py": "07cac858a4dd2852309ccd06723e2d1935bae82b99ec12bfd6fd967936d68f45",
+    "m3_extract_discovery.py": "c0e609689fc85a0cf4ac2bb344449edf842adaa005e07f1fb0a5562322e8498a",
+    "m3_discovery.py": "c251df4500ce403bd428407354e6aa7fca36ea03a2a45c4de632424534aef282",
+    "m3_sensitivities.py": "8a92fbf325d8c4fc4ffc9fd789f2e21c550f7ada6a68a4191fc0972e12f0fc4a",
+    "m3_calibrate.py": "0030d4cd4abc17c73a42dc101afd6beade977ec5802c032423b7a86325898aeb",
+    "m3_prediction.py": "4328290b2aef616bcf55f2451c6b8d94d8416163f82a026a09a0b3f89bb6971c",
+    "m3_reference.py": "087178417b1626a942fc7ba69aecf39515f1402a226131d26ca98f5b4233ac4d",
+    "m3_reference_probe.py": "0f1877eecdfe5641532be8cc1e7706198bf42bbd71afc71b1fd017526af84d35",
+    "m3_reference_probe.cpp": "4962be45322e1496a073776358fe036bc3cc4a4c21276b3a7021b658f14bcf06",
+    "m3_freeze_discovery.py": "ad5c9959cd844d5523ea33afb204ca8cb24083d89085880fd0a2fc38166d0d61"
+  },
+  "date_timezone": "America/Sao_Paulo",
+  "discovery_dates": [
+    "2022-10-16",
+    "2022-10-18"
+  ],
+  "holdout_dates": [
+    "2022-10-19",
+    "2022-10-21"
+  ],
+  "date_bounds_inclusive": true,
+  "eligibility": "M2 verified distinct explicit repost, known query stratum, resolved sharer and historical author, excluding verified self-reposts",
+  "source_footer_inventory_sha256": "b3a1f9cb48fcd5b590089da0a95897cf717367a4a935066494fcc3f287df745c",
+  "ledger": {
+    "duckdb": "1.5.6",
+    "discovery_ledger_sha256": "657ceaf3b2369f8524555ccf0b945865f769f479800207b04b5ad7f51e4781d6",
+    "counts": [
+      {
+        "day": "2022-10-16",
+        "membership": "Bolsonaro only",
+        "actions": 1722396,
+        "unresolved_authors": 5256,
+        "unresolved_sharers": 0,
+        "self_reposts": 2973,
+        "eligible_actions": 1714167,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-16",
+        "membership": "Lula only",
+        "actions": 862511,
+        "unresolved_authors": 5642,
+        "unresolved_sharers": 0,
+        "self_reposts": 1744,
+        "eligible_actions": 855125,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-16",
+        "membership": "both",
+        "actions": 627313,
+        "unresolved_authors": 1674,
+        "unresolved_sharers": 0,
+        "self_reposts": 758,
+        "eligible_actions": 624881,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-17",
+        "membership": "Bolsonaro only",
+        "actions": 920853,
+        "unresolved_authors": 3485,
+        "unresolved_sharers": 0,
+        "self_reposts": 1695,
+        "eligible_actions": 915673,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-17",
+        "membership": "Lula only",
+        "actions": 624263,
+        "unresolved_authors": 2449,
+        "unresolved_sharers": 0,
+        "self_reposts": 1437,
+        "eligible_actions": 620377,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-17",
+        "membership": "both",
+        "actions": 394523,
+        "unresolved_authors": 255,
+        "unresolved_sharers": 0,
+        "self_reposts": 757,
+        "eligible_actions": 393511,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-18",
+        "membership": "Bolsonaro only",
+        "actions": 778115,
+        "unresolved_authors": 1333,
+        "unresolved_sharers": 0,
+        "self_reposts": 1713,
+        "eligible_actions": 775069,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-18",
+        "membership": "Lula only",
+        "actions": 626467,
+        "unresolved_authors": 2061,
+        "unresolved_sharers": 0,
+        "self_reposts": 1641,
+        "eligible_actions": 622765,
+        "publication_after_action": 0
+      },
+      {
+        "day": "2022-10-18",
+        "membership": "both",
+        "actions": 244235,
+        "unresolved_authors": 309,
+        "unresolved_sharers": 0,
+        "self_reposts": 566,
+        "eligible_actions": 243360,
+        "publication_after_action": 0
+      }
+    ]
+  },
+  "software": {
+    "python": "3.10.12",
+    "duckdb": "1.5.6",
+    "igraph": "0.11.9",
+    "leidenalg": "0.10.2",
+    "networkx": "3.4.2",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "scikit-learn": "1.6.1",
+    "infomap": "2.8.0"
+  },
+  "threads": {
+    "duckdb": 4,
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1"
+  },
+  "grid_settings": {
+    "resolutions": [
+      0.5,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "leiden_iterations": "until convergence",
+    "infomap_trials": 20,
+    "infomap_seed": 20,
+    "infomap_teleportation": 0.15,
+    "infomap_recorded_teleportation": false,
+    "infomap_flat_partition": "finest hierarchy level"
+  },
+  "grids": {
+    "leiden-weighted": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 3,
+          "median_ari": 0.9922756452206796,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9934778409198761
+        },
+        {
+          "resolution": 0.75,
+          "seed": 5,
+          "median_ari": 0.9896549778675559,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8645422692740937
+        },
+        {
+          "resolution": 1.0,
+          "seed": 6,
+          "median_ari": 0.9738189102930237,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9807290725909861
+        },
+        {
+          "resolution": 1.25,
+          "seed": 8,
+          "median_ari": 0.9678279957323694,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9665962967633329
+        },
+        {
+          "resolution": 1.5,
+          "seed": 8,
+          "median_ari": 0.8418073613389233,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8650925216075599
+        },
+        {
+          "resolution": 2.0,
+          "seed": 3,
+          "median_ari": 0.7181761237357642,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7506624491097723
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 3,
+        "median_ari": 0.9922756452206796,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9934778409198761
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": null,
+      "vertices": 660089,
+      "arcs": 4484125,
+      "actions": 6764928,
+      "graph_sha256": "0136296dc2bb2d293e9c0e3153ba0fc11752c661ab2736652fe32ddb38098286",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "0f53ca34a1ed5b0a9142bb3679eeca3ea0be3932de20d439d20ce3e18c0ca679",
+      "grid_report_sha256": "db02518ffc90dfe4852b2bdf7423ed5be01ad00bda919eb5bee1c502c4f0f257",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4061,
+        "eligible_groups": 8,
+        "largest_group_accounts": 422524,
+        "eligible_group_sharers": 623971,
+        "eligible_group_actions": 6756510,
+        "seed": 3,
+        "resolution": 0.5,
+        "modularity": 0.7338355013486421
+      },
+      "size_quantiles_accounts": {
+        "min": 2.0,
+        "median": 2.0,
+        "p90": 4.0,
+        "p99": 15.0,
+        "max": 422524.0
+      }
+    },
+    "leiden-binary": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 4,
+          "median_ari": 0.9952381092025627,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9961477521168962
+        },
+        {
+          "resolution": 0.75,
+          "seed": 9,
+          "median_ari": 0.9840819369871405,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9823448461458826
+        },
+        {
+          "resolution": 1.0,
+          "seed": 11,
+          "median_ari": 0.9929943361840603,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9933268585704204
+        },
+        {
+          "resolution": 1.25,
+          "seed": 16,
+          "median_ari": 0.9713569646552818,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9733479610044948
+        },
+        {
+          "resolution": 1.5,
+          "seed": 16,
+          "median_ari": 0.7749387226725664,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.812762249155895
+        },
+        {
+          "resolution": 2.0,
+          "seed": 6,
+          "median_ari": 0.7491249985063991,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7844392416833403
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 4,
+        "median_ari": 0.9952381092025627,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9961477521168962
+      },
+      "method": "leiden",
+      "binary": true,
+      "before": null,
+      "vertices": 660089,
+      "arcs": 4484125,
+      "actions": 6764928,
+      "graph_sha256": "4587a8cffb9efbf8b5be21658431a4b9016edd39b3bde9a75056ffc46213874e",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "c31d88aebf1a92ecd4fc4077684c3bc11c9d469366fddf613e2134b8c323f15b",
+      "grid_report_sha256": "be0791ac4f44c3aaf61a37ee502c451a3875c7a5ba14121731b87d18b5532db3",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 4014,
+        "eligible_groups": 8,
+        "largest_group_accounts": 421682,
+        "eligible_group_sharers": 624088,
+        "eligible_group_actions": 6756917,
+        "seed": 4,
+        "resolution": 0.5,
+        "modularity": 0.7299058836850919
+      }
+    },
+    "leiden-fold-17": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 10,
+          "median_ari": 0.995575354999289,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9962028607946996
+        },
+        {
+          "resolution": 0.75,
+          "seed": 8,
+          "median_ari": 0.9894728930528313,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9871990998380857
+        },
+        {
+          "resolution": 1.0,
+          "seed": 14,
+          "median_ari": 0.9923675106631451,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9930011111906737
+        },
+        {
+          "resolution": 1.25,
+          "seed": 18,
+          "median_ari": 0.9235212222513121,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9363343511838738
+        },
+        {
+          "resolution": 1.5,
+          "seed": 7,
+          "median_ari": 0.8898890913877646,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9107280134655391
+        },
+        {
+          "resolution": 2.0,
+          "seed": 18,
+          "median_ari": 0.7542645340468226,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7983282215312402
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 10,
+        "median_ari": 0.995575354999289,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9962028607946996
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": "2022-10-17",
+      "vertices": 428306,
+      "arcs": 2297479,
+      "actions": 3194173,
+      "graph_sha256": "0dc46336326f033f70be18223886280bfacf2236933991e4943caf20c1ef112e",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "dcb616c034d7fa59d183f58ff16b8f93a86abfe171da4622e70e505955a23ff1",
+      "grid_report_sha256": "1e27acd4f1cf3d7fffe556bfec7b6df1089447f2da6d4e7e613078fc0e544dc5",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "f1c6da326913c2266e3178317a2fbf9ee8f995abfada9cf69fcb2edeeb02fe0c",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 2652,
+        "eligible_groups": 6,
+        "largest_group_accounts": 285662,
+        "eligible_group_sharers": 404111,
+        "eligible_group_actions": 3188610,
+        "seed": 10,
+        "resolution": 0.5,
+        "modularity": 0.729392405664393
+      }
+    },
+    "leiden-fold-18": {
+      "resolutions": [
+        {
+          "resolution": 0.5,
+          "seed": 5,
+          "median_ari": 0.9977650877195092,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9980372567802761
+        },
+        {
+          "resolution": 0.75,
+          "seed": 16,
+          "median_ari": 0.6572402281483978,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7993390495925875
+        },
+        {
+          "resolution": 1.0,
+          "seed": 13,
+          "median_ari": 0.9934475714899258,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9839142787132648
+        },
+        {
+          "resolution": 1.25,
+          "seed": 9,
+          "median_ari": 0.9275207572509632,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.9425495617845785
+        },
+        {
+          "resolution": 1.5,
+          "seed": 16,
+          "median_ari": 0.8305709880502681,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.8749483187415901
+        },
+        {
+          "resolution": 2.0,
+          "seed": 12,
+          "median_ari": 0.685668192257094,
+          "eligible_runs": 20,
+          "representative_mean_ari": 0.7414777385086211
+        }
+      ],
+      "selected": {
+        "resolution": 0.5,
+        "seed": 5,
+        "median_ari": 0.9977650877195092,
+        "eligible_runs": 20,
+        "representative_mean_ari": 0.9980372567802761
+      },
+      "method": "leiden",
+      "binary": false,
+      "before": "2022-10-18",
+      "vertices": 574595,
+      "arcs": 3544115,
+      "actions": 5123734,
+      "graph_sha256": "dcb35189f721f8f5984a98023d7c748539b84ca4a05f4476b47a9717ad8d131f",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "partition_sha256": "e72b576a28179681e1cb97679c25a310c0ce1828f965745987e4e9f2c0c03dc6",
+      "grid_report_sha256": "fa5f151a6c8c4aab57b80796219f3b414554d1812529af7eaf8305cd832de615",
+      "eligible_run_counts": {
+        "0.5": 20,
+        "0.75": 20,
+        "1.0": 20,
+        "1.25": 20,
+        "1.5": 20,
+        "2.0": 20
+      },
+      "connected_runs": 120,
+      "accounts_sha256": "3de7e5b8fa76ef71975cf26eb03802acb652c519f4ad19090092f0d7af1c5668",
+      "selected_diagnostics": {
+        "connected": true,
+        "groups": 3458,
+        "eligible_groups": 8,
+        "largest_group_accounts": 371947,
+        "eligible_group_sharers": 544340,
+        "eligible_group_actions": 5116643,
+        "seed": 5,
+        "resolution": 0.5,
+        "modularity": 0.7336646893501648
+      }
+    },
+    "louvain-weighted": {
+      "resolutions": [],
+      "selected": null,
+      "method": "louvain",
+      "binary": false,
+      "before": null,
+      "vertices": 660089,
+      "arcs": 4484125,
+      "actions": 6764928,
+      "graph_sha256": "0136296dc2bb2d293e9c0e3153ba0fc11752c661ab2736652fe32ddb38098286",
+      "optimizer_fixture": {
+        "expected": -0.08163265306122448,
+        "leiden": -0.08163265306122447,
+        "louvain": -0.08163265306122441
+      },
+      "grid_report_sha256": "14993e53a0c47357a28f79c0895cd64f8cad4c708955ebe5c6363ccf6d83f2bc",
+      "eligible_run_counts": {
+        "0.5": 0,
+        "0.75": 0,
+        "1.0": 0,
+        "1.25": 0,
+        "1.5": 0,
+        "2.0": 0
+      },
+      "connected_runs": 0,
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59"
+    }
+  },
+  "sensitivities": {
+    "infomap-weighted": {
+      "codelength": 6.595873046906973,
+      "depth": 8,
+      "top_modules": 7699,
+      "leaf_modules": 136576,
+      "binary": false,
+      "reverse": false,
+      "connected": false,
+      "groups": 136576,
+      "eligible_groups": 1483,
+      "largest_group_accounts": 16288,
+      "eligible_group_sharers": 429454,
+      "eligible_group_actions": 2131863,
+      "partition_sha256": "675ab54c766509be1ec3bdfa34899e0a33fd53347aa047b1ce3cd1e58f511088",
+      "hierarchy_sha256": "8362bc1a7e5e61ea96839cdf58c7af1775d993d95bf25b664e9ece86d0f9f056",
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59"
+    },
+    "infomap-binary": {
+      "codelength": 7.2294420117691365,
+      "depth": 6,
+      "top_modules": 7805,
+      "leaf_modules": 131724,
+      "binary": true,
+      "reverse": false,
+      "connected": false,
+      "groups": 131724,
+      "eligible_groups": 1567,
+      "largest_group_accounts": 19817,
+      "eligible_group_sharers": 430257,
+      "eligible_group_actions": 2010813,
+      "partition_sha256": "01467b2bb3e255260eba1fc8fcf7591ceb8188ce8efe530c6bdd475041d21a91",
+      "hierarchy_sha256": "86df16dbc34b1ecbd7af9000b191a9215f9d32f6fca1774bbf5d8eb5b4a08894",
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59"
+    },
+    "infomap-reversed": {
+      "codelength": 13.372898033240551,
+      "depth": 6,
+      "top_modules": 17587,
+      "leaf_modules": 257138,
+      "binary": false,
+      "reverse": true,
+      "connected": false,
+      "groups": 257138,
+      "eligible_groups": 1675,
+      "largest_group_accounts": 9576,
+      "eligible_group_sharers": 282200,
+      "eligible_group_actions": 1724581,
+      "partition_sha256": "94a7baa5b4d153caeff5dac3919e76b04a75420c119f338f4a421b1f73fddb80",
+      "hierarchy_sha256": "f673faeb015a8a3f273ab1bc115b74074cd71c9355b075ff54029a359cc55aff",
+      "accounts_sha256": "8fc97d044b492e7c81922219aa5d84a0171570d4bc671a0623c55e7392fa5e59"
+    },
+    "omit-2022-10-16": {
+      "connected": true,
+      "groups": 3849,
+      "eligible_groups": 7,
+      "largest_group_accounts": 269943,
+      "eligible_group_sharers": 434553,
+      "eligible_group_actions": 3563052,
+      "vertices": 463116,
+      "arcs": 2595768,
+      "actions": 3570755,
+      "removed_ranked_accounts": 0,
+      "partition_sha256": "f10febd25d6c5e13a6629b08ac16caddb9ea4e05fffea404f339dbf06b681776",
+      "common_accounts": 463116,
+      "ari": 0.9089571864907858,
+      "ami": 0.8365827372472133,
+      "vi_nats": 0.3590559689965005,
+      "mean_best_jaccard_primary_groups": 0.9490485548148585,
+      "accounts_sha256": "b11f36b7ca7718c6e34c5045d138590c2f91cb541cd1116208235dfdfb7e2e9c"
+    },
+    "omit-2022-10-17": {
+      "connected": true,
+      "groups": 3666,
+      "eligible_groups": 6,
+      "largest_group_accounts": 350122,
+      "eligible_group_sharers": 512969,
+      "eligible_group_actions": 4827513,
+      "vertices": 545397,
+      "arcs": 3340190,
+      "actions": 4835367,
+      "removed_ranked_accounts": 0,
+      "partition_sha256": "b8bed55bcc404b7fbb59dfd3580a93ccaede6a09734749f4d8a29ae1d1a22689",
+      "common_accounts": 545397,
+      "ari": 0.9441206778896425,
+      "ami": 0.8777891641195023,
+      "vi_nats": 0.2438780294259706,
+      "mean_best_jaccard_primary_groups": 0.9487166934308751,
+      "accounts_sha256": "aa4bf74cc12a559831f659235b11436a2525308620e3c7e22d7b138815a35a2d"
+    },
+    "omit-2022-10-18": {
+      "connected": true,
+      "groups": 3456,
+      "eligible_groups": 8,
+      "largest_group_accounts": 371862,
+      "eligible_group_sharers": 544360,
+      "eligible_group_actions": 5116663,
+      "vertices": 574595,
+      "arcs": 3544115,
+      "actions": 5123734,
+      "removed_ranked_accounts": 0,
+      "partition_sha256": "01196a4256d8288d1946dc18ca991c01192d82fbe01a02bce708f7195cce2254",
+      "common_accounts": 574595,
+      "ari": 0.9628180199711474,
+      "ami": 0.916923232666119,
+      "vi_nats": 0.16570197827003286,
+      "mean_best_jaccard_primary_groups": 0.9549211716330249,
+      "accounts_sha256": "3de7e5b8fa76ef71975cf26eb03802acb652c519f4ad19090092f0d7af1c5668"
+    },
+    "drop-0.0001": {
+      "connected": true,
+      "groups": 4406,
+      "eligible_groups": 8,
+      "largest_group_accounts": 394957,
+      "eligible_group_sharers": 583032,
+      "eligible_group_actions": 5886492,
+      "vertices": 620706,
+      "arcs": 4128148,
+      "actions": 5895292,
+      "removed_ranked_accounts": 8,
+      "partition_sha256": "c1ba737886214b00e9caa15b610d689b90d422f5ab91b8d8e35e7643004a0765",
+      "common_accounts": 620706,
+      "ari": 0.9732051708101551,
+      "ami": 0.9457644107049897,
+      "vi_nats": 0.11579882533776908,
+      "mean_best_jaccard_primary_groups": 0.9879832579613826,
+      "accounts_sha256": "d595b9f75427ae6431fda03c54e91e794fc97756575d6425787ff77a57ab04d9"
+    },
+    "drop-0.0005": {
+      "connected": true,
+      "groups": 4660,
+      "eligible_groups": 8,
+      "largest_group_accounts": 366818,
+      "eligible_group_sharers": 538416,
+      "eligible_group_actions": 4450755,
+      "vertices": 577987,
+      "arcs": 3451483,
+      "actions": 4459991,
+      "removed_ranked_accounts": 39,
+      "partition_sha256": "47012df478e2d104170ac872ce3af83368445f49d095e14c12dc73446edaca27",
+      "common_accounts": 577987,
+      "ari": 0.9354331839593745,
+      "ami": 0.8940074461126972,
+      "vi_nats": 0.23302308979973896,
+      "mean_best_jaccard_primary_groups": 0.9778865301979427,
+      "accounts_sha256": "a1c30c30a12c6ee0f95858c6604be089ebbec02f40e1b7fba1e3d7f8525a4361"
+    },
+    "drop-0.001": {
+      "connected": true,
+      "groups": 5189,
+      "eligible_groups": 8,
+      "largest_group_accounts": 302102,
+      "eligible_group_sharers": 475030,
+      "eligible_group_actions": 3568577,
+      "vertices": 517654,
+      "arcs": 2893483,
+      "actions": 3578964,
+      "removed_ranked_accounts": 78,
+      "partition_sha256": "15ab2af926a084824db245069aede97b82203ead5c965e1c141e691882c8bfbf",
+      "common_accounts": 517654,
+      "ari": 0.8819831404034375,
+      "ami": 0.8404791088852817,
+      "vi_nats": 0.37656246475038335,
+      "mean_best_jaccard_primary_groups": 0.9694420149071393,
+      "accounts_sha256": "6044375f78a1eaac594afbf1ec20c5fc65ddebde68a1174ad3a488acf12cac69"
+    }
+  },
+  "comparisons": {
+    "leiden-binary": {
+      "common_accounts": 660089,
+      "ari": 0.986937985121429,
+      "ami": 0.9659671903489657,
+      "vi_nats": 0.07058351157528131,
+      "mean_best_jaccard_primary_groups": 0.9796452015891186
+    },
+    "louvain-weighted": {
+      "disposition": "no eligible partition"
+    },
+    "infomap-weighted": {
+      "common_accounts": 660089,
+      "ari": 0.007088784272334434,
+      "ami": 0.16286880383006597,
+      "vi_nats": 7.2792861539076394,
+      "mean_best_jaccard_primary_groups": 0.959852263950447
+    },
+    "infomap-binary": {
+      "common_accounts": 660089,
+      "ari": 0.007738107870844653,
+      "ami": 0.16400530394609436,
+      "vi_nats": 7.265858926222881,
+      "mean_best_jaccard_primary_groups": 0.957734018639081
+    },
+    "infomap-reversed": {
+      "common_accounts": 660089,
+      "ari": 0.0026285744430070684,
+      "ami": 0.10634872661795311,
+      "vi_nats": 9.106977343415736,
+      "mean_best_jaccard_primary_groups": 0.9636224627274889
+    }
+  },
+  "prediction_calibration": {
+    "context_mass": 100,
+    "dyad_mass": 100,
+    "half_life_days": 1,
+    "beta": 2,
+    "membership_calibrated": true,
+    "context_log_scores": [
+      [
+        100,
+        -29824423.12517442
+      ],
+      [
+        10,
+        -30390146.090881523
+      ],
+      [
+        1,
+        -30955011.044345714
+      ]
+    ],
+    "history_log_scores": [
+      [
+        100,
+        null,
+        -28889471.406174757
+      ],
+      [
+        100,
+        3,
+        -28843735.415392634
+      ],
+      [
+        100,
+        1,
+        -28839550.600724045
+      ],
+      [
+        10,
+        null,
+        -30472844.23722499
+      ],
+      [
+        10,
+        3,
+        -30170341.45424309
+      ],
+      [
+        10,
+        1,
+        -29694902.490407884
+      ],
+      [
+        1,
+        null,
+        -33996280.99930244
+      ],
+      [
+        1,
+        3,
+        -33515988.47859234
+      ],
+      [
+        1,
+        1,
+        -32645945.349608317
+      ]
+    ],
+    "beta_log_score_gains": [
+      [
+        0,
+        0.0
+      ],
+      [
+        -0.5,
+        -602419.6433976123
+      ],
+      [
+        0.5,
+        440996.7470523962
+      ],
+      [
+        -1,
+        -1376929.0111507906
+      ],
+      [
+        1,
+        742355.2425133833
+      ],
+      [
+        -2,
+        -3414451.957017082
+      ],
+      [
+        2,
+        1037006.0220951695
+      ]
+    ],
+    "fold_actions": [
+      1929561,
+      1641194
+    ]
+  },
+  "reference": {
+    "exhaustive_fixtures": 4,
+    "prediction_scalar_fixture": true,
+    "full_proposal_probe": {
+      "workers": 8,
+      "seconds": 16.538363384002878,
+      "early_reject": false,
+      "strata": [
+        {
+          "day": "2022-10-16",
+          "context": "Bolsonaro only",
+          "slots": 1714167,
+          "draws": 256,
+          "seed": 20261126,
+          "accepted": 1,
+          "seconds": 15.062277580997034,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 14,
+          "self_mean": 5.83984375
+        },
+        {
+          "day": "2022-10-16",
+          "context": "Lula only",
+          "slots": 855125,
+          "draws": 256,
+          "seed": 20261127,
+          "accepted": 10,
+          "seconds": 7.991220145995612,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 8,
+          "self_mean": 3.0859375
+        },
+        {
+          "day": "2022-10-16",
+          "context": "both",
+          "slots": 624881,
+          "draws": 256,
+          "seed": 20261128,
+          "accepted": 49,
+          "seconds": 5.084852440995746,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 5,
+          "self_mean": 1.61328125
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Bolsonaro only",
+          "slots": 915673,
+          "draws": 256,
+          "seed": 20261129,
+          "accepted": 9,
+          "seconds": 11.360043319997203,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 11,
+          "self_mean": 3.83203125
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Lula only",
+          "slots": 620377,
+          "draws": 256,
+          "seed": 20261130,
+          "accepted": 37,
+          "seconds": 7.503443563000474,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 6,
+          "self_mean": 2.078125
+        },
+        {
+          "day": "2022-10-17",
+          "context": "both",
+          "slots": 393511,
+          "draws": 256,
+          "seed": 20261131,
+          "accepted": 76,
+          "seconds": 3.785086620002403,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 5,
+          "self_mean": 1.09765625
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Bolsonaro only",
+          "slots": 775069,
+          "draws": 256,
+          "seed": 20261132,
+          "accepted": 4,
+          "seconds": 8.026046901002701,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 11,
+          "self_mean": 3.95703125
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Lula only",
+          "slots": 622765,
+          "draws": 256,
+          "seed": 20261133,
+          "accepted": 36,
+          "seconds": 4.94485353899654,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 7,
+          "self_mean": 2.16796875
+        },
+        {
+          "day": "2022-10-18",
+          "context": "both",
+          "slots": 243360,
+          "draws": 256,
+          "seed": 20261134,
+          "accepted": 119,
+          "seconds": 1.4484600510040764,
+          "zero_acceptance_upper_95": null,
+          "self_min": 0,
+          "self_max": 3,
+          "self_mean": 0.74609375
+        }
+      ],
+      "slot_semantics": [
+        {
+          "day": "2022-10-16",
+          "context": "Bolsonaro only",
+          "slots": 1714167,
+          "repeat_sharer_post_actions": 118,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-16",
+          "context": "Lula only",
+          "slots": 855125,
+          "repeat_sharer_post_actions": 15,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-16",
+          "context": "both",
+          "slots": 624881,
+          "repeat_sharer_post_actions": 25,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Bolsonaro only",
+          "slots": 915673,
+          "repeat_sharer_post_actions": 64,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Lula only",
+          "slots": 620377,
+          "repeat_sharer_post_actions": 21,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-17",
+          "context": "both",
+          "slots": 393511,
+          "repeat_sharer_post_actions": 20,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Bolsonaro only",
+          "slots": 775069,
+          "repeat_sharer_post_actions": 62,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Lula only",
+          "slots": 622765,
+          "repeat_sharer_post_actions": 17,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "both",
+          "slots": 243360,
+          "repeat_sharer_post_actions": 16,
+          "same_second": 0
+        }
+      ],
+      "compiled_fixtures": [
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 33209
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 33117
+        },
+        {
+          "time_feasible": 1,
+          "legal": 1,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 100000
+        },
+        {
+          "time_feasible": 1,
+          "legal": 1,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 100000
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 33413
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 33506
+        }
+      ]
+    },
+    "early_rejection_probe": {
+      "workers": 8,
+      "seconds": 20.854371175002598,
+      "early_reject": true,
+      "strata": [
+        {
+          "day": "2022-10-16",
+          "context": "Bolsonaro only",
+          "slots": 1714167,
+          "draws": 2048,
+          "seed": 20261126,
+          "accepted": 6,
+          "seconds": 15.674515992999659,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-16",
+          "context": "Lula only",
+          "slots": 855125,
+          "draws": 2048,
+          "seed": 20261127,
+          "accepted": 83,
+          "seconds": 11.772086300996307,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-16",
+          "context": "both",
+          "slots": 624881,
+          "draws": 2048,
+          "seed": 20261128,
+          "accepted": 404,
+          "seconds": 13.17177425599948,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Bolsonaro only",
+          "slots": 915673,
+          "draws": 2048,
+          "seed": 20261129,
+          "accepted": 55,
+          "seconds": 19.055454651002947,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Lula only",
+          "slots": 620377,
+          "draws": 2048,
+          "seed": 20261130,
+          "accepted": 269,
+          "seconds": 16.262526853002782,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-17",
+          "context": "both",
+          "slots": 393511,
+          "draws": 2048,
+          "seed": 20261131,
+          "accepted": 632,
+          "seconds": 12.605942325004435,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Bolsonaro only",
+          "slots": 775069,
+          "draws": 2048,
+          "seed": 20261132,
+          "accepted": 32,
+          "seconds": 10.48543465200055,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Lula only",
+          "slots": 622765,
+          "draws": 2048,
+          "seed": 20261133,
+          "accepted": 238,
+          "seconds": 14.549342621998221,
+          "zero_acceptance_upper_95": null
+        },
+        {
+          "day": "2022-10-18",
+          "context": "both",
+          "slots": 243360,
+          "draws": 2048,
+          "seed": 20261134,
+          "accepted": 961,
+          "seconds": 5.541369139995368,
+          "zero_acceptance_upper_95": null
+        }
+      ],
+      "slot_semantics": [
+        {
+          "day": "2022-10-16",
+          "context": "Bolsonaro only",
+          "slots": 1714167,
+          "repeat_sharer_post_actions": 118,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-16",
+          "context": "Lula only",
+          "slots": 855125,
+          "repeat_sharer_post_actions": 15,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-16",
+          "context": "both",
+          "slots": 624881,
+          "repeat_sharer_post_actions": 25,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Bolsonaro only",
+          "slots": 915673,
+          "repeat_sharer_post_actions": 64,
+          "same_second": 1
+        },
+        {
+          "day": "2022-10-17",
+          "context": "Lula only",
+          "slots": 620377,
+          "repeat_sharer_post_actions": 21,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-17",
+          "context": "both",
+          "slots": 393511,
+          "repeat_sharer_post_actions": 20,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Bolsonaro only",
+          "slots": 775069,
+          "repeat_sharer_post_actions": 62,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "Lula only",
+          "slots": 622765,
+          "repeat_sharer_post_actions": 17,
+          "same_second": 0
+        },
+        {
+          "day": "2022-10-18",
+          "context": "both",
+          "slots": 243360,
+          "repeat_sharer_post_actions": 16,
+          "same_second": 0
+        }
+      ],
+      "compiled_fixtures": [
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 33209
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 33117
+        },
+        {
+          "time_feasible": 1,
+          "legal": 1,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 100000
+        },
+        {
+          "time_feasible": 1,
+          "legal": 1,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 100000
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": false,
+          "draws": 100000,
+          "accepted": 33413
+        },
+        {
+          "time_feasible": 6,
+          "legal": 2,
+          "early_reject": true,
+          "draws": 100000,
+          "accepted": 33506
+        }
+      ]
+    },
+    "status": "Exact rejection candidate benchmarked on discovery. Executable scoring and registered simulations are pending."
+  },
+  "holdout_status": "unopened"
+}
