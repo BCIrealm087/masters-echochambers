@@ -4,7 +4,7 @@ Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-reference-validation.md#reproduction-and-handoff) | Primary reference scorer validated on discovery. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-holdout-preparation.md) | Primary entry points rehearsed on discovery. Secondary and missing-endpoint checks pending. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -27,6 +27,8 @@ Last updated 2026-11-27.
 **Discovery freeze handoff, 2026-11-26.** Verified the [frozen partition, sensitivities and prediction settings](docs/reports/m3-discovery-freeze.json). The [discovery review](docs/reports/m3-discovery-implementation.md#discovery-freeze--2026-11-26) explains the Leiden result and the scale benchmark for exact rejection. The benchmark supports implementing the reference scorer. The holdout gate remains closed pending scoring and simulation checks.
 
 **Reference validation handoff, 2026-11-27.** The [reference validation report](docs/reports/m3-reference-validation.md) records exhaustive fixture checks, a resumable 64-draw corpus benchmark, and 1,000 null and injected-affinity replicates per scenario. The primary scorer and its aggregate evidence are archived. The holdout evaluation entry point and secondary and sensitivity statistics remain pending.
+
+**Holdout preparation checkpoint, 2026-11-27.** Implemented and rehearsed the [margin checks, primary and restricted references, and prediction comparisons](docs/reports/m3-holdout-preparation.md) on discovery data. Group-level inference, weighting and missing-endpoint checks remain in preparation.
 
 ## M2 · Repost feasibility and coverage
 

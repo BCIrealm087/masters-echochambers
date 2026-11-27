@@ -14,6 +14,8 @@ import numpy as np
 
 SCORE_COLUMNS = ("sharer", "action_second", "author", "original_second",
                  "sharer_group", "author_group")
+DISCOVERY_DAYS = tuple(date(2022, 10, day) for day in (16, 17, 18))
+HOLDOUT_DAYS = tuple(date(2022, 10, day) for day in (19, 20, 21))
 
 
 def digest(path):
@@ -68,11 +70,12 @@ def score_batch(binary, output, key, payload, slots, batch, count, seed, limit):
     return result
 
 
-def load_strata(ledger, accounts, labels):
+def load_strata(ledger, accounts, labels, *, days=DISCOVERY_DAYS, stratify="day-context",
+                exclude=None):
     with duckdb.connect(config={"threads": 4}) as db:
         scope = db.execute("SELECT DISTINCT day FROM read_parquet(?)", [str(ledger)]).fetchall()
-        if set(scope) != {(date(2022, 10, day),) for day in (16, 17, 18)}:
-            raise ValueError("This scorer is restricted to the discovery dates")
+        if set(scope) != {(day,) for day in days}:
+            raise ValueError("Ledger dates differ from the requested evaluation interval")
         db.register("groups", {"account": accounts, "label": labels.astype(np.uint64) + 1})
         db.execute("""
             CREATE TEMP TABLE eligible AS
@@ -90,13 +93,29 @@ def load_strata(ledger, accounts, labels):
         """).fetchone()[0]
         if bad:
             raise ValueError(f"{bad} observed pairings lack a valid post time")
-        for day, context in db.execute(
-            "SELECT DISTINCT day, membership FROM eligible ORDER BY 1, 2"
-        ).fetchall():
-            data = db.execute("""
+        if exclude is not None:
+            field, top = exclude
+            if field not in ("author", "target") or top not in ("1", "5", "1%"):
+                raise ValueError("Invalid concentration exclusion")
+            cutoff = "ceil(count(*) OVER () / 100.0)" if top == "1%" else top
+            db.execute(f"""
+                DELETE FROM eligible WHERE {field} IN (
+                    SELECT {field} FROM eligible GROUP BY {field}
+                    QUALIFY row_number() OVER (ORDER BY count(*) DESC, {field}) <= {cutoff}
+                )
+            """)
+        if stratify not in ("day-context", "day", "pooled"):
+            raise ValueError("Unknown reference strata")
+        date_expr = "cast(day AS VARCHAR)" if stratify != "pooled" else "'all'"
+        context_expr = "membership" if stratify == "day-context" else "'all'"
+        for day, context in db.execute(f"""
+            SELECT DISTINCT {date_expr}, {context_expr} FROM eligible ORDER BY 1, 2
+        """).fetchall():
+            data = db.execute(f"""
                 SELECT sharer, action_second, author, original_second, sharer_group, author_group,
                        target
-                FROM eligible WHERE day = ? AND membership = ? ORDER BY action_second, post_id
+                FROM eligible WHERE {date_expr} = ? AND {context_expr} = ?
+                ORDER BY action_second, post_id
             """, [day, context]).fetchnumpy()
             yield str(day), context, data
 
@@ -109,10 +128,15 @@ def run(args):
 
 
 def score(args):
+    days = getattr(args, "days", DISCOVERY_DAYS)
+    stratify = getattr(args, "stratify", "day-context")
+    exclude = getattr(args, "exclude", None)
     config = dict(ledger_sha256=digest(args.ledger), accounts_sha256=digest(args.accounts),
                   membership_sha256=digest(args.membership), binary_sha256=digest(args.binary),
                   driver_sha256=digest(Path(__file__)), draws=args.draws, batch_size=args.batch_size,
                   seed=args.seed, proposals_per_draw=args.proposals_per_draw)
+    config.update(days=[str(day) for day in days], stratify=stratify,
+                  exclude=list(exclude) if exclude else None)
     state = args.output / "config.json"
     if state.exists():
         if json.loads(state.read_text()) != config:
@@ -122,8 +146,10 @@ def score(args):
     accounts, labels = np.load(args.accounts), np.load(args.membership)
     jobs = {}
     strata = []
+    stratum_scores = []
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        for index, (day, context, data) in enumerate(load_strata(args.ledger, accounts, labels)):
+        for index, (day, context, data) in enumerate(load_strata(
+                args.ledger, accounts, labels, days=days, stratify=stratify, exclude=exclude)):
             shards = jobs[index] = []
             payload = pack(*(data[column] for column in SCORE_COLUMNS))
             slots = len(data["sharer"])
@@ -136,20 +162,43 @@ def score(args):
                 shards.append(pool.submit(score_batch, args.binary, args.output, str(index),
                                           payload, slots, batch, count, seed,
                                           count * args.proposals_per_draw))
-        combined = np.zeros(args.draws, dtype=np.int64)
         for index, stratum in enumerate(strata):
             batches = [job.result() for job in jobs[index]]
             scores = np.concatenate([batch["scores"] for batch in batches])
-            combined += scores
+            stratum_scores.append(scores)
             stratum.update(reference_mean_internal=float(scores.mean()),
                            proposals=sum(batch["proposals"] for batch in batches))
+    if not strata:
+        raise ValueError("No eligible actions")
+    def contrast(indices):
+        selected = [strata[index] for index in indices]
+        return summarize(selected, np.sum([stratum_scores[index] for index in indices], axis=0))
+
+    result = dict(draws=args.draws, strata=strata, **contrast(list(range(len(strata)))))
+    if stratify == "day-context":
+        result["per_context"] = {
+            context: contrast([i for i, row in enumerate(strata) if row["context"] == context])
+            for context in sorted({row["context"] for row in strata})
+        }
+        if len({row["day"] for row in strata}) > 1:
+            result["leave_one_day_out"] = {
+                day: contrast([i for i, row in enumerate(strata) if row["day"] != day])
+                for day in sorted({row["day"] for row in strata})
+            }
+    return result
+
+
+def summarize(strata, combined):
     total = sum(row["slots"] for row in strata)
     observed = sum(row["observed_internal"] for row in strata)
-    return dict(draws=args.draws, slots=total, strata=strata, observed_share=observed/total,
+    excess = float(100*(observed-combined.mean())/total)
+    return dict(slots=total, observed_share=observed/total,
                 expected_share=float(combined.mean()/total),
-                excess_percentage_points=float(100*(observed-combined.mean())/total),
+                excess_percentage_points=excess,
+                practical_screens={str(threshold): excess >= threshold
+                                   for threshold in (2.5, 5, 10, 20)},
                 central_95_reference_share=(np.quantile(combined, [.025, .975])/total).tolist(),
-                plus_one_upper_p=float((1+np.count_nonzero(combined >= observed))/(args.draws+1)))
+                plus_one_upper_p=float((1+np.count_nonzero(combined >= observed))/(len(combined)+1)))
 
 
 if __name__ == "__main__":

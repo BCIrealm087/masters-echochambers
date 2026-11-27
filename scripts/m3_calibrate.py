@@ -12,12 +12,13 @@ BETAS = (0, -0.5, 0.5, -1, 1, -2, 2)
 FOLD_DAYS = ("2022-10-17", "2022-10-18")
 
 
-def load_fold(ledger, day, partition=None):
+def load_fold(ledger, day, partition=None, *, evaluation=None,
+              training_end=None, discovery_support=False):
     with duckdb.connect(config={"threads": 4}) as db:
         db.execute("""
             CREATE TEMP TABLE events AS SELECT * FROM read_parquet(?)
             WHERE sharer <> author AND membership <> 'unknown' AND day <= cast(? AS DATE)
-        """, [str(ledger), day])
+        """, [[str(ledger)] if evaluation is None else [str(ledger), str(evaluation)], day])
         if partition:
             accounts, groups = partition
             db.register("account_groups", {"account": accounts, "label": groups})
@@ -25,7 +26,8 @@ def load_fold(ledger, day, partition=None):
             db.execute("CREATE TEMP TABLE account_groups (account UBIGINT, label INTEGER)")
         # Anchor recency at local midnight to keep exponent magnitudes small.
         db.execute("CREATE TEMP TABLE boundary AS SELECT cast(? AS DATE) AS day, "
-                   "epoch(cast(? AS DATE)) + 10800 AS anchor", [day, day])
+                   "epoch(cast(? AS DATE)) + 10800 AS anchor, cast(? AS DATE) AS training_end",
+                   [day, day, training_end or day])
         db.execute("""
             CREATE TEMP TABLE train AS SELECT e.*,
                 s.label AS sharer_group, a.label AS author_group,
@@ -34,7 +36,7 @@ def load_fold(ledger, day, partition=None):
             FROM events e CROSS JOIN boundary b
             LEFT JOIN account_groups s ON e.sharer = s.account
             LEFT JOIN account_groups a ON e.author = a.account
-            WHERE e.day < b.day;
+            WHERE e.day < b.training_end;
             CREATE TEMP TABLE validation AS SELECT e.*, anchor,
                 s.label AS sharer_group, a.label AS author_group
             FROM events e CROSS JOIN boundary b
@@ -45,11 +47,21 @@ def load_fold(ledger, day, partition=None):
                 FROM train GROUP BY author;
             CREATE TEMP TABLE context_popularity AS SELECT membership, author, count(*) AS total
                 FROM train GROUP BY membership, author;
+        """)
+        if discovery_support:
+            # Zero is reserved because the corpus reconciliation accepts positive IDs.
+            db.execute("""
+                UPDATE validation SET author = 0, author_group = NULL
+                WHERE author NOT IN (SELECT author FROM popularity)
+            """)
+        support = ("SELECT membership, 0 AS author FROM contexts" if discovery_support
+                   else "SELECT membership, author FROM validation")
+        db.execute(f"""
             CREATE TEMP TABLE risk AS
                 WITH contexts AS (SELECT DISTINCT membership FROM validation),
                 support AS (
                     SELECT membership, author FROM contexts CROSS JOIN popularity
-                    UNION SELECT membership, author FROM validation
+                    UNION {support}
                 )
                 SELECT s.*, g.label, coalesce(p.total, 0) AS popularity,
                        coalesce(c.total, 0) AS context_popularity
@@ -77,8 +89,11 @@ def load_fold(ledger, day, partition=None):
                        sum(recent1) FILTER (WHERE sharer_group = author_group) AS within1
                 FROM train GROUP BY sharer;
         """)
-        return db.execute("""
+        metadata = "v.sharer, v.author, v.target, v.membership," if evaluation is not None else ""
+        assigned_only = "WHERE v.sharer_group IS NOT NULL" if evaluation is not None else ""
+        return db.execute(f"""
             SELECT
+                {metadata}
                 t.size - (s.author IS NOT NULL)::INT AS risk_size,
                 t.global_total - coalesce(s.popularity, 0) AS global_total,
                 t.context_total - coalesce(s.context_popularity, 0) AS context_total,
@@ -102,6 +117,7 @@ def load_fold(ledger, day, partition=None):
             LEFT JOIN group_totals g ON g.membership = v.membership AND g.label = v.sharer_group
             LEFT JOIN dyad d USING (sharer, author)
             LEFT JOIN history h USING (sharer)
+            {assigned_only}
             ORDER BY v.post_id
         """).fetchnumpy()
 
