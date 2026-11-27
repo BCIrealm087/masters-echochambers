@@ -39,4 +39,11 @@ python3 scripts/m3_holdout.py primary-reference "$discovery/discovery.parquet" \
   "$holdout" --binary "$discovery/reference-score-evaluation" --secondary
 ```
 
-The next step is to run the frozen evaluation on the research host in a persistent terminal session and record the primary result, sensitivities and any resource limits. The command above has yet to be run.
+The next step is to run the frozen evaluation on the research host in a persistent terminal session and record the primary result, sensitivities and any resource limits. The launch checkpoint below records the first execution.
+
+
+## Holdout launch
+
+The [workflow driver](../../scripts/m3_run_holdout.py) started on 2026-11-27 in the detached `holdout-evaluation` session on tmux socket `m3-holdout`. The primary reference uses eight workers. Prediction, raw endpoint bounds and circulation diagnostics run in a separate serial lane. Day-only and pooled references, distinct-dyad scoring, frequency exclusions and the four endpoint sensitivities follow the primary reference in its lane. Sequential reference stages keep the peak worker count bounded on the 16-core research host.
+
+Each stage saves a local log and an atomic status marker in `runs/local/m3-holdout/evaluation/`. Completed outputs are reused if their hashes and the evaluation freeze agree. Reference draws can resume from their existing checkpoints. The workflow records completion or failure in `workflow-status.json` and emits a terminal bell if attached. No holdout estimates are reported at this checkpoint.

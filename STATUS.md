@@ -4,7 +4,7 @@ Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Run the frozen holdout evaluation](docs/reports/m3-evaluation-freeze.md) | Evaluation frozen and holdout margins verified. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Run the frozen holdout evaluation](docs/reports/m3-evaluation-freeze.md) | Frozen holdout evaluation running. Outcome review and archive pending. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -37,6 +37,8 @@ Last updated 2026-11-27.
 **Circulation follow-up handoff, 2026-11-27.** Adopted a [literature-based protocol for prior contact about the same item](docs/reports/repost-intermediaries.md). The [reference query](scripts/repost_prior_contact.sql) passed its synthetic checks. After the M3 baseline, audit the discovery-period quote and reply joins alongside distinct-item circulation. The deliverable is the rate of documented cross-group contact before internal reposts, with its coverage, or the measured reason it cannot be estimated. M3 v1 governs the active endpoint refits and holdout preparation.
 
 **Evaluation freeze handoff, 2026-11-27.** Reviewed the 480 discovery refits, verified 4,770,214 eligible holdout actions and five group-test margins, and froze the [executable evaluation](docs/reports/m3-evaluation-freeze.json). The [advisor report](docs/reports/m3-evaluation-freeze.md) records partition sensitivity and legality checks. No outcome scoring has started.
+
+**Evaluation launch checkpoint, 2026-11-27.** Started the [frozen holdout workflow](docs/reports/m3-evaluation-freeze.md#holdout-launch) in detached tmux after verifying its inputs and implementation. Primary reference and prediction started together. The remaining registered comparisons are queued.
 
 ## M2 · Repost feasibility and coverage
 
