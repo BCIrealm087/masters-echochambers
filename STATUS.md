@@ -34,6 +34,8 @@ Last updated 2026-11-27.
 
 **Endpoint completion checkpoint, 2026-11-27.** Verified [four post-level discovery completions](docs/reports/m3-endpoint-completions.md) covering 22,464 previously unresolved actions. Started all four registered refits with per-seed recovery in a detached tmux session. Refit results and matched-reference feasibility remain pending.
 
+**Circulation follow-up handoff, 2026-11-27.** Adopted a [literature-based protocol for prior contact about the same item](docs/reports/repost-intermediaries.md). The [reference query](scripts/repost_prior_contact.sql) passed its synthetic checks. After the M3 baseline, audit the discovery-period quote and reply joins alongside distinct-item circulation. The deliverable is the rate of documented cross-group contact before internal reposts, with its coverage, or the measured reason it cannot be estimated. M3 v1 governs the active endpoint refits and holdout preparation.
+
 ## M2 · Repost feasibility and coverage
 
 **Objective.** Measure which observed Lula- and Bolsonaro-context reposts from 16–21 October 2022 have a verified action date, sharing account and historical original author.
@@ -123,3 +125,4 @@ Last updated 2026-11-27.
 | 2026-11-26 | Thesis design | Mapped the [prospective computational pipeline](docs/reports/thesis-computational-pipeline.md) from Parquet reconciliation to community discovery, held-out reference testing, author prediction and conditional political interpretation. The M3 specification governs pilot execution. |
 | 2026-11-26 | Thesis design | Recorded the researcher's observation of culturally distinct hashtag clusters and mapped [prospective tests of linguistic repertoires](docs/reports/linguistic-repertoire-hypothesis.md) for community characterization, graph construction and held-out author prediction. |
 | 2026-11-26 | Thesis design | Integrated the [research direction and study sequence](docs/reports/thesis-direction-synthesis.md). Defined the roles of the repost baseline, distinct-item circulation, independent language validation and matched tests of linguistic information. |
+| 2026-11-27 | Thesis design · Circulation | Registered [which public traces can document contact before reposting](docs/reports/repost-intermediaries.md), the denominator and timing controls, and the independent evidence a transmission-parent benchmark would require. |

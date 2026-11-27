@@ -15,6 +15,7 @@ The October coverage audit established that the recorded actions can support a c
 | [Research progress](STATUS.md) | Current milestone, active task, evidence of completion and dated handoffs |
 | [Integrated thesis direction](docs/reports/thesis-direction-synthesis.md) | Research questions, prioritization, execution sequence and decisions for the later studies |
 | [Computational pipeline](docs/reports/thesis-computational-pipeline.md) | Event reconstruction, discovery, held-out evaluation and extension procedures |
+| [Repost intermediaries and prior contact](docs/reports/repost-intermediaries.md) | How to test whether someone replied across a group boundary about an item before reposting an author within their group |
 | [Project instructions](AGENTS.md) | How to develop, document and archive work in this repository |
 | [What counts as echo-chamber evidence?](docs/reports/reflexive-report-8.md) | Research questions, competing definitions and the evidence required for each interpretation |
 | [Prior study](docs/prior-study.md) | The earlier hashtag graphs, stance labels and limits on their interpretation |
