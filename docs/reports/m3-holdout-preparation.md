@@ -16,6 +16,8 @@ The [prediction implementation](../../scripts/m3_calibrate.py) uses only discove
 
 A scalar comparison fixture verified both prediction supports, including exclusion of an unassigned sharer. Rerunning both original rolling folds reproduced the frozen settings and log scores. The discovery rehearsal split October 16–17 training from October 18 validation and scored all 1,641,194 eligible actions through both support definitions. The exercise checks the code path. The primary partition uses all three discovery days, so this rehearsal provides no independent estimate of predictive gain.
 
-## Work remaining before opening outcomes
+## Work identified at the preparation checkpoint
 
 Implement and verify the group-level reference scores and Holm correction, equal-sharer and distinct-dyad reference statistics, concentration and historical-item diagnostics, and the missing-endpoint bounds and imputation analyses. Freeze the executable evaluation configuration and record dispositions for any sensitivity that exceeds available resources. The primary preparation, reference and prediction commands are separate stages so margin checks can be performed before group agreement or prediction outcomes are evaluated.
+
+The [subsequent sensitivity checkpoint](m3-holdout-sensitivities.md) records validation of the group, weighting, circulation and raw endpoint checks. It identifies the remaining work before scoring.

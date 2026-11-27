@@ -4,7 +4,7 @@ Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-holdout-preparation.md) | Primary entry points rehearsed on discovery. Secondary and missing-endpoint checks pending. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-holdout-preparation.md) | Group, weighting and raw endpoint checks rehearsed on discovery. Post-level imputation and executable freeze pending. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -12,7 +12,7 @@ Last updated 2026-11-27.
 
 **Completion condition.** Archive a reproducible discovery freeze, validated comparisons, holdout estimates and sensitivity results or a documented feasibility limit.
 
-**Current task.** Prepare and verify the holdout evaluation entry point and registered comparisons. Check the eligible population, scoring inputs, and sensitivity implementation before scoring outcomes.
+**Current task.** Complete or document the feasibility limits of post-level missing-author completions and corresponding discovery refits. Freeze the executable configuration and verify holdout margins before scoring outcomes.
 
 **Specification handoff, 2026-11-26.** Registered [protocol v1](docs/reports/m3-repost-pilot-specification.md) with a discovery-only selection rule, matched post-slot reference, history-aware prediction and interpretation thresholds. The executable manifest and fitted partition are pending implementation and verification.
 
@@ -29,6 +29,8 @@ Last updated 2026-11-27.
 **Reference validation handoff, 2026-11-27.** The [reference validation report](docs/reports/m3-reference-validation.md) records exhaustive fixture checks, a resumable 64-draw corpus benchmark, and 1,000 null and injected-affinity replicates per scenario. The primary scorer and its aggregate evidence are archived. The holdout evaluation entry point and secondary and sensitivity statistics remain pending.
 
 **Holdout preparation checkpoint, 2026-11-27.** Implemented and rehearsed the [margin checks, primary and restricted references, and prediction comparisons](docs/reports/m3-holdout-preparation.md) on discovery data. Group-level inference, weighting and missing-endpoint checks remain in preparation.
+
+**Sensitivity checkpoint, 2026-11-27.** Validated [group tests with Holm correction, equal-sharer and distinct-dyad weighting, raw missing-endpoint bounds and circulation diagnostics](docs/reports/m3-holdout-sensitivities.md) on discovery inputs. Matched-reference endpoint completions and corresponding discovery refits remain open.
 
 ## M2 · Repost feasibility and coverage
 

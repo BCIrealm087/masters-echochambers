@@ -10,6 +10,7 @@ import numpy as np
 
 from m2_repost_coverage import HOLDOUT_START, reconcile
 from m3_calibrate import context_scores, history_scores, load_fold
+from m3_distinct_dyads import score as score_distinct_dyads
 from m3_reference_score import HOLDOUT_DAYS, atomic_json, digest, run
 
 REPOSITORY = Path(__file__).resolve().parent.parent
@@ -96,6 +97,86 @@ def group_margins(db, accounts, membership):
             LEFT JOIN eligible e USING (group_id) ORDER BY m.group_id
         """).fetchall()
     ]
+
+
+def endpoint_bounds(ledger, accounts, membership):
+    """Bound raw internal sharing for otherwise eligible assigned sharers."""
+    with duckdb.connect(config={"threads": 4}) as db:
+        db.register("frozen_groups", {"account": accounts, "group_id": membership})
+        rows = db.execute("""
+            WITH assigned AS (
+                SELECT e.*, s.group_id, a.group_id AS author_group
+                FROM read_parquet(?) e JOIN frozen_groups s ON e.sharer = s.account
+                LEFT JOIN frozen_groups a ON e.author = a.account
+                WHERE e.membership <> 'unknown'
+                  AND (e.author IS NULL OR e.sharer <> e.author)
+            ), measured AS (
+                SELECT *,
+                    count(*) OVER (PARTITION BY sharer) AS activity,
+                    CASE WHEN target IS NOT NULL THEN
+                        count(*) OVER (PARTITION BY target) END AS reuse
+                FROM assigned
+            ), binned AS (
+                SELECT *, CASE WHEN activity = 1 THEN '1' WHEN activity < 10 THEN '2-9'
+                               WHEN activity < 100 THEN '10-99' ELSE '100+' END AS activity_bin,
+                          CASE WHEN reuse IS NULL THEN 'reference unavailable'
+                               WHEN reuse = 1 THEN '1' WHEN reuse < 10 THEN '2-9'
+                               WHEN reuse < 100 THEN '10-99' ELSE '100+' END AS reuse_bin
+                FROM measured
+            )
+            SELECT cast(day AS VARCHAR), membership, group_id, activity_bin, reuse_bin, count(author),
+                   count(*) FILTER (WHERE author IS NULL),
+                   count(*) FILTER (WHERE group_id = author_group),
+                   count(*) FILTER (WHERE author IS NOT NULL AND author_group IS NULL)
+            FROM binned
+            GROUP BY GROUPING SETS ((), (day, membership), (group_id), (activity_bin), (reuse_bin))
+            ORDER BY day NULLS FIRST, membership NULLS FIRST, group_id NULLS FIRST,
+                     activity_bin NULLS FIRST, reuse_bin NULLS FIRST
+        """, [str(ledger)]).fetchall()
+    return [
+        dict(day=day, context=context, group=group, activity_bin=activity, target_reuse_bin=reuse,
+             resolved=known, missing=unknown,
+             internal=within, resolved_external_to_partition=outside,
+             lower=within/(known+unknown) if known+unknown else None,
+             upper=(within+unknown)/(known+unknown) if known+unknown else None)
+        for day, context, group, activity, reuse, known, unknown, within, outside in rows
+    ]
+
+
+def circulation_diagnostics(discovery, evaluation, accounts, evaluation_start=HOLDOUT_START):
+    with duckdb.connect(config={"threads": 4}) as db:
+        db.register("assigned_accounts", {"account": accounts})
+        db.execute("""
+            CREATE TEMP TABLE eligible AS
+            SELECT e.sharer, e.author, e.target, e.original_second
+            FROM read_parquet(?) e JOIN assigned_accounts a ON e.sharer = a.account
+            WHERE e.sharer <> e.author AND e.membership <> 'unknown'
+        """, [str(evaluation)])
+        totals = {}
+        for name, columns in (("sharer", "sharer"), ("author", "author"), ("post", "target"),
+                              ("dyad", "sharer, author")):
+            count, actions, largest, squares = db.execute(f"""
+                SELECT count(*), sum(n), max(n), sum(n::DOUBLE * n)
+                FROM (SELECT count(*) AS n FROM eligible GROUP BY {columns})
+            """).fetchone()
+            totals[name] = dict(distinct=count, max_share=largest/actions if actions else None,
+                                inverse_squared_share_sum=actions**2/squares if actions else None)
+        novelty = db.execute("""
+            WITH history AS (
+                SELECT sharer, author, target FROM read_parquet(?)
+                WHERE sharer <> author AND membership <> 'unknown'
+            ), dyads AS (SELECT DISTINCT sharer, author FROM history),
+            posts AS (SELECT DISTINCT target FROM history)
+            SELECT count(*) FILTER (WHERE d.sharer IS NULL),
+                   count(*) FILTER (WHERE p.target IS NULL),
+                   count(*) FILTER (WHERE e.original_second >=
+                                      epoch(cast(? AS DATE)) + 10800)
+            FROM eligible e LEFT JOIN dyads d USING (sharer, author)
+            LEFT JOIN posts p USING (target)
+        """, [str(discovery), evaluation_start]).fetchone()
+    return dict(concentration=totals, actions_with_unseen_dyad=novelty[0],
+                actions_with_unseen_original=novelty[1],
+                actions_with_newly_published_original=novelty[2])
 
 
 def prepare(root, snapshot, output, accounts, membership):
@@ -215,7 +296,9 @@ def prediction(discovery, evaluation, membership, settings, days=HOLDOUT_DAYS,
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("stage", choices=("prepare-margins", "primary-reference", "prediction"))
+    parser.add_argument("stage", choices=("prepare-margins", "primary-reference", "prediction",
+                                         "endpoint-bounds", "circulation-diagnostics",
+                                         "distinct-dyads"))
     for name in ("discovery", "accounts", "membership", "work"):
         parser.add_argument(name, type=Path)
     parser.add_argument("--root", type=Path)
@@ -225,6 +308,7 @@ def main():
     parser.add_argument("--stratify", choices=("day-context", "day", "pooled"),
                         default="day-context")
     parser.add_argument("--exclude", nargs=2, metavar=("FIELD", "TOP"))
+    parser.add_argument("--secondary", action="store_true")
     args = parser.parse_args()
     settings = verify_frozen(args.discovery, args.accounts, args.membership)
     if args.stage == "prepare-margins":
@@ -241,6 +325,17 @@ def main():
         if args.stage == "prediction":
             result = prediction(args.discovery, ledger, (np.load(args.accounts),
                                 np.load(args.membership)), settings)
+        elif args.stage == "endpoint-bounds":
+            result = endpoint_bounds(ledger, np.load(args.accounts), np.load(args.membership))
+        elif args.stage == "circulation-diagnostics":
+            result = circulation_diagnostics(args.discovery, ledger, np.load(args.accounts))
+        elif args.stage == "distinct-dyads":
+            if args.binary is None or args.workers < 1:
+                parser.error("distinct-dyads requires --binary and a positive worker count")
+            result = score_distinct_dyads(
+                args.binary, ledger, args.accounts, args.membership,
+                args.work / "reference-distinct-dyads", draws=9999, workers=args.workers,
+                seed=20261127, days=HOLDOUT_DAYS)
         else:
             if args.binary is None or args.workers < 1:
                 parser.error("primary-reference requires --binary and a positive worker count")
@@ -250,10 +345,10 @@ def main():
             suffix = "-".join(args.exclude or ())
             result = run(SimpleNamespace(ledger=ledger, accounts=args.accounts,
                          membership=args.membership, binary=args.binary,
-                         output=args.work / f"reference-{args.stratify}-{suffix}",
+                         output=args.work / f"reference-{args.stratify}-{suffix}-{args.secondary}",
                          days=HOLDOUT_DAYS, stratify=args.stratify, exclude=args.exclude,
                          draws=9999, batch_size=64, workers=args.workers, seed=20261127,
-                         proposals_per_draw=10000))
+                         proposals_per_draw=10000, secondary=args.secondary))
     print(json.dumps(result, indent=2, allow_nan=False))
 
 
