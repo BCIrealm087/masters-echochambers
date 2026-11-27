@@ -1,0 +1,41 @@
+{
+  "discovery_sha256": "657ceaf3b2369f8524555ccf0b945865f769f479800207b04b5ad7f51e4781d6",
+  "candidate_authors": 77817,
+  "missing_actions": 22464,
+  "missing_reference_actions": 0,
+  "actions_on_inadmissible_posts": 0,
+  "scenarios": {
+    "internal-frequent": {
+      "posts_imputed": 3435,
+      "actions_imputed": 22464,
+      "internal_added_under_frozen_groups": 20294,
+      "sha256": "3a7d53941d29e44623706721c3ab3cd802839edd43441aafb4402e74f4ae6052",
+      "distinct_imputed_authors": 23,
+      "max_imputed_actions_per_author": 13367
+    },
+    "internal-rare": {
+      "posts_imputed": 3435,
+      "actions_imputed": 22464,
+      "internal_added_under_frozen_groups": 20294,
+      "sha256": "a66cdea215b22165824020f4f96cfbf9caf72dcf4fc963a57358f6493952e7d7",
+      "distinct_imputed_authors": 23,
+      "max_imputed_actions_per_author": 13367
+    },
+    "external-frequent": {
+      "posts_imputed": 3435,
+      "actions_imputed": 22464,
+      "internal_added_under_frozen_groups": 0,
+      "sha256": "88221ca03b3f5d24297303e4a82598f75f9329464660ac3b1269debadde45981",
+      "distinct_imputed_authors": 4,
+      "max_imputed_actions_per_author": 13737
+    },
+    "external-rare": {
+      "posts_imputed": 3435,
+      "actions_imputed": 22464,
+      "internal_added_under_frozen_groups": 0,
+      "sha256": "99718f8c7ee1da64fc5619fc30cf39c5446fe15ae04e57c98e533270781aa799",
+      "distinct_imputed_authors": 2,
+      "max_imputed_actions_per_author": 13737
+    }
+  }
+}

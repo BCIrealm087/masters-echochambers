@@ -4,7 +4,7 @@ Last updated 2026-11-27.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Prepare the holdout evaluation](docs/reports/m3-holdout-preparation.md) | Group, weighting and raw endpoint checks rehearsed on discovery. Post-level imputation and executable freeze pending. Holdout outcomes remain unopened. |
+| M3 · Within-corpus repost pilot | [Complete the missing-author sensitivity and freeze evaluation](docs/reports/m3-endpoint-completions.md) | Four discovery completions verified. Resumable refits running. Holdout outcomes remain unopened. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -31,6 +31,8 @@ Last updated 2026-11-27.
 **Holdout preparation checkpoint, 2026-11-27.** Implemented and rehearsed the [margin checks, primary and restricted references, and prediction comparisons](docs/reports/m3-holdout-preparation.md) on discovery data. Group-level inference, weighting and missing-endpoint checks remain in preparation.
 
 **Sensitivity checkpoint, 2026-11-27.** Validated [group tests with Holm correction, equal-sharer and distinct-dyad weighting, raw missing-endpoint bounds and circulation diagnostics](docs/reports/m3-holdout-sensitivities.md) on discovery inputs. Matched-reference endpoint completions and corresponding discovery refits remain open.
+
+**Endpoint completion checkpoint, 2026-11-27.** Verified [four post-level discovery completions](docs/reports/m3-endpoint-completions.md) covering 22,464 previously unresolved actions. Started all four registered refits with per-seed recovery in a detached tmux session. Refit results and matched-reference feasibility remain pending.
 
 ## M2 · Repost feasibility and coverage
 

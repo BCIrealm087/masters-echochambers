@@ -152,7 +152,7 @@ def expected_information(first_sizes, second_sizes, total):
     return result
 
 
-def grid(method, graph, arcs, out_actions, directory):
+def grid(method, graph, arcs, out_actions, directory, load_labels=None):
     optimizer_graph = graph if method == "leiden" else directed_louvain_graph(graph)
     directory.mkdir(parents=True, exist_ok=True)
     results = []
@@ -160,13 +160,16 @@ def grid(method, graph, arcs, out_actions, directory):
     for resolution in RESOLUTIONS:
         passed = []
         for seed in SEEDS:
-            labels = fit(method, optimizer_graph, resolution, seed)
+            path = directory / f"{resolution}-{seed}.npy"
+            labels = (fit(method, optimizer_graph, resolution, seed) if load_labels is None
+                      else load_labels(path))
             summary = diagnostics(arcs, labels, out_actions)
             summary.update(seed=seed, resolution=resolution, modularity=graph.modularity(
                 labels, weights="weight", resolution=resolution, directed=True,
             ))
             results.append(summary)
-            np.save(directory / f"{resolution}-{seed}.npy", labels)
+            if load_labels is None:
+                np.save(path, labels)
             if summary["connected"] and summary["eligible_groups"] >= 2:
                 passed.append((seed, labels))
         if len(passed) < 10:
@@ -191,14 +194,16 @@ def grid(method, graph, arcs, out_actions, directory):
     return {"runs": results, "resolutions": representatives, "selected": selected}
 
 
-def write_graph_grid(ledger, directory, method, binary=False, before=None):
+def write_graph_grid(ledger, directory, method, binary=False, before=None, prepare_labels=None):
     directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     accounts, arcs, graph, out_actions = graph_from_ledger(ledger, binary=binary, before=before)
     np.save(directory / "accounts.npy", accounts)
     graph_hash = hashlib.sha256()
     for values in (accounts, arcs, graph.es["weight"]):
         graph_hash.update(np.asarray(values, dtype="<u8").tobytes())
-    result = grid(method, graph, arcs, out_actions, directory)
+    load_labels = (prepare_labels(graph, graph_hash.hexdigest(), directory)
+                   if prepare_labels is not None else None)
+    result = grid(method, graph, arcs, out_actions, directory, load_labels=load_labels)
     result.update(method=method, binary=binary, before=before, vertices=len(accounts),
                   arcs=len(arcs), actions=int(out_actions.sum()),
                   graph_sha256=graph_hash.hexdigest(), optimizer_fixture=verify_optimizers())
@@ -206,7 +211,9 @@ def write_graph_grid(ledger, directory, method, binary=False, before=None):
         selected = result["selected"]
         partition = directory / f"{selected['resolution']}-{selected['seed']}.npy"
         result["partition_sha256"] = hashlib.sha256(partition.read_bytes()).hexdigest()
-    (directory / "grid.json").write_text(json.dumps(result, indent=2) + "\n")
+    temp = directory / "grid.tmp"
+    temp.write_text(json.dumps(result, indent=2) + "\n")
+    temp.replace(directory / "grid.json")
     return result
 
 
