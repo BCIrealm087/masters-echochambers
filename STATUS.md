@@ -4,7 +4,7 @@ Last updated 2026-11-28.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
-| M3 · Within-corpus repost pilot | [Run the frozen holdout evaluation](docs/reports/m3-evaluation-freeze.md) | Frozen holdout evaluation running. Outcome review and archive pending. |
+| M3 · Within-corpus repost pilot | [Complete the holdout sensitivities and second review](docs/reports/m3-holdout-first-review.md) | First holdout review archived. Sensitivities running. Second review pending. |
 
 ## M3 · Within-corpus repost pilot
 
@@ -41,6 +41,8 @@ Last updated 2026-11-28.
 **Evaluation launch checkpoint, 2026-11-27.** Started the [frozen holdout workflow](docs/reports/m3-evaluation-freeze.md#holdout-launch) in detached tmux after verifying its inputs and implementation. Primary reference and prediction started together. The remaining registered comparisons are queued.
 
 **Operational guidance, 2026-11-28.** Expanded the [large data run guidance](AGENTS.md#large-data-runs) to consider SIMD, GPU offloading and other implementation options during planning for multi-hour jobs. Record measured performance as meaningful batches finish and consult those reports when designing future runs.
+
+**First holdout review, 2026-11-28.** The [advisor report](docs/reports/m3-holdout-first-review.md) records +45.54 percentage points of internal reposting above the registered reference and +0.406 nats per action of predictive gain over the history model. Runtime evidence is archived. The second review awaits the remaining sensitivity results or feasibility dispositions.
 
 ## M2 · Repost feasibility and coverage
 
