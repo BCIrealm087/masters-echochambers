@@ -1,6 +1,6 @@
 # Research progress
 
-Last updated 2026-11-27.
+Last updated 2026-11-28.
 
 | Current milestone | Current task | Status |
 | --- | --- | --- |
@@ -39,6 +39,8 @@ Last updated 2026-11-27.
 **Evaluation freeze handoff, 2026-11-27.** Reviewed the 480 discovery refits, verified 4,770,214 eligible holdout actions and five group-test margins, and froze the [executable evaluation](docs/reports/m3-evaluation-freeze.json). The [advisor report](docs/reports/m3-evaluation-freeze.md) records partition sensitivity and legality checks. No outcome scoring has started.
 
 **Evaluation launch checkpoint, 2026-11-27.** Started the [frozen holdout workflow](docs/reports/m3-evaluation-freeze.md#holdout-launch) in detached tmux after verifying its inputs and implementation. Primary reference and prediction started together. The remaining registered comparisons are queued.
+
+**Operational guidance, 2026-11-28.** Expanded the [large data run guidance](AGENTS.md#large-data-runs) to consider SIMD, GPU offloading and other implementation options during planning for multi-hour jobs.
 
 ## M2 · Repost feasibility and coverage
 
