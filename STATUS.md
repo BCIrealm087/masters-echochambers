@@ -40,7 +40,7 @@ Last updated 2026-11-28.
 
 **Evaluation launch checkpoint, 2026-11-27.** Started the [frozen holdout workflow](docs/reports/m3-evaluation-freeze.md#holdout-launch) in detached tmux after verifying its inputs and implementation. Primary reference and prediction started together. The remaining registered comparisons are queued.
 
-**Operational guidance, 2026-11-28.** Expanded the [large data run guidance](AGENTS.md#large-data-runs) to consider SIMD, GPU offloading and other implementation options during planning for multi-hour jobs.
+**Operational guidance, 2026-11-28.** Expanded the [large data run guidance](AGENTS.md#large-data-runs) to consider SIMD, GPU offloading and other implementation options during planning for multi-hour jobs. Record measured performance as meaningful batches finish and consult those reports when designing future runs.
 
 ## M2 · Repost feasibility and coverage
 
